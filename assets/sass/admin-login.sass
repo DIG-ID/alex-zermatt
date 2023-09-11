@@ -1,19 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap')
-
-//Color variables
-$green: #10664F
-$dark-green: #032F35
-$light-green: #E6EADC
-$lime-green: #B6ED3E
-
 body
-  background-color: bg-white
+  @apply bg-white bg-no-repeat bg-contain text-blue
   background-position: bottom
   background-position-y: 140%
-  background-repeat: no-repeat
-  background-size: contain
-  color: #000
-  font-family: 'Raleway', sans-serif
 
 #login
   width: 370px
@@ -22,33 +10,30 @@ body
   .message
     color: #000
   h1
-    margin-bottom: 40px
     a
-      width: 200px
-      height: 108.5px
-      background-size: 200px 108.5px
+      width: 90px
+      height: 44px
+      background-size: 90px 44px
       &:focus
         box-shadow: none
 
   form
-    @apply rounded-3xl shadow-none border border-light-green p-10 bg-white
+    @apply shadow-none p-10 border-white/0 bg-white
     label
-      @apply text-sm text-black mb-2
+      @apply text-xs text-blue mb-2 font-serif font-thin uppercase leading-normal tracking-widest
     .input
-        @apply w-full border border-green/20 py-3 px-6 rounded-full font-sans text-base text-dark-green 
+        @apply w-full border-2 border-white border-b-gold py-3 px-2 font-sans text-base text-blue
         &::placeholder
           @apply font-sans text-gray-300 text-base
         &:focus-visible
-          @apply outline-lime-green
+          @apply outline-blue/5 rounded-none
     input[type="submit"]
-      @apply font-sans text-dark-green text-sm transition-all duration-500 ease-in-out inline-flex justify-center items-center gap-2 bg-lime-green uppercase font-bold py-2 px-11 rounded-full hover:text-white hover:bg-green border-0
+      @apply font-serif font-light text-gold text-base transition-all duration-500 ease-in-out inline-flex justify-center items-center bg-white uppercase py-2 px-11 border border-gold rounded-none tracking-widest mt-8 hover:text-white hover:bg-gold
 
   #backtoblog, #nav
-    text-align: center
-    color: $light-green
+    @apply font-sans font-light text-center text-blue
     a
-      color: $light-green
-      font-weight: 600
+       @apply  font-sans font-light text-blue
 
   input:-webkit-autofill
     -webkit-box-shadow: 0 0 0 30px white inset

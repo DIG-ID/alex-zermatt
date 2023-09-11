@@ -11,16 +11,13 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Raleway', 'sans-serif'],
-      montbold: ['Mont', 'sans-serif'],
-      montlight: ['Mont Book', 'sans-serif'],
+      sans: ['Roboto', 'sans-serif'],
+      serif: ['larken', 'serif'],
     },
     extend: {
       colors: {
-        'green': '#10664F',
-        'dark-green': '#032F35',
-        'light-green': '#E6EADC',
-        'lime-green': '#B6ED3E',
+        'blue': '#002850',
+        'gold': '#906841',
       },
     },
   },

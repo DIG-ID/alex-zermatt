@@ -7,7 +7,8 @@ do_action( 'before_main_content' );
 	<section class="az-container py-40 !px-16">
 		<div class="az-container-grid">
 			<div class="col-span-4">
-				<h1 class="title-big mb-12">testing title-big</h1>
+				<h1 class="title-xl mb-12">testing title-xl</h1>
+				<h1 class="title-sm mb-12">testing title-sm</h1>
 				<p class="text-body mb-12">Testing body-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptas non voluptatibus quas, esse magni. Inventore quae culpa tempora assumenda? Rerum aperiam unde deleniti pariatur mollitia consequatur quisquam dolorum ratione.</p>
 				<p class="title-overline">Testing title-overline</p>
 			</div>

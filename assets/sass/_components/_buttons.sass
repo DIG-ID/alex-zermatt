@@ -1,5 +1,5 @@
 .btn
-  @apply inline-block font-serif font-light text-sm md:text-base xl:text-xl text-blue leading-normal tracking-[1.54px] uppercase transition-all duration-150
+  @apply inline-block font-serif font-light text-sm md:text-base xl:text-xl text-blue leading-normal tracking-[1.54px] uppercase transition-all duration-75
   &--arrow-right
     @apply relative
     &::after
@@ -28,7 +28,7 @@
       &::after
         content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='24' viewBox='0 0 21 24' fill='none'%3E%3Cline x1='10.5' y1='23.1802' x2='10.5' y2='1.52708e-05' stroke='%23906841'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21 8.13721C18.3568 9.27276 16.3136 10.8421 14.7613 12.5965C11.65 16.1129 10.5485 20.3304 10.4909 23.1639L11.4907 23.1842C11.5442 20.553 12.5778 16.5735 15.5102 13.2591C16.8819 11.7088 18.6774 10.2946 21 9.23113L21 8.13721Z' fill='%23906841'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 8.13721C2.6432 9.27276 4.68642 10.8421 6.23869 12.5965C9.34997 16.1129 10.4515 20.3304 10.5091 23.1639L9.50933 23.1842C9.45579 20.553 8.42224 16.5735 5.48975 13.2591C4.11809 11.7088 2.32261 10.2946 -2.94872e-07 9.23113L0 8.13721Z' fill='%23906841'/%3E%3C/svg%3E")
   &--box
-    @apply border border-gold bg-white text-gold text-center min-w-[290px] pt-[14px] pb-[11px]
+    @apply border border-gold bg-white text-gold text-center min-w-[290px] pt-[14px] pb-[11px] transition-all duration-300 ease-in-out
     &:hover
       @apply text-white bg-gold
     &:focus

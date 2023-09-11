@@ -11,6 +11,7 @@ do_action( 'before_main_content' );
 				<h1 class="title-sm mb-12">testing title-sm</h1>
 				<p class="text-body mb-12">Testing body-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa voluptas non voluptatibus quas, esse magni. Inventore quae culpa tempora assumenda? Rerum aperiam unde deleniti pariatur mollitia consequatur quisquam dolorum ratione.</p>
 				<p class="title-overline">Testing title-overline</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas culpa accusantium nulla neque ipsam officiis a et laudantium rerum repudiandae quam nobis minima iste veritatis placeat, eveniet velit magni molestiae?</p>
 			</div>
 			<div class="col-span-4">
 				<a href="#" class="btn mb-8">Simple Button</a><br>

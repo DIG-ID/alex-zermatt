@@ -1,0 +1,37 @@
+.btn
+  @apply inline-block font-serif font-light text-sm md:text-base xl:text-xl text-blue leading-normal tracking-[1.54px] uppercase transition-all duration-150
+  &--arrow-right
+    @apply relative
+    &::after
+      @apply block absolute bottom-0 -right-14 w-[141px] h-[14px]
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='141' height='14' viewBox='0 0 141 14' fill='none'%3E%3Cline y1='-0.5' x2='141' y2='-0.5' transform='matrix(-1 8.74228e-08 8.74228e-08 1 141 13.5625)' stroke='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M117 0C118.801 3.42176 121.28 6.05938 124.037 8.05737C129.581 12.0744 136.218 13.4886 140.651 13.5625L140.667 12.5627C136.392 12.4914 129.966 11.119 124.624 7.24763C122.117 5.43052 119.842 3.05902 118.137 -2.98239e-07L117 0Z' fill='%23002850'/%3E%3C/svg%3E")
+    &:hover
+      @apply text-gold
+      &::after
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='141' height='14' viewBox='0 0 141 14' fill='none'%3E%3Cline y1='-0.5' x2='141' y2='-0.5' transform='matrix(-1 8.74228e-08 8.74228e-08 1 141 13.5625)' stroke='%23906841'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M117 0C118.801 3.42176 121.28 6.05938 124.037 8.05737C129.581 12.0744 136.218 13.4886 140.651 13.5625L140.667 12.5627C136.392 12.4914 129.966 11.119 124.624 7.24763C122.117 5.43052 119.842 3.05902 118.137 -2.98239e-07L117 0Z' fill='%23906841'/%3E%3C/svg%3E")
+  &--arrow-left
+    @apply relative ml-7
+    &::after
+      @apply block absolute top-0 -left-8 w-[24px] h-[22px]
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='22' viewBox='0 0 24 22' fill='none'%3E%3Cline x1='0.00401307' y1='10.5918' x2='23.1842' y2='10.5918' stroke='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.047 21.0918C13.9114 18.4486 12.3421 16.4054 10.5877 14.8531C7.07125 11.7418 2.85375 10.6403 0.020333 10.5827L-1.06362e-05 11.5825C2.63123 11.636 6.6107 12.6696 9.92506 15.602C11.4754 16.9737 12.8896 18.7692 13.9531 21.0918L15.047 21.0918Z' fill='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.047 0.0917969C13.9114 2.735 12.3421 4.77822 10.5877 6.33049C7.07125 9.44177 2.85375 10.5433 0.0203319 10.6009L-1.16553e-05 9.60113C2.63123 9.54759 6.6107 8.51403 9.92506 5.58155C11.4754 4.20988 12.8896 2.4144 13.9531 0.0917965L15.047 0.0917969Z' fill='%23002850'/%3E%3C/svg%3E")
+    &:hover
+      @apply text-gold
+      &::after
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='22' viewBox='0 0 24 22' fill='none'%3E%3Cline x1='0.00401307' y1='10.5918' x2='23.1842' y2='10.5918' stroke='%23906841'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.047 21.0918C13.9114 18.4486 12.3421 16.4054 10.5877 14.8531C7.07125 11.7418 2.85375 10.6403 0.020333 10.5827L-1.06362e-05 11.5825C2.63123 11.636 6.6107 12.6696 9.92506 15.602C11.4754 16.9737 12.8896 18.7692 13.9531 21.0918L15.047 21.0918Z' fill='%23906841'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.047 0.0917969C13.9114 2.735 12.3421 4.77822 10.5877 6.33049C7.07125 9.44177 2.85375 10.5433 0.0203319 10.6009L-1.16553e-05 9.60113C2.63123 9.54759 6.6107 8.51403 9.92506 5.58155C11.4754 4.20988 12.8896 2.4144 13.9531 0.0917965L15.047 0.0917969Z' fill='%23906841'/%3E%3C/svg%3E")
+  &--arrow-down
+    @apply relative
+    &::after
+      @apply block absolute top-0 -right-8 w-[21px] h-[24px]
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='24' viewBox='0 0 21 24' fill='none'%3E%3Cline x1='10.5' y1='23.1802' x2='10.5' y2='1.52708e-05' stroke='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21 8.13721C18.3568 9.27276 16.3136 10.8421 14.7613 12.5965C11.65 16.1129 10.5485 20.3304 10.4909 23.1639L11.4907 23.1842C11.5442 20.553 12.5778 16.5735 15.5102 13.2591C16.8819 11.7088 18.6774 10.2946 21 9.23113L21 8.13721Z' fill='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 8.13721C2.6432 9.27276 4.68642 10.8421 6.23869 12.5965C9.34997 16.1129 10.4515 20.3304 10.5091 23.1639L9.50933 23.1842C9.45579 20.553 8.42224 16.5735 5.48975 13.2591C4.11809 11.7088 2.32261 10.2946 -2.94872e-07 9.23113L0 8.13721Z' fill='%23002850'/%3E%3C/svg%3E")
+    &:hover
+      @apply text-gold
+      &::after
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='24' viewBox='0 0 21 24' fill='none'%3E%3Cline x1='10.5' y1='23.1802' x2='10.5' y2='1.52708e-05' stroke='%23906841'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21 8.13721C18.3568 9.27276 16.3136 10.8421 14.7613 12.5965C11.65 16.1129 10.5485 20.3304 10.4909 23.1639L11.4907 23.1842C11.5442 20.553 12.5778 16.5735 15.5102 13.2591C16.8819 11.7088 18.6774 10.2946 21 9.23113L21 8.13721Z' fill='%23906841'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 8.13721C2.6432 9.27276 4.68642 10.8421 6.23869 12.5965C9.34997 16.1129 10.4515 20.3304 10.5091 23.1639L9.50933 23.1842C9.45579 20.553 8.42224 16.5735 5.48975 13.2591C4.11809 11.7088 2.32261 10.2946 -2.94872e-07 9.23113L0 8.13721Z' fill='%23906841'/%3E%3C/svg%3E")
+  &--box
+    @apply border border-gold bg-white text-gold text-center min-w-[290px] pt-[14px] pb-[11px]
+    &:hover
+      @apply text-white bg-gold
+    &:focus
+      @apply text-white bg-[#715332]
+    &:active
+      @apply text-white bg-[#715332]

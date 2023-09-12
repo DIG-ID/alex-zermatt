@@ -6,9 +6,9 @@ function az_theme_setup() {
 
 	register_nav_menus(
 		array(
-			'main'         => __( 'Main Menu', 'az' ),
-			'footer'       => __( 'Footer Menu', 'az' ),
-			'footer_terms' => __( 'Footer Terms Menu', 'az' ),
+			'main'     => __( 'Main Menu', 'az' ),
+			'footer'   => __( 'Footer Menu', 'az' ),
+			'opyright' => __( 'Copryright Menu', 'az' ),
 		)
 	);
 
@@ -24,11 +24,11 @@ function az_theme_setup() {
 
 	add_post_type_support( 'page', 'excerpt' );
 
-	set_post_thumbnail_size( 500, 350, 'center', 'center' );
+	//set_post_thumbnail_size( 500, 350, 'center', 'center' );
 
-	add_image_size( 'gallery-full', 1024, false );
+	//add_image_size( 'gallery-full', 1024, false );
 
-	add_image_size( 'mega-link-thumbnail', 1000, 500, array( 'center', 'center' ) );
+	//add_image_size( 'mega-link-thumbnail', 1000, 500, array( 'center', 'center' ) );
 
 }
 
@@ -159,14 +159,14 @@ function az_theme_acf_op_gc_init() {
 	if ( function_exists( 'acf_add_options_page' ) ) :
 		$theme_option_page = acf_add_options_page(
 			array(
-				'page_title'      => __( 'Alex Zermatt Options', 'az' ),
-				'menu_title'      => __( 'Alex Zermatt Theme', 'az' ),
+				'page_title'      => __( 'Alex Zermatt Theme Options', 'az' ),
+				'menu_title'      => __( 'Theme Options', 'az' ),
 				'menu_slug'       => 'az-theme-general-options',
 				'capability'      => 'edit_posts',
-				'icon_url'        => get_template_directory_uri() . '/assets/images/az-theme-icon.png',
+				'icon_url'        => get_template_directory_uri() . '/assets/images/hotel-resort-alex-theme-icon.png',
 				'redirect'        => false,
 				'update_button'   => __( 'Update Options', 'az' ),
-				'updated_message' => __( 'az Options Updated', 'az' ),
+				'updated_message' => __( 'Alex Zermatt Options Updated', 'az' ),
 			)
 		);
 	endif;
@@ -206,6 +206,3 @@ require get_template_directory() . '/inc/theme-template-tags.php';
 
 // The theme admin settings
 require get_template_directory() . '/inc/theme-admin-settings.php';
-
-// The theme admin settings
-require get_template_directory() . '/inc/theme-custom-walker.php';

@@ -1,9 +1,9 @@
 #header-main
-  .navigation-main
+  nav.navigation-main
     #menu-main-menu
-      @apply block w-full
+      @apply block w-full overflow-hidden
       li.menu-item
-        @apply inline-block
+        @apply inline-block transition-all duration-500 ease-in-out translate-y-0
         &:nth-child(1)
           @apply mr-16
         &:nth-child(3),
@@ -24,5 +24,9 @@
             @apply content-[''] block absolute bg-gold w-[99%] h-[1px] translate-y-0 transition-all duration-300 ease-in-out -z-10
 
 #header-main.mega-menu-open
+  nav.navigation-main
+    #menu-main-menu
+      li.menu-item
+        @apply translate-y-8
   .mega-menu-wrapper
     @apply visible h-[var(--element-height)]

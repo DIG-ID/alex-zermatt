@@ -41,7 +41,52 @@
 
 	</nav>
 
-	<div class="mega-menu-wrapper bg-slate-200 absolute top-[108px] left-0 right-0 bottom-0 h-0 invisible overflow-hidden -z-30 transition-all duration-500 ease-in-out">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus animi ex, facere ea a optio distinctio, ratione, fugit inventore tenetur maxime nisi accusamus suscipit atque repudiandae ipsum rem! Modi, architecto!</p>
+	<div class="mega-menu-wrapper bg-slate-200 absolute top-[108px] left-0 right-0 bottom-0 h-0 invisible overflow-hidden -z-10 transition-all duration-500 ease-in-out flex justify-center items-center">
+		<div class="mega-menu-content grid grid-cols-5 max-w-7xl w-full">
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'main',
+					'container'      => false,
+					'menu_class'     => 'main-menu-top-level',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'fallback_cb'    => '__return_false',
+				)
+			);
+			?>
+						<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'main',
+					'container'      => false,
+					'menu_class'     => 'main-menu-top-level',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'fallback_cb'    => '__return_false',
+				)
+			);
+			?>
+						<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'main',
+					'container'      => false,
+					'menu_class'     => 'main-menu-top-level',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'fallback_cb'    => '__return_false',
+				)
+			);
+			?>
+						<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'main',
+					'container'      => false,
+					'menu_class'     => 'main-menu-top-level',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'fallback_cb'    => '__return_false',
+				)
+			);
+			?>
+		</div>
 	</div>
 </header>

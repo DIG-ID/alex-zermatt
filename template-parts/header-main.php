@@ -2,9 +2,11 @@
 	<nav class="navigation-main w-full flex items-center py-10" role="navigation" aria-label="<?php esc_attr_e( 'main navigation', 'az' ); ?>">
 		<div class="mega-menu-buttons px-8">
 			<button class="main-menu-toggle">
-				<span class="bar"></span>
-				<span class="bar"></span>
-				<span class="bar"></span>
+				<span class="bars">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</span>
 				<span class="text hidden invisible xl:block xl:visible font-serif font-light text-xl uppercase tracking-[1.54px]"><?php esc_html_e( 'Menu', 'az' ); ?></span>
 			</button>
 		</div>
@@ -31,7 +33,7 @@
 			);
 			?>
 		</div>
-		<div class="az-custom-language-menu px-8">
+		<div class="az-custom-language-menu px-8 hidden invisible xl:block xl:visible">
 			<select name="language" id="az-language-custom-selector">
 				<option value="en">EN</option>
 				<option value="fr">FR</option>
@@ -40,53 +42,5 @@
 		</div>
 
 	</nav>
-
-	<div class="mega-menu-wrapper bg-slate-200 absolute top-[108px] left-0 right-0 bottom-0 h-0 invisible overflow-hidden -z-10 transition-all duration-500 ease-in-out flex justify-center items-center">
-		<div class="mega-menu-content grid grid-cols-5 max-w-7xl w-full">
-		<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'main',
-					'container'      => false,
-					'menu_class'     => 'main-menu-top-level',
-					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					'fallback_cb'    => '__return_false',
-				)
-			);
-			?>
-						<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'main',
-					'container'      => false,
-					'menu_class'     => 'main-menu-top-level',
-					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					'fallback_cb'    => '__return_false',
-				)
-			);
-			?>
-						<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'main',
-					'container'      => false,
-					'menu_class'     => 'main-menu-top-level',
-					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					'fallback_cb'    => '__return_false',
-				)
-			);
-			?>
-						<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'main',
-					'container'      => false,
-					'menu_class'     => 'main-menu-top-level',
-					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					'fallback_cb'    => '__return_false',
-				)
-			);
-			?>
-		</div>
-	</div>
+	<?php get_template_part( 'template-parts/mega-menu' ); ?>
 </header>

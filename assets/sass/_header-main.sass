@@ -1,7 +1,7 @@
 #header-main
   nav.navigation-main
     #menu-main-menu
-      @apply block w-full overflow-hidden
+      @apply w-full invisible hidden xl:block xl:visible
       li.menu-item
         @apply inline-block transition-all duration-500 ease-in-out translate-y-0
         &:nth-child(1)
@@ -19,14 +19,38 @@
 
       li.menu-item.current-menu-item
         a
-          @apply font-serif font-light text-xl tracking-[1.54px] uppercase transition-all duration-300 ease-in-out relative bg-white
+          @apply font-serif font-light text-xl tracking-[1.54px] uppercase transition-all duration-300 ease-in-out relative bg-white opacity-100 visible
           &::after
             @apply content-[''] block absolute bg-gold w-[99%] h-[1px] translate-y-0 transition-all duration-300 ease-in-out -z-10
+  .main-menu-toggle
+    .bars
+      @apply w-[36px] h-[18px] flex flex-col justify-between xl:invisible xl:hidden
+      .bar
+        @apply block h-[2px] w-full bg-blue
+        &:nth-child(1)
+          transform-origin: 0% 0%
+          @apply transition-all duration-[0.4s] ease-in-out
+        &:nth-child(2)
+          @apply transition-all duration-[0.2s] ease-in-out
+        &:nth-child(3)
+          transform-origin: 0% 100%
+          @apply transition-all duration-[0.4s] ease-in-out
 
 #header-main.mega-menu-open
   nav.navigation-main
     #menu-main-menu
       li.menu-item
-        @apply translate-y-8
+        @apply translate-y-6 opacity-0 invisible
   .mega-menu-wrapper
-    @apply visible h-[var(--element-height)]
+    @apply visible min-h-screen xl:h-[var(--element-height)]
+  .main-menu-toggle
+    .bars
+      .bar
+        &:nth-child(1)
+          @apply rotate-45
+        &:nth-child(2)
+          @apply scale-y-0
+        &:nth-child(3)
+          @apply -rotate-45
+
+

@@ -6,9 +6,15 @@ function az_theme_setup() {
 
 	register_nav_menus(
 		array(
-			'main'     => __( 'Main Menu', 'az' ),
-			'footer'   => __( 'Footer Menu', 'az' ),
-			'opyright' => __( 'Copryright Menu', 'az' ),
+			'main'                    => __( 'Main Menu', 'az' ),
+			'mega-menu-left'          => __( 'Mega Menu Left', 'az' ),
+			'mega-menu-left-2'        => __( 'Mega Menu Left 2', 'az' ),
+			'mega-menu-right'         => __( 'Mega Menu Right', 'az' ),
+			'mega-menu-right-2'       => __( 'Mega Menu Right 2', 'az' ),
+			'mega-menu-submenu-left'  => __( 'Mega Menu Sub-menu Left', 'az' ),
+			'mega-menu-submenu-right' => __( 'Mega Menu Sub-menu Right', 'az' ),
+			'footer'                  => __( 'Footer Menu', 'az' ),
+			'opyright'                => __( 'Copryright Menu', 'az' ),
 		)
 	);
 

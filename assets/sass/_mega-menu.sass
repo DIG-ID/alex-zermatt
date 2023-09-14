@@ -1,8 +1,18 @@
 .mega-menu-content
   .mega-menu-nav
+    
     li.menu-item
-      @apply mb-3
+      @apply xl:mb-3
       a
-        @apply inline-block font-serif font-light text-blue text-xl tracking-[1.54px] transition-all duration-300 ease-in-out hover:text-gold
+        @apply inline-block font-serif font-light text-blue text-xs xl:text-xl tracking-[0.7px] xl:tracking-[1.54px] leading-4 transition-all duration-300 ease-in-out hover:text-gold 
+  .mega-menu-top-level
+    @apply max-h-0 overflow-hidden xl:overflow-auto xl:max-h-none transition-all duration-300 ease-in-out mt-3 xl:mt-0 mb-4 xl:mb-0
+    li.menu-item
+      a
+        @apply text-gold xl:text-blue
   .mega-menu-sub-level
     @apply xl:columns-2
+
+  .menu-accordion.active
+    svg
+      @apply rotate-180

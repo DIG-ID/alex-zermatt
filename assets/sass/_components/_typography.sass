@@ -1,13 +1,13 @@
 .title-xl
-  @apply font-serif font-thin text-2xl md:text-3xl xl:text-5xl text-blue leading-7 md:leading-normal tracking-[2.6px] uppercase
+  @apply font-serif font-thin text-2xl md:text-[1.75rem] xl:text-5xl text-blue leading-7 md:leading-none tracking-[2.6px] uppercase
 
 .title-sm
   @apply font-serif font-bold text-sm md:text-lg xl:text-xl text-blue leading-7 md:leading-normal tracking-[2.6px] uppercase
 
 .title-overline
-  @apply font-sans font-normal text-xs md:text-sm xl:text-lg text-blue leading-normal tracking-[6.3px] uppercase relative inline-block z-10 mb-36 pb-9 mx-auto text-center
+  @apply font-sans font-normal text-xs md:text-sm xl:text-lg text-blue leading-normal tracking-[6.3px] uppercase relative inline-block z-10 mb-16 md:mb-24 xl:mb-36 pb-9 mx-auto text-center
   &::after
-    @apply content-[''] inline-block w-[1px] h-[290px] bg-blue absolute left-1/2 -translate-x-1/2 top-16
+    @apply content-[''] inline-block w-[1px] h-[125px] md:h-[200px] xl:h-[290px] bg-blue absolute left-1/2 -translate-x-1/2 top-16
 
 .text-body
   @apply font-sans font-normal text-xs md:text-sm text-blue leading-6 tracking-[0.42px]

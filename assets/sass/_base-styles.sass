@@ -71,7 +71,13 @@ html.lenis
     
 // Grid classes
 .az-container
-  @apply px-7 md:px-16 lg:px-0
+  @apply px-7 md:px-16 xl:px-0
 
 .az-container-grid
   @apply grid grid-cols-1 md:grid-cols-8 xl:grid-cols-12 md:gap-4 xl:gap-9
+
+.az-container-grid-xl
+  @apply grid grid-cols-1 md:grid-cols-8 xl:grid-cols-8 md:gap-4 xl:gap-9
+
+.az-container-span-xl
+  @apply col-span-1 md:col-span-8 xl:col-span-8 col-start-1 xl:col-start-3

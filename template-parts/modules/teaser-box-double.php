@@ -1,0 +1,31 @@
+<?php
+if (isset($args['paddings'])) {
+    $paddings = $args['paddings'];
+} else {
+    $paddings = 'py-0';
+}
+?>
+<section id="section-box-teasers" class="section-box-teasers az-container az-container-grid <?php echo esc_attr($paddings); ?>">
+    <div class="az-container-span-xl">
+        <div class="az-container-grid-xl">
+            <?php
+            if( have_rows('teaser_boxes') ):
+            while( have_rows('teaser_boxes') ) : the_row(); ?>
+                <div class="col-span-1 md:col-span-4 xl:col-span-4 text-center">
+                    <p class="title-overline"><?php the_sub_field( 'title_overline' ); ?></p>
+                    <?php 
+                        $image_left = get_sub_field('image');
+                        if( $image_left ) {
+                            echo wp_get_attachment_image( $image_left, 'full' );
+                        }
+                    ?>
+                    <h2 class="title-xl text-left my-10"><?php the_sub_field( 'title' ); ?></h2>
+                    <span class="block text-left"><a class="btn btn--arrow-right" href="<?php the_sub_field( 'cta_link' ); ?>"><?php echo esc_html_e( 'Mehr Erfahren', 'alexzermatt' ) ?></a></span>
+                </div>
+            <?php 
+            endwhile;
+            endif; 
+            ?>
+        </div>
+    </div>
+</section>

@@ -11,7 +11,7 @@ if (isset($args['paddings'])) {
             <?php
             if( have_rows('teaser_boxes') ):
             while( have_rows('teaser_boxes') ) : the_row(); ?>
-                <div class="col-span-1 md:col-span-4 xl:col-span-4 text-center">
+                <div class="col-span-1 md:col-span-4 xl:col-span-4 text-center pb-24 md:pb-0">
                     <p class="title-overline"><?php the_sub_field( 'title_overline' ); ?></p>
                     <?php 
                         $image_left = get_sub_field('image');
@@ -19,8 +19,8 @@ if (isset($args['paddings'])) {
                             echo wp_get_attachment_image( $image_left, 'full' );
                         }
                     ?>
-                    <h2 class="title-xl text-left my-10"><?php the_sub_field( 'title' ); ?></h2>
-                    <span class="block text-left"><a class="btn btn--arrow-right" href="<?php the_sub_field( 'cta_link' ); ?>"><?php echo esc_html_e( 'Mehr Erfahren', 'alexzermatt' ) ?></a></span>
+                    <h2 class="title-xl text-left my-10 min-h-[56px] xl:min-h-0"><?php the_sub_field( 'title' ); ?></h2>
+                    <span class="block text-right xl:text-left mr-16 xl:mr-0"><a class="btn btn--arrow-right" href="<?php the_sub_field( 'cta_link' ); ?>"><?php echo esc_html_e( 'Mehr Erfahren', 'alexzermatt' ) ?></a></span>
                 </div>
             <?php 
             endwhile;

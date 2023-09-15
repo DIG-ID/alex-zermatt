@@ -3,7 +3,7 @@
         <div class="col-span-1 md:col-span-8 xl:col-span-10 grid grid-cols-1 md:grid-cols-8 xl:grid-cols-10 md:gap-x-4 xl:gap-x-9">
             <div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 text-center xl:text-left">
                 <h2 class="title-xl"><?php the_title(); ?></h2>
-                <p class="title-sm !normal-case !font-thin mt-6 mb-9"><span class="font-bold"><?php esc_html_e( 'Fläche: ', 'alexzermatt' ) ?></span><?php the_field( 'size' ); ?></p>
+                <p class="title-sm !normal-case !font-thin my-6 md:my-12 xl:mt-6 xl:mb-9"><span class="font-bold"><?php esc_html_e( 'Fläche: ', 'alexzermatt' ) ?></span><?php the_field( 'size' ); ?></p>
             </div>
             <div class="col-span-1 md:col-span-8 xl:col-span-2 col-start-1 hidden xl:block">
                 <hr class="border-b border-blue">

@@ -1,9 +1,9 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-seminar col-span-4 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-3' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-seminar col-span-4 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-3 pb-20 md:pb-24 xl:pb-64' ); ?>>
     <div class="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-10 md:gap-x-4 xl:gap-x-9">
         <div class="col-span-1 md:col-span-8 xl:col-span-10 grid grid-cols-1 md:grid-cols-8 xl:grid-cols-10 md:gap-x-4 xl:gap-x-9">
             <div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1">
                 <h2 class="title-xl"><?php the_title(); ?></h2>
-                <p class="title-sm !normal-case !font-thin mt-6 mb-9"><span class="font-bold"><?php esc_html_e( 'Area: ', 'alexzermatt' ) ?></span><?php the_field( 'size' ); ?></p>
+                <p class="title-sm !normal-case !font-thin mt-6 mb-9"><span class="font-bold"><?php esc_html_e( 'Fläche: ', 'alexzermatt' ) ?></span><?php the_field( 'size' ); ?></p>
             </div>
             <div class="col-span-1 md:col-span-8 xl:col-span-2 col-start-1">
                 <hr class="border-b border-blue">
@@ -88,7 +88,7 @@
                 <div class="col-span-1 text-center">
                     <p class="text-body"><?php esc_html_e( 'U-shape', 'alexzermatt' ) ?></p>
                     <?php
-                    $capacity_ushape = get_field('capacity_ushape');
+                    $capacity_ushape = get_field('capacity_u-shape');
                     switch ($capacity_ushape) {
                         case true:
                             echo '<img class="mx-auto my-4" src="' . get_stylesheet_directory_uri() . '/assets/images/seminar/5_ushape.svg" title="u-shape" alt="u-shape">';

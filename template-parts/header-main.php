@@ -1,6 +1,6 @@
 <header id="header-main" class="header-main w-full fixed top-0 z-40 bg-white" itemscope itemtype="http://schema.org/WebSite">
 	<nav class="navigation-main w-full flex items-center py-8 xl:py-10" role="navigation" aria-label="<?php esc_attr_e( 'main navigation', 'az' ); ?>">
-		<div class="mega-menu-buttons xl:px-8 absolute top-1/2 -translate-y-1/2 xl:translate-y-0 left-8 xl:top-0 xl:left-0 xl:relative">
+		<div class="mega-menu-buttons md:px-8 absolute top-1/2 -translate-y-1/2 md:translate-y-0 left-8 md:top-0 md:left-0 md:relative leading-[0]">
 			<button class="main-menu-toggle">
 				<span class="bars">
 					<span class="bar"></span>
@@ -33,12 +33,8 @@
 			);
 			?>
 		</div>
-		<div class="az-custom-language-menu px-8 hidden invisible xl:block xl:visible">
-			<select name="language" id="az-language-custom-selector">
-				<option value="en">EN</option>
-				<option value="fr">FR</option>
-				<option value="de">DE</option>
-			</select>
+		<div class="az-custom-language-switcher-menu-wrapper px-8 hidden invisible md:block md:visible">
+			<?php do_action( 'az_ls' ); ?>
 		</div>
 
 	</nav>

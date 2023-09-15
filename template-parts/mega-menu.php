@@ -146,7 +146,7 @@
 				</svg>
 			</a>
 		</div>
-		<div class="col-span-2 mt-4 xl:hidden xl:invisible">
+		<div class="col-span-2 mt-4 md:hidden md:invisible">
 			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden uppercase"><?php esc_html_e( 'Language', 'az' ); ?></p>
 			<div class="wpml-megamenu-language-switcher">
 				<?php do_action( 'wpml_add_language_selector' ); ?>

@@ -101,3 +101,28 @@ function az_theme_breadcrumbs() {
 }
 
 add_action( 'breadcrumbs', 'az_theme_breadcrumbs' );
+
+/**
+ * Implement custom made WPML Language Switcher.
+ */
+function az_theme_custom_ls() {
+	global $sitepress;
+	$az_ls = $sitepress->get_ls_languages();
+
+	if ( ! empty( $az_ls ) ) :
+		echo '<ul class="az-custom-language-switcher-menu">';
+		$first_lng = array_shift( $az_ls );
+		echo '<li class="dropdown"><a href="' . $first_lng['url'] . '" aria-haspopup="true">' . strtoupper( $first_lng['code'] ) . '</a>';
+		if ( ! empty( $az_ls ) ) :
+			echo '<ul class="dropdown-content" aria-label="submenu">';
+			foreach ( $az_ls as $lng ) :
+				echo '<li><a href="' . $lng['url'] . '">' . strtoupper( $lng['code'] ) . '</a></li>';
+			endforeach;
+			echo '</ul>';
+		endif;
+		echo '</li></ul>';
+	endif;
+
+}
+
+add_action( 'az_ls', 'az_theme_custom_ls' );

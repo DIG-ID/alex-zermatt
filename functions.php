@@ -32,6 +32,8 @@ function az_theme_setup() {
 
 	add_image_size( 'main-header-image', 1594, 436, array( 'center', 'center' ) );
 
+	add_image_size( 'main-header-image-half-container', 706, 830, array( 'center', 'center' ) );
+
 	//set_post_thumbnail_size( 500, 350, 'center', 'center' );
 
 	//add_image_size( 'gallery-full', 1024, false );

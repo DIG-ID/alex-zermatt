@@ -1,4 +1,4 @@
-<section id="section-seminare" class="section-seminare az-container overflow-hidden pt-12 md:pt-10 xl:pt-32">
+<section id="section-seminare" class="section-seminare az-container overflow-hidden pt-12 md:pt-12 xl:pt-32">
     <div class="az-container-grid">
         <?php
         $seminar_args   = array(

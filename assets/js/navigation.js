@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const megaMenu = document.querySelector('.mega-menu-wrapper');
     let navHeight = '';
     if ( window.innerWidth > 1280 ) {
-      let navHeight = 108; // Change this to match the actual height of your navigation bar
+      navHeight = 108; // Change this to match the actual height of your navigation bar
     } else {
-      let navHeight = 64; // Change this to match the actual height of your navigation bar
+      navHeight = 64; // Change this to match the actual height of your navigation bar
     }
 
     function setElementHeight() {

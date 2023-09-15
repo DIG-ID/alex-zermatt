@@ -2,9 +2,9 @@
   .mega-menu-nav
     
     li.menu-item
-      @apply xl:mb-3
+      @apply mb-2 xl:mb-3
       a
-        @apply inline-block font-serif font-light text-blue text-xs xl:text-xl tracking-[0.7px] xl:tracking-[1.54px] leading-4 transition-all duration-300 ease-in-out hover:text-gold 
+        @apply inline-block font-serif font-light text-blue text-sm xl:text-xl tracking-[0.7px] xl:tracking-[1.54px] leading-4 transition-all duration-300 ease-in-out hover:text-gold 
   .mega-menu-top-level
     @apply max-h-0 overflow-hidden xl:overflow-auto xl:max-h-none transition-all duration-300 ease-in-out mt-3 xl:mt-0 mb-4 xl:mb-0
     li.menu-item
@@ -16,3 +16,13 @@
   .menu-accordion.active
     svg
       @apply rotate-180
+
+  .wpml-megamenu-language-switcher
+    .wpml-ls
+      @apply p-0 border-none
+      ul
+        @apply mb-4
+        .wpml-ls-item
+          @apply mr-4 last-of-type:mr-0
+          .wpml-ls-link
+            @apply p-0 font-serif font-light text-blue text-sm uppercase tracking-[0.98px] 

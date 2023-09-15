@@ -1,7 +1,7 @@
-<div class="mega-menu-wrapper bg-white absolute top-[108px] left-0 bottom-0 w-full h-0 invisible overflow-scroll xl:overflow-hidden -z-10 transition-all duration-500 ease-in-out xl:flex xl:justify-center xl:items-center">
+<div class="mega-menu-wrapper bg-white absolute top-[64px] xl:top-[108px] left-0 bottom-0 w-full h-0 invisible overflow-scroll xl:overflow-hidden -z-10 transition-all duration-500 ease-in-out xl:flex xl:justify-center xl:items-center">
 	<div class="mega-menu-content grid grid-cols-2 xl:grid-cols-5 max-w-7xl w-full px-8 xl:px-0">
 		<div class="col-span-2 xl:col-span-1">
-			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden"><?php esc_html_e( 'Menu', 'az' ); ?></p>
+			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden uppercase mt-10"><?php esc_html_e( 'Menu', 'az' ); ?></p>
 
 			<button class="menu-accordion flex items-center xl:items-start xl:text-left xl:block xl:w-full">
 				<h3 class="font-serif font-light text-blue text-sm xl:text-2xl tracking-[0.98px] xl:tracking-[1.54px] uppercase xl:mb-14"><?php esc_html_e( 'Aufenthalt', 'az' ); ?></h3>
@@ -118,8 +118,8 @@
 			?>
 		</div>
 		<div class="col-span-1 xl:col-span-5 flex flex-col xl:flex-row xl:items-center xl:justify-between mt-8 xl:mt-16">
-			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden"><?php esc_html_e( 'Book', 'az' ); ?></p>
-			<a href="#" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold">
+			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden uppercase"><?php esc_html_e( 'Book', 'az' ); ?></p>
+			<a href="#" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[160px] xl:max-w-none">
 				<?php esc_html_e( 'Book table', 'az' ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" width="51" height="15" viewBox="0 0 51 15" fill="none" class="xl:invisible xl:hidden">
 					<line x1="51" y1="7.5" x2="4.37114e-08" y2="7.5" stroke="#002850"/>
@@ -128,7 +128,7 @@
 				</svg>
 			</a>
 			<span class="invisible hidden xl:visible xl:block w-full h-[1px] bg-blue ml-20 mr-12"></span>
-			<a href="" class="flex items-center justify-between xl:block font-serif font-light xl:font-medium text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold">
+			<a href="" class="flex items-center justify-between xl:block font-serif font-light xl:font-medium text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[160px] xl:max-w-none">
 				<?php esc_html_e( 'Book Now', 'az' ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" width="51" height="15" viewBox="0 0 51 15" fill="none" class="xl:invisible xl:hidden">
 					<line x1="51" y1="7.5" x2="4.37114e-08" y2="7.5" stroke="#002850"/>
@@ -137,7 +137,7 @@
 				</svg>
 			</a>
 			<span class="invisible hidden xl:visible xl:block w-full h-[1px] bg-blue mr-20 ml-12"></span>
-			<a href="" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap transition-all duration-300 ease-in-out hover:text-gold">
+			<a href="" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[160px] xl:max-w-none">
 				<?php esc_html_e( 'Vouchers', 'az' ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" width="51" height="15" viewBox="0 0 51 15" fill="none" class="xl:invisible xl:hidden">
 					<line x1="51" y1="7.5" x2="4.37114e-08" y2="7.5" stroke="#002850"/>
@@ -145,6 +145,12 @@
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M39.6584 14.999C40.4791 13.0657 41.6217 11.571 42.904 10.4365C45.4445 8.18871 48.4908 7.39226 50.5434 7.35049L50.5638 8.35028C48.7133 8.38794 45.905 9.11645 43.5666 11.1854C42.4885 12.1393 41.501 13.3863 40.7525 14.999L39.6584 14.999Z" fill="#002850"/>
 				</svg>
 			</a>
+		</div>
+		<div class="col-span-2 mt-4 xl:hidden xl:invisible">
+			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden uppercase"><?php esc_html_e( 'Language', 'az' ); ?></p>
+			<div class="wpml-megamenu-language-switcher">
+				<?php do_action( 'wpml_add_language_selector' ); ?>
+			</div>
 		</div>
 	</div>
 </div>

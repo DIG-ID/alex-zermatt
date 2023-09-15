@@ -25,7 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Set mega-menu height */
     const megaMenu = document.querySelector('.mega-menu-wrapper');
-    const navHeight = 108; // Change this to match the actual height of your navigation bar
+    let navHeight = '';
+    if ( window.innerWidth > 1280 ) {
+      let navHeight = 108; // Change this to match the actual height of your navigation bar
+    } else {
+      let navHeight = 64; // Change this to match the actual height of your navigation bar
+    }
 
     function setElementHeight() {
       const height = window.innerHeight - navHeight;
@@ -71,6 +76,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Call handleWindowSize once on page load to set the initial state
     handleWindowSize();*/
+
+    // Mega menu accordion
     let acc = document.querySelectorAll(".menu-accordion");
     let i;
     
@@ -92,26 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
-    /*for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        // Close all accordions
-        for (let j = 0; j < acc.length; j++) {
-          if (j !== i) {
-            acc[j].classList.remove("active");
-            let panel = acc[j].nextElementSibling;
-            panel.style.maxHeight = null;
-          }
-        }
-    
-        this.classList.toggle("active");
-        let panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }*/
 
   }, false);
 });

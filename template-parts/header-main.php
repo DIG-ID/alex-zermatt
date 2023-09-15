@@ -25,6 +25,7 @@
 			wp_nav_menu(
 				array(
 					'theme_location' => 'main',
+					'menu_id'        => 'menu-main-menu',
 					'container'      => false,
 					'menu_class'     => 'main-menu-top-level',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',

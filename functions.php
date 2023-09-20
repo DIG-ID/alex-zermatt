@@ -7,14 +7,13 @@ function az_theme_setup() {
 	register_nav_menus(
 		array(
 			'main'                    => __( 'Main Menu', 'az' ),
-			'mega-menu-left'          => __( 'Mega Menu Left', 'az' ),
-			'mega-menu-left-2'        => __( 'Mega Menu Left 2', 'az' ),
-			'mega-menu-right'         => __( 'Mega Menu Right', 'az' ),
-			'mega-menu-right-2'       => __( 'Mega Menu Right 2', 'az' ),
+			'menu-stay'               => __( 'Menu Stay', 'az' ),
+			'menu-eat&drink'          => __( 'Menu Eat & Drink', 'az' ),
+			'menu-experience'         => __( 'Menu Experience', 'az' ),
+			'menu-kulture'            => __( 'Menu Kulture', 'az' ),
 			'mega-menu-submenu-left'  => __( 'Mega Menu Sub-menu Left', 'az' ),
 			'mega-menu-submenu-right' => __( 'Mega Menu Sub-menu Right', 'az' ),
-			'footer'                  => __( 'Footer Menu', 'az' ),
-			'opyright'                => __( 'Copryright Menu', 'az' ),
+			'copyright'               => __( 'Copryright Menu', 'az' ),
 		)
 	);
 

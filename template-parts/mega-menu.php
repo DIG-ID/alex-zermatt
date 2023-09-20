@@ -13,7 +13,7 @@
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'mega-menu-left',
+					'theme_location' => 'menu-stay',
 					'container'      => false,
 					'menu_class'     => 'mega-menu-nav mega-menu-top-level',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
@@ -33,7 +33,7 @@
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'mega-menu-left-2',
+					'theme_location' => 'menu-eat&drink',
 					'container'      => false,
 					'menu_class'     => 'mega-menu-nav mega-menu-top-level',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
@@ -56,7 +56,7 @@
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'mega-menu-right',
+					'theme_location' => 'menu-experience',
 					'container'      => false,
 					'menu_class'     => 'mega-menu-nav mega-menu-top-level',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
@@ -76,7 +76,7 @@
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'mega-menu-right-2',
+					'theme_location' => 'menu-kulture',
 					'container'      => false,
 					'menu_class'     => 'mega-menu-nav mega-menu-top-level',
 					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',

@@ -1,75 +1,138 @@
-<footer class="footer-main">
-	<div class="w-full py-20 md:py-24 px-4 md:px-8 border-t border-dark-green">
-		<div class="w-full mb-8">
-			<?php do_action( 'theme_logo' ); ?>
+<footer class="footer-main border-t border-t-blue pt-32">
+
+	<div class="az-container-footer az-container">
+		<div class="col-span-2 md:col-span-8 xl:col-span-2 xl:col-start-3 mb-12 xl:mb-16">
+			<div class="w-full">
+				<?php do_action( 'theme_logo' ); ?>
+			</div>
 		</div>
-		<div class="w-full grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4">
-			<div class="md:col-span-3 lg:col-span-2 mb-12 lg:mb-0">
-				<p class="font-sans text-base text-dark-green leading-7 mb-4"><?php the_field( 'footer_address', 'options' ); ?></p>
+		<div class="col-span-2 md:col-span-2 xl:col-span-2 mb-12 xl:mb-16">
+			<h3 class="title-footer"><?php esc_html_e( 'Contacts', 'az' ); ?></h3>
+			<p class="text-footer"><?php the_field( 'contacts_text', 'options' ); ?></p>
+			<div class="flex flex-col">
+				<a class="text-footer--link" href="tel:<?php the_field( 'contacts_phone', 'options' ); ?>"><?php the_field( 'contacts_phone', 'options' ); ?></a>
+				<a class="text-footer--link" href="mailto:<?php the_field( 'contacts_email', 'options' ); ?>"><?php the_field( 'contacts_email', 'options' ); ?></a>
+			</div>
+		</div>
+		<div class="col-span-2 md:col-span-2 xl:col-span-2 mb-12 xl:mb-16">
+			<h3 class="title-footer"><?php esc_html_e( 'Follow us', 'az' ); ?></h3>
+			<div class="flex flex-col">
 				<?php
-				$email = get_field( 'footer_email', 'options' );
-				if ( $email ) :
-					?><a class="font-sans text-base text-dark-green leading-7 block transition-all duration-300 ease-in-out hover:text-green hover:underline underline-offset-4" href="mailto:<?php echo esc_attr( $email ); ?>"> <?php echo $email; ?></a><?php
+				$facebook  = get_field( 'socials_facebook_url', 'options' );
+				$instagram = get_field( 'socials_instagram_url', 'options' );
+				if ( $facebook ) :
+					?>
+					<a class="text-footer--link" href="<?php echo esc_url( $facebook ); ?>" target="_blank"><?php esc_html_e( 'facebook', 'az' ); ?></a>
+					<?php
+				endif;
+				if ( $instagram ) :
+					?>
+					<a class="text-footer--link" href="<?php echo esc_url( $instagram ); ?>" target="_blank"><?php esc_html_e( 'instagram', 'az' ); ?></a>
+					<?php
 				endif;
 				?>
-				<?php
-				$phone = get_field( 'footer_phone', 'options' );
-				$clean_phone = str_replace( ' ', '', $phone );
-				if ( $phone ) :
-					?><a class="font-sans text-base text-dark-green leading-7 block mb-6 transition-all duration-300 ease-in-out hover:text-green hover:underline underline-offset-4" href="tel:<?php echo esc_attr( $clean_phone ); ?>"> <?php echo $phone; ?></a><?php
-				endif;
-				?>
-				<?php do_action( 'socials' ); ?>
 			</div>
-			<div class="lg:col-start-4 md:col-span-3 lg:col-span-4 mb-12 lg:mb-0">
-				<?php echo do_shortcode( get_field( 'footer_newsletter_shortcode', 'options' ) ); ?>
-			</div>
-			<div class="lg:col-start-9 md:col-span-3 lg:col-span-2 mb-12 lg:mb-0">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'footer',
-						'container'      => false,
-						'menu_class'     => 'footer',
-						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-						'fallback_cb'    => '__return_false',
-					),
-				);
-				?>
-			</div>
-			<div class="md:col-span-3 lg:col-span-2">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'footer_terms',
-						'container'      => false,
-						'menu_class'     => 'footer_terms',
-						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-						'fallback_cb'    => '__return_false',
-					),
-				);
-				?>
-			</div>
+		</div>
+		<div class="col-span-2 md:col-span-3 xl:col-span-2 mb-12 xl:mb-16">
+			<h3 class="title-footer"><?php esc_html_e( 'Newsletter', 'az' ); ?></h3>
 		</div>
 	</div>
 
-	<div class="w-full px-4 md:px-8 py-5 flex justify-between items-center border-t border-dark-green">
-		<p class="font-sans text-xs text-dark-green">
+	<div class="az-container-footer az-container">
+		<div class="col-span-1 md:col-span-2 xl:col-span-2 xl:col-start-3 mb-12 xl:mb-32">
+			<h3 class="title-footer"><?php esc_html_e( 'Aufenthalt', 'az' ); ?></h3>
 			<?php
-			$y = date( 'Y' );
-			printf(
-				esc_html__( 'Urheberrecht &copy; %d Hotel Resort Alex', 'az' ),
-				esc_html( $y )
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-stay',
+					'container'      => false,
+					'menu_class'     => 'footer-menu-nav',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'fallback_cb'    => '__return_false',
+				)
 			);
 			?>
-		</p>
-		<p class="font-sans text-xs text-dark-green">
+		</div>
+		<div class="col-span-1 md:col-span-2 xl:col-span-2 mb-12 xl:mb-32">
+			<h3 class="title-footer"><?php esc_html_e( 'Genuss', 'az' ); ?></h3>
 			<?php
-			printf(
-				__( 'Developed by: <a href="%s">dig.id</a>', 'az' ),
-				esc_url( 'https://dig.id' )
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-eat&drink',
+					'container'      => false,
+					'menu_class'     => 'footer-menu-nav',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'fallback_cb'    => '__return_false',
+				)
 			);
 			?>
-		</p>
+		</div>
+		<div class="col-span-1 md:col-span-2 xl:col-span-2 mb-12 xl:mb-32">
+			<h3 class="title-footer"><?php esc_html_e( 'Erlebnis', 'az' ); ?></h3>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-experience',
+					'container'      => false,
+					'menu_class'     => 'footer-menu-nav',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'fallback_cb'    => '__return_false',
+				)
+			);
+			?>
+		</div>
+		<div class="col-span-1 md:col-span-2 xl:col-span-2 mb-12 xl:mb-32">
+			<h3 class="title-footer"><?php esc_html_e( 'Kultur', 'az' ); ?></h3>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-kulture',
+					'container'      => false,
+					'menu_class'     => 'footer-menu-nav',
+					'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'fallback_cb'    => '__return_false',
+				)
+			);
+			?>
+		</div>
+	</div>
+
+
+	<div class="az-container-grid az-container border-t border-t-blue py-6">
+		<div class="col-span-1 md:col-span-8 xl:col-span-8 xl:col-start-3 flex flex-col xl:flex-row justify-center xl:justify-between items-center">
+			<div class="copy-info flex flex-col xl:flex-row order-2 xl:order-1">
+				<p class="text-footer !text-xs xl:!text-sm text-center xl:text-right mr-0 xl:mr-4">
+					<?php
+					$y = date( 'Y' );
+					printf(
+						esc_html__( 'Urheberrecht &copy; %d Hotel Resort Alex', 'az' ),
+						esc_html( $y )
+					);
+					?>
+				</p>
+				<p class="text-footer !text-xs xl:!text-sm text-center xl:text-right">
+					<?php
+					printf(
+						__( 'Developed by: <a href="%s">dig.id</a>', 'az' ),
+						esc_url( 'https://dig.id' )
+					);
+					?>
+				</p>
+			</div>
+			<div class="copy-menu order-1 xl:order-2 mb-6 xl:mb-0">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'copyright',
+						'container'      => false,
+						'menu_class'     => 'copy-menu-nav',
+						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						'fallback_cb'    => '__return_false',
+					)
+				);
+				?>
+			</div>
+		</div>
+
 	</div>
 </footer>

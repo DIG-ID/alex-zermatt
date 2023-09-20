@@ -11,7 +11,7 @@ if ( have_posts() ) :
 			do_action( 'before_post_content' );
 				get_template_part( 'template-parts/pages/stay/intro' );
 				get_template_part( 'template-parts/pages/stay/rooms' );
-				get_template_part( 'template-parts/modules/teaser-box-double', null, array( 'paddings' => 'pt-24 xl:pt-44', ));
+				get_template_part( 'template-parts/modules/teaser-box-double', null, array( 'paddings' => 'pt-24 xl:pt-44', ) );
 				get_template_part( 'template-parts/pages/stay/seminare' );
 			do_action( 'after_post_content' );
 		do_action( 'after_main_content' );

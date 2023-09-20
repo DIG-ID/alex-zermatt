@@ -4,10 +4,21 @@
 .title-sm
   @apply font-serif font-bold text-sm md:text-lg xl:text-xl text-blue leading-7 md:leading-none tracking-[2.6px] uppercase
 
+.title-sub
+  @apply font-sans font-normal text-xs md:text-sm xl:text-lg text-blue leading-none tracking-[6.3px] uppercase relative
+
 .title-overline
   @apply font-sans font-normal text-xs md:text-sm xl:text-lg text-blue leading-none tracking-[6.3px] uppercase relative inline-block z-10 mb-16 md:mb-24 xl:mb-36 pb-9 mx-auto text-center
   &::after
     @apply content-[''] inline-block w-[1px] h-[125px] md:h-[200px] xl:h-[290px] bg-blue absolute left-1/2 -translate-x-1/2 top-16
 
+.title-footer
+  @apply font-serif font-bold text-blue text-sm xl:text-lg uppercase leading-[34px] tracking-[1.26px] mb-2 xl:mb-6
+
 .text-body
   @apply font-sans font-normal text-xs md:text-sm text-blue leading-6 tracking-[0.42px]
+
+.text-footer
+  @apply font-serif font-light text-blue text-sm xl:text-lg leading-[26px] xl:leading-[34px] tracking-[0.84px] xl:tracking-[1.26px]
+  &--link
+    @apply font-serif font-light text-blue text-sm xl:text-lg leading-[26px] xl:leading-[34px] tracking-[0.84px] xl:tracking-[1.26px] transition-all duration-300 ease-in-out hover:text-gold inline-block

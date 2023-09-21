@@ -1,7 +1,6 @@
 <section class="section-experience az-container mb-72">
 	<div class="az-container-grid items-end">
-		<div class="col-span-3 col-start-3">
-			
+		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3">
 			<?php
 			$stay_img_sm = get_field( 'experience_image_small' );
 			if ( $stay_img_sm ) :
@@ -22,7 +21,7 @@
 			endif;
 			?>
 		</div>
-		<div class="col-span-4 col-start-7">
+		<div class="xl:col-span-4 xl:col-start-7">
 			<h2 class="title-overline !block mx-auto"><?php the_field( 'experience_subtitle' ); ?></h2>
 			<?php
 			$stay_img_lg = get_field( 'experience_image_large' );

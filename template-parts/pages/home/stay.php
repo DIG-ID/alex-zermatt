@@ -8,7 +8,7 @@
 				echo wp_get_attachment_image( $stay_img_sm, 'full', false, array( 'class' => 'w-full object-cover mb-24 hidden invisible xl:block xl:visible' ) );
 			endif;
 			?>
-			<div class="grid grid-cols-1 md:grid-cols-8 xl:grid-cols-3">
+			<div class="grid grid-cols-1 md:grid-cols-8 xl:grid-cols-3 md:gap-4 xl:gap-9">
 				<div class="col-span-1 md:col-span-4 xl:col-span-3">
 					<h3 class="title-xl mb-16"><?php the_field( 'stay_title' ); ?></h3>
 				</div>

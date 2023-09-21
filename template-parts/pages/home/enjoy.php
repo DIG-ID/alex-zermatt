@@ -1,28 +1,28 @@
-<section class="section-pleasure az-container mb-72">
-	<div class="az-container-grid items-end">
+<section class="section-enjoy az-container mb-28 xl:mb-72">
+	<div class="az-container-grid xl:items-end">
 		<div class="col-span-1 md:col-span-8 xl:col-span-4 xl:col-start-3">
 			<h2 class="title-overline !block mx-auto xl:!hidden xl:invisible"><?php the_field( 'enjoy_subtitle' ); ?></h2>
 			<?php
 			$stay_img_lg = get_field( 'enjoy_image_large' );
 			if ( $stay_img_lg ) :
-				echo wp_get_attachment_image( $stay_img_lg, 'full', false, array( 'class' => 'w-full object-cover mb-24' ) );
+				echo wp_get_attachment_image( $stay_img_lg, 'full', false, array( 'class' => 'w-full object-cover mb-12 xl:mb-24 max-h-[377px] md:max-h-[800px]' ) );
 			endif;
 			?>
 		</div>
 		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-8">
-			<h2 class="title-overline mx-auto hidden invisible xl:!block xl:visible"><?php the_field( 'enjoy_subtitle' ); ?></h2>
+			<h2 class="title-overline mx-auto !hidden invisible xl:!block xl:visible"><?php the_field( 'enjoy_subtitle' ); ?></h2>
 			<?php
 			$stay_img_sm = get_field( 'enjoy_image_small' );
 			if ( $stay_img_sm ) :
-				echo wp_get_attachment_image( $stay_img_sm, 'full', false, array( 'class' => 'w-full object-cover mb-24 hidden invisible xl:block xl:visible' ) );
+				echo wp_get_attachment_image( $stay_img_sm, 'full', false, array( 'class' => 'w-full object-cover mb-12 xl:mb-24 hidden invisible xl:block xl:visible' ) );
 			endif;
 			?>
 			<div class="grid grid-cols-1 md:grid-cols-8 xl:grid-cols-3 md:gap-4 xl:gap-9">
 				<div class="col-span-1 md:col-span-4 xl:col-span-3">
-					<h3 class="title-xl mb-16"><?php the_field( 'enjoy_title' ); ?></h3>
+					<h3 class="title-xl mb-6 md:mb-0 xl:mb-16"><?php the_field( 'enjoy_title' ); ?></h3>
 				</div>
 				<div class="col-span-1 md:col-span-4 xl:col-span-3">
-					<p class="body-text mb-16"><?php the_field( 'enjoy_description' ); ?></p>
+					<p class="body-text mb-12 md:mb-14 xl:mb-16"><?php the_field( 'enjoy_description' ); ?></p>
 				</div>
 			</div>
 			<?php

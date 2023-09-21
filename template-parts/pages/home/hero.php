@@ -20,7 +20,7 @@
 			else :
 				$hero_img = get_field( 'hero_image' );
 				if ( $hero_img ) :
-					echo wp_get_attachment_image( $hero_img, 'full', false, array( 'class' => 'w-full object-cover' ) );
+					echo wp_get_attachment_image( $hero_img, 'full', false, array( 'class' => 'w-full object-cover min-h-[530px] md:min-h-[980px] xl:min-h-[760px]' ) );
 				endif;
 			endif;
 			?>

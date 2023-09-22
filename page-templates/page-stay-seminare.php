@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Stay - Seminare Page Template
+ * Template Name: Stay - Seminare Template
  */
 
 get_header();

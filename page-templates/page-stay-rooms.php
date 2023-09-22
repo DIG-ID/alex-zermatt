@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Stay - Rooms Page Template
+ * Template Name: Stay - Rooms Template
  */
 
 get_header();

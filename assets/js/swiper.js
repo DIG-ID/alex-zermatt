@@ -24,7 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
     }
-
+    if (document.body.classList.contains("post-type-archive-zimmer")) {
+      var angeboteZimmerSwiper = new Swiper(".angebote-zimmer-swiper", {
+        loop: true,
+        spaceBetween: 35,
+        slidesPerView: 2.5,
+        navigation: {
+          nextEl: ".zimmer-swiper-button-next",
+          prevEl: ".zimmer-swiper-button-prev",
+        },
+      });
+    }
 
   }, false);
 });

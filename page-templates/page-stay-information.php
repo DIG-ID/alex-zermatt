@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Stay - Rooms Template
+ * Template Name: Stay - Information Template
  */
 
 get_header();
@@ -9,7 +9,8 @@ if ( have_posts() ) :
 		the_post();
 		do_action( 'before_main_content' );
 			do_action( 'before_post_content' );
-				get_template_part( 'template-parts/pages/stay/rooms/intro' );
+				get_template_part( 'template-parts/pages/stay/information/intro' );
+				get_template_part( 'template-parts/pages/stay/information/services' );
 			do_action( 'after_post_content' );
 		do_action( 'after_main_content' );
 	endwhile;

@@ -35,6 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
     }
+    if (document.body.classList.contains("single-zimmer")) {
+      var angeboteZimmerSwiper = new Swiper(".single-zimmer-swiper", {
+        loop: true,
+        spaceBetween: 0,
+        slidesPerView: 1,
+        navigation: {
+          nextEl: ".single-zimmer-swiper-button-next",
+          prevEl: ".single-zimmer-swiper-button-prev",
+        },
+      });
+    }
 
   }, false);
 });

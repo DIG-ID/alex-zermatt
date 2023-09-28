@@ -31,6 +31,10 @@ function az_theme_setup() {
 
 	add_image_size( 'main-header-image', 1594, 436, array( 'center', 'center' ) );
 
+	add_image_size( 'featured-header-image', 1594, 967, array( 'center', 'center' ) );
+
+	add_image_size( 'featured-image-overview', 1105, 605, array( 'center', 'center' ) );
+
 	add_image_size( 'main-header-image-half-container', 706, 830, array( 'center', 'center' ) );
 
 	add_image_size( 'angebote-slider-image', 615, 640, array( 'center', 'center' ) );

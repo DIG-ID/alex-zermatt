@@ -2,13 +2,25 @@
 .swiper-button-prev:after, .swiper-button-next:after
   content: ""
 
-//prev-next arrows
+//prev-next arrows - angebot
 .swiper-button-next.angebot-swiper-button-next,
 .swiper-button-prev.angebot-swiper-button-prev
     @apply w-[140px] top-44
 
-.swiper-button-prev.angebot-swiper-button-prev
+.swiper-button-prev.angebot-swiper-button-prev,
+.swiper-button-prev.single-zimmer-swiper-button-prev
     @apply -scale-x-100
 
 .swiper-button-next.angebot-swiper-button-next
     @apply right-0 left-[475px]
+
+//prev-next arrows - zimmer
+.swiper-button-next.single-zimmer-swiper-button-next,
+.swiper-button-prev.single-zimmer-swiper-button-prev
+    @apply w-[118px] -bottom-[4.5rem] top-auto
+
+.swiper-button-next.single-zimmer-swiper-button-next
+    @apply right-0
+
+.swiper-button-prev.single-zimmer-swiper-button-prev
+    @apply right-40 left-auto

@@ -1,5 +1,5 @@
 .title-xl
-  @apply font-serif font-thin text-2xl md:text-[1.75rem] xl:text-5xl text-blue leading-7 md:leading-none tracking-[2.6px] uppercase
+  @apply font-serif font-thin text-2xl md:text-[1.75rem] xl:text-5xl text-blue leading-7 md:leading-none tracking-[2.6px] uppercase break-words hyphens-auto
 
 .title-sm
   @apply font-serif font-bold text-sm md:text-lg xl:text-xl text-blue leading-7 md:leading-none tracking-[2.6px] uppercase
@@ -12,11 +12,20 @@
   &::after
     @apply content-[''] inline-block w-[1px] h-[125px] md:h-[200px] xl:h-[290px] bg-blue absolute left-1/2 -translate-x-1/2 top-16
 
+  &__horizontal
+    @apply font-sans font-normal text-xs md:text-sm xl:text-lg text-blue leading-none tracking-[6.3px] uppercase relative inline-block z-10 mb-16 md:mb-24 xl:mb-24 pb-9
+    &::after
+      @apply content-[''] inline-block w-[620px] h-[1px] md:w-[200px] xl:w-[620px] bg-blue absolute left-0 top-16
+    &--right
+      @apply font-sans font-normal text-xs md:text-sm xl:text-lg text-blue leading-none tracking-[6.3px] uppercase relative inline-block z-10 mb-16 md:mb-24 xl:mb-24 pb-9
+      &::after
+        @apply content-[''] inline-block w-[620px] h-[1px] md:w-[200px] xl:w-[620px] bg-blue absolute right-0 top-16
+
 .title-footer
   @apply font-serif font-bold text-blue text-sm xl:text-lg uppercase leading-[34px] tracking-[1.26px] mb-2 xl:mb-6
 
 .text-body
-  @apply font-sans font-normal text-xs md:text-sm text-blue leading-6 tracking-[0.42px]
+  @apply font-sans font-normal text-xs md:text-sm text-blue leading-6 tracking-[0.42px] break-words hyphens-auto
 
 .text-footer
   @apply font-serif font-light text-blue text-sm xl:text-lg leading-[26px] xl:leading-[34px] tracking-[0.84px] xl:tracking-[1.26px]

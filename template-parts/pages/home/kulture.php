@@ -12,7 +12,7 @@
 		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-8">
 			<div class="grid grid-cols-1 md:grid-cols-8 xl:grid-cols-3 md:gap-4 xl:gap-9">
 				<div class="col-span-1 md:col-span-4 xl:col-span-3">
-				<h3 class="title-xl mb-6 md:mb-0 xl:mb-16 xl:mt-48"><?php the_field( 'kulture_title' ); ?></h3>
+					<h3 class="title-xl mb-6 md:mb-0 xl:mb-16 xl:mt-48"><?php the_field( 'kulture_title' ); ?></h3>
 				</div>
 				<div class="col-span-1 md:col-span-4 xl:col-span-3">
 					<p class="body-text mb-12 md:mb-14 xl:mb-16"><?php the_field( 'kulture_description' ); ?></p>

@@ -1,4 +1,3 @@
-
 <section id="section-angebote-slider" class="section-angebote-slider az-container overflow-hidden xl:pb-48">
     <div class="az-container-grid">
         <div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-3 mb-12 md:mb-8 xl:mb-7 relative">

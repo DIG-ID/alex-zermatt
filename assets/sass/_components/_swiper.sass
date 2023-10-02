@@ -24,3 +24,27 @@
 
 .swiper-button-prev.single-zimmer-swiper-button-prev
     @apply right-40 left-auto
+
+// swiper for content with tabs (rooms)
+.fade-content
+    opacity: 0
+    transition: opacity 0.3s ease-in-out
+
+.swiper-slide-active .fade-content
+    opacity: 1
+
+.room-details .swiper-pagination
+    position: absolute
+    bottom: 20px
+    left: 0
+    right: 0
+    margin: 0 auto
+
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet
+        @apply font-serif font-thin text-[22px] text-blue leading-7 md:leading-none tracking-[2.6px] uppercase break-words hyphens-auto w-full bg-transparent min-h-[82px] rounded-none flex items-center opacity-100 pl-6 pr-5 m-0 justify-between
+        &-active
+            @apply bg-[#FFF8F1] border-b border-blue
+        img
+            @apply w-[118px] ml-5
+    

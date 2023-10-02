@@ -20,7 +20,7 @@
                     if ( $query->have_posts() ) :
                         while ( $query->have_posts() ) :
                             $query->the_post();
-                            get_template_part( 'template-parts/components/angebote-slide' );
+                            get_template_part( 'template-parts/components/angebote', 'slide' );
                         endwhile;
                     endif;
                     wp_reset_postdata();

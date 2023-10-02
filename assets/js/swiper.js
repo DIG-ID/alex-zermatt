@@ -34,6 +34,30 @@ document.addEventListener("DOMContentLoaded", () => {
           prevEl: ".zimmer-swiper-button-prev",
         },
       });
+
+      var postsTabsSwiper = new Swiper('.swiper-tabs-container', {
+          effect: 'fade',
+          pagination: {
+              el: '.swiper-tabs-pagination',
+              clickable: true,
+              renderBullet: function (index, className) {
+                  // Check if the post link exists for this index
+                  if (typeof swiperData.postLinks !== 'undefined' && swiperData.postLinks[index] !== '') {
+                      return '<a href="' + swiperData.postLinks[index] + '" class="' + className + '">' + swiperData.postTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" alt="arrow"></a>';
+                  } else {
+                      return '<span class="' + className + '">' + swiperData.postTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" alt="arrow"></span>';
+                  }
+              },
+          },
+      });
+      document.querySelector('.swiper-tabs-pagination').addEventListener('click', function (event) {
+          event.preventDefault();  // Prevent default behavior (e.g., navigating away from the page)
+          var link = event.target.closest('a');
+          if (link) {
+              window.location.href = link.href;  // Navigate to the post URL
+          }
+      });
+      
     }
     if (document.body.classList.contains("single-zimmer")) {
       var angeboteZimmerSwiper = new Swiper(".single-zimmer-swiper", {

@@ -148,6 +148,33 @@ function az_theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'az_theme_enqueue_styles' );
 
+function localize_swiper_data() {
+    $rooms_query = new WP_Query(array(
+        'post_type' => 'zimmer',
+		'order' => 'ASC',
+		'category_name' => 'zimmer'
+    ));
+
+    $room_titles = array();
+    $post_links = array();  // Initialize an array for post links
+
+    if ($rooms_query->have_posts()) {
+        while ($rooms_query->have_posts()) {
+            $rooms_query->the_post();
+            $room_titles[] = get_the_title();
+            $post_links[] = get_permalink();  // Get and store the post link
+        }
+        wp_reset_postdata();
+    }
+
+    // Localize the script with room titles and post links
+    wp_localize_script('theme-scripts', 'swiperData', array(
+        'postTitles' => $room_titles,
+        'postLinks' => $post_links  // Include post links in localization
+    ));
+}
+add_action('wp_enqueue_scripts', 'localize_swiper_data');
+
 
 
 /**

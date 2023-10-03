@@ -149,33 +149,55 @@ function az_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'az_theme_enqueue_styles' );
 
 function localize_swiper_data() {
-    $rooms_query = new WP_Query(array(
+    // Query for 'zimmer' custom post type
+    $zimmer_query = new WP_Query(array(
         'post_type' => 'zimmer',
-		'order' => 'ASC',
-		'category_name' => 'zimmer'
+        'order' => 'ASC',
+        'category_name' => 'zimmer'
     ));
 
-    $room_titles = array();
-    $post_links = array();  // Initialize an array for post links
+    // Query for 'suite' custom post type
+    $suite_query = new WP_Query(array(
+        'post_type' => 'zimmer',
+        'order' => 'ASC',
+        'category_name' => 'suite'
+    ));
 
-    if ($rooms_query->have_posts()) {
-        while ($rooms_query->have_posts()) {
-            $rooms_query->the_post();
-            $room_titles[] = get_the_title();
-            $post_links[] = get_permalink();  // Get and store the post link
+    $zimmer_titles = array();
+    $zimmer_links = array();
+
+    $suite_titles = array();
+    $suite_links = array();
+
+    // Process 'zimmer' query
+    if ($zimmer_query->have_posts()) {
+        while ($zimmer_query->have_posts()) {
+            $zimmer_query->the_post();
+            $zimmer_titles[] = get_the_title();
+            $zimmer_links[] = get_permalink();
         }
         wp_reset_postdata();
     }
 
-    // Localize the script with room titles and post links
+    // Process 'suite' query
+    if ($suite_query->have_posts()) {
+        while ($suite_query->have_posts()) {
+            $suite_query->the_post();
+            $suite_titles[] = get_the_title();
+            $suite_links[] = get_permalink();
+        }
+        wp_reset_postdata();
+    }
+
+    // Localize the script with room titles and post links for 'zimmer' and 'suite'
     wp_localize_script('theme-scripts', 'swiperData', array(
-        'postTitles' => $room_titles,
-        'postLinks' => $post_links  // Include post links in localization
+        'zimmerTitles' => $zimmer_titles,
+        'zimmerLinks' => $zimmer_links,
+        'suiteTitles' => $suite_titles,
+        'suiteLinks' => $suite_links
     ));
 }
 add_action('wp_enqueue_scripts', 'localize_swiper_data');
-
-
 
 /**
  * Wrap the post thumbnail image in a figure element only in the blog posts and project posts.

@@ -34,31 +34,63 @@ document.addEventListener("DOMContentLoaded", () => {
           prevEl: ".zimmer-swiper-button-prev",
         },
       });
-
+      //rooms category - zimmer
       var postsTabsSwiper = new Swiper('.swiper-tabs-container', {
           effect: 'fade',
           pagination: {
               el: '.swiper-tabs-pagination',
               clickable: true,
               renderBullet: function (index, className) {
-                  if (typeof swiperData.postLinks !== 'undefined' && swiperData.postLinks[index] !== '') {
-                      return '<a href="' + swiperData.postLinks[index] + '" class="' + className + '">' + swiperData.postTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" alt="arrow"></a>';
+                  if (typeof swiperData.zimmerLinks !== 'undefined' && swiperData.zimmerLinks[index] !== '') {
+                      return '<a href="' + swiperData.zimmerLinks[index] + '" class="' + className + '">' + swiperData.zimmerTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" class="swiper-arrow" alt="arrow"></a>';
                   } else {
-                      return '<span class="' + className + '">' + swiperData.postTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" alt="arrow"></span>';
+                      return '<span class="' + className + '">' + swiperData.zimmerTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" class="swiper-arrow" alt="arrow"></span>';
                   }
               },
           },
       });
       //hover in slider pagination
-      var paginationBullets = document.querySelectorAll('.swiper-tabs-pagination a');
+      var paginationBulletsZimmer = document.querySelectorAll('.swiper-tabs-pagination a');
 
-      paginationBullets.forEach(function (bullet, index) {
+      paginationBulletsZimmer.forEach(function (bullet, index) {
           bullet.addEventListener('mouseenter', function () {
               postsTabsSwiper.slideTo(index);
           });
       });
       //click event in slider pagination
       document.querySelector('.swiper-tabs-pagination').addEventListener('click', function (event) {
+          event.preventDefault();
+          var link = event.target.closest('a');
+          if (link) {
+              window.location.href = link.href;
+          }
+      });
+
+      //rooms category - zimmer
+      var postsSuiteSwiper = new Swiper('.swiper-suite-container', {
+          effect: 'fade',
+          pagination: {
+              el: '.swiper-suite-pagination',
+              clickable: true,
+              renderBullet: function (index, className) {
+                  if (typeof swiperData.suiteLinks !== 'undefined' && swiperData.suiteLinks[index] !== '') {
+                      return '<a href="' + swiperData.suiteLinks[index] + '" class="' + className + '">' + swiperData.suiteTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" class="swiper-arrow" alt="arrow"></a>';
+                  } else {
+                      return '<span class="' + className + '">' + swiperData.suiteTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" class="swiper-arrow" alt="arrow"></span>';
+                  }
+              },
+          },
+      });
+      //hover in slider pagination
+      var paginationBulletsSuite = document.querySelectorAll('.swiper-suite-pagination a');
+
+      paginationBulletsSuite.forEach(function (bullet, index) {
+          bullet.addEventListener('mouseenter', function () {
+              postsSuiteSwiper.slideTo(index);
+          });
+      });
+      //click event in slider pagination
+      document.querySelector('.swiper-suite-pagination').addEventListener('click', function (event) {
           event.preventDefault();
           var link = event.target.closest('a');
           if (link) {

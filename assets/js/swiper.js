@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
               el: '.swiper-tabs-pagination',
               clickable: true,
               renderBullet: function (index, className) {
-                  // Check if the post link exists for this index
                   if (typeof swiperData.postLinks !== 'undefined' && swiperData.postLinks[index] !== '') {
                       return '<a href="' + swiperData.postLinks[index] + '" class="' + className + '">' + swiperData.postTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" alt="arrow"></a>';
                   } else {
@@ -50,11 +49,20 @@ document.addEventListener("DOMContentLoaded", () => {
               },
           },
       });
+      //hover in slider pagination
+      var paginationBullets = document.querySelectorAll('.swiper-tabs-pagination a');
+
+      paginationBullets.forEach(function (bullet, index) {
+          bullet.addEventListener('mouseenter', function () {
+              postsTabsSwiper.slideTo(index);
+          });
+      });
+      //click event in slider pagination
       document.querySelector('.swiper-tabs-pagination').addEventListener('click', function (event) {
-          event.preventDefault();  // Prevent default behavior (e.g., navigating away from the page)
+          event.preventDefault();
           var link = event.target.closest('a');
           if (link) {
-              window.location.href = link.href;  // Navigate to the post URL
+              window.location.href = link.href;
           }
       });
       

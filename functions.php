@@ -149,16 +149,16 @@ function az_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'az_theme_enqueue_styles' );
 
 function localize_swiper_data() {
-    // Query for 'zimmer' custom post type
     $zimmer_query = new WP_Query(array(
         'post_type' => 'zimmer',
+		'posts_per_page' => 3,
         'order' => 'ASC',
         'category_name' => 'zimmer'
     ));
 
-    // Query for 'suite' custom post type
     $suite_query = new WP_Query(array(
         'post_type' => 'zimmer',
+		'posts_per_page' => 2,
         'order' => 'ASC',
         'category_name' => 'suite'
     ));
@@ -169,7 +169,6 @@ function localize_swiper_data() {
     $suite_titles = array();
     $suite_links = array();
 
-    // Process 'zimmer' query
     if ($zimmer_query->have_posts()) {
         while ($zimmer_query->have_posts()) {
             $zimmer_query->the_post();
@@ -179,7 +178,6 @@ function localize_swiper_data() {
         wp_reset_postdata();
     }
 
-    // Process 'suite' query
     if ($suite_query->have_posts()) {
         while ($suite_query->have_posts()) {
             $suite_query->the_post();
@@ -189,7 +187,6 @@ function localize_swiper_data() {
         wp_reset_postdata();
     }
 
-    // Localize the script with room titles and post links for 'zimmer' and 'suite'
     wp_localize_script('theme-scripts', 'swiperData', array(
         'zimmerTitles' => $zimmer_titles,
         'zimmerLinks' => $zimmer_links,

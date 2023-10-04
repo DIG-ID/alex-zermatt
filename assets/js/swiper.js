@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
               window.location.href = link.href;
           }
       });
-
       //rooms category - zimmer
       var postsSuiteSwiper = new Swiper('.swiper-suite-container', {
           effect: 'fade',
@@ -97,8 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
               window.location.href = link.href;
           }
       });
-      
     }
+
     if (document.body.classList.contains("single-zimmer")) {
       var angeboteZimmerSwiper = new Swiper(".single-zimmer-swiper", {
         loop: true,

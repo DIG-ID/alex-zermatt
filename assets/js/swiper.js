@@ -8,7 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
       var angeboteSummerSwiper = new Swiper(".angebote-summer-swiper", {
         loop: true,
         spaceBetween: 35,
-        slidesPerView: 2.5,
+        slidesPerView: 1,
+        breakpoints: {
+            768: {
+                slidesPerView: 1.5,
+            },
+            1920: {
+                slidesPerView: 2.5,
+            },
+        },
         navigation: {
           nextEl: ".summer-swiper-button-next",
           prevEl: ".summer-swiper-button-prev",
@@ -17,7 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
       var angeboteWinterSwiper = new Swiper(".angebote-winter-swiper", {
         loop: true,
         spaceBetween: 35,
-        slidesPerView: 2.5,
+        slidesPerView: 1,
+        breakpoints: {
+            768: {
+                slidesPerView: 1.5,
+            },
+            1920: {
+                slidesPerView: 2.5,
+            },
+        },
         navigation: {
           nextEl: ".winter-swiper-button-next",
           prevEl: ".winter-swiper-button-prev",
@@ -28,7 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
       var angeboteZimmerSwiper = new Swiper(".angebote-zimmer-swiper", {
         loop: true,
         spaceBetween: 35,
-        slidesPerView: 2.5,
+        slidesPerView: 1,
+        breakpoints: {
+            768: {
+                slidesPerView: 1.5,
+            },
+            1920: {
+                slidesPerView: 2.5,
+            },
+        },
         navigation: {
           nextEl: ".zimmer-swiper-button-next",
           prevEl: ".zimmer-swiper-button-prev",

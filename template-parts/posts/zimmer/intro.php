@@ -1,4 +1,4 @@
-<section id="section-intro" class="section-intro az-container pt-28 pb-36 overflow-hidden">
+<section id="section-intro" class="section-intro az-container pt-28 pb-16 xl:pb-36 overflow-hidden">
 	<div class="az-container-grid gap-y-3">
 		<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2 mb-20 relative">
         <?php 
@@ -13,7 +13,7 @@
                     <?php endforeach; ?>
                 </div>
             </div>
-            <h1 class="title-xl absolute -bottom-[4.5rem] left-0"><?php the_title(); ?></h1>
+            <h1 class="title-xl absolute -bottom-[4.5rem] left-0 hidden xl:block"><?php the_title(); ?></h1>
             <div class="swiper-button-next single-zimmer-swiper-button-next">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-arrow.svg" alt="Next">
             </div>
@@ -23,12 +23,13 @@
         <?php endif; ?>
 		</div>
 		<div class="col-span-1 md:col-span-5 xl:col-span-3 col-start-1 md:col-start-1 xl:col-start-4">
+        <h1 class="title-xl mb-7 block xl:hidden"><?php the_title(); ?></h1>
 			<p class="text-body"><?php the_field( 'descriptions_room_description_1' ) ?></p>
 		</div>
         <div class="col-span-1 md:col-span-5 xl:col-span-3 col-start-1 md:col-start-1 xl:col-start-7">
 			<p class="text-body"><?php the_field( 'descriptions_room_description_2' ) ?></p>
 		</div>
-        <div class="col-span-1 md:col-span-4 xl:col-span-2 col-start-1 md:col-start-3 xl:col-start-4">
+        <div class="col-span-1 md:col-span-4 xl:col-span-2 col-start-1 md:col-start-3 xl:col-start-4 mt-9 xl:mt-0">
 			<button class="btn btn--box"><?php esc_html_e( 'Jetzt buchen', 'alexzermatt' ) ?></button>
 		</div>
 	</div>

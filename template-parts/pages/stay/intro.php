@@ -11,7 +11,7 @@
 		<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2">
 			<span class="az-vertical-line-small"></span>
 		</div>
-		<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2">
+		<div class="col-span-1 md:col-span-8 xl:col-span-8 col-start-1 xl:col-start-3 justify-center">
 			<h1 class="title-xl text-center"><?php the_field( 'section_intro_title' ) ?></h1>
 		</div>
 		<div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-3 xl:col-start-5">

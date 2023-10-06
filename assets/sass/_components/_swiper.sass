@@ -5,25 +5,25 @@
 //prev-next arrows - angebot
 .swiper-button-next.angebot-swiper-button-next,
 .swiper-button-prev.angebot-swiper-button-prev
-    @apply w-[140px] top-44
+    @apply w-[52px] md:w-[140px] top-20 md:top-28 xl:top-44
 
 .swiper-button-prev.angebot-swiper-button-prev,
 .swiper-button-prev.single-zimmer-swiper-button-prev
     @apply -scale-x-100
 
 .swiper-button-next.angebot-swiper-button-next
-    @apply right-0 left-[475px]
+    @apply right-0 left-auto xl:left-[475px]
 
 //prev-next arrows - zimmer
 .swiper-button-next.single-zimmer-swiper-button-next,
 .swiper-button-prev.single-zimmer-swiper-button-prev
-    @apply w-[118px] -bottom-[4.5rem] top-auto
+    @apply w-[52px] md:w-[118px] xl:w-[118px] -bottom-[4.5rem] top-auto
 
 .swiper-button-next.single-zimmer-swiper-button-next
     @apply right-0
 
 .swiper-button-prev.single-zimmer-swiper-button-prev
-    @apply right-40 left-auto
+    @apply xl:right-40 left-auto
 
 // swiper for content with tabs (rooms)
 .fade-content
@@ -48,7 +48,7 @@
             .swiper-arrow
                 display: inline-block
         img
-            @apply w-[50px] md:w-[62px] xl:w-[118px] ml-5
+            @apply w-[52px] md:w-[62px] xl:w-[118px] ml-5
 
 .swiper-arrow
     display: none

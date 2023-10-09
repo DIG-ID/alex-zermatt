@@ -13,7 +13,7 @@
 			<p class="body-text"><?php the_field( 'museum_text_box_right', 'options' ); ?></p>
 		</div>
 	</div>
-	<div class="w-full text-center mb-12 md:mb-24">
+	<div class="w-full text-center mb-12 md:mb-24 flex justify-center">
 		<?php
 		$museum_link = get_field( 'museum_link', 'options' );
 		if ( $museum_link ) :

@@ -10,6 +10,6 @@
             <img src="https://placehold.co/615x640">
         </div>
     <?php endif; ?>
-    <h2 class="title-xl pt-7 md:pt-12 xl:pt-7 pb-14 xl:pb-16"><?php the_title(); ?></h2>
-    <span class="block text-right xl:text-left mr-16 xl:mr-0 pb-2"><a class="btn btn--arrow-right" href="<?php the_permalink( '' ); ?>"><?php echo esc_html_e( 'Mehr Erfahren', 'alexzermatt' ); ?></a></span>
+    <h2 class="title-xl pt-7 md:pt-12 xl:pt-7 pb-10 xl:pb-16"><?php the_title(); ?></h2>
+    <span class="block text-right md:text-left mr-16 xl:mr-0 pb-2"><a class="btn btn--arrow-right" href="<?php the_permalink( '' ); ?>"><?php echo esc_html_e( 'Mehr Erfahren', 'alexzermatt' ); ?></a></span>
 </article>

@@ -1,6 +1,16 @@
-<section class="section-intro w-full py-20 lg:py-32 px-4 lg:px-8 text-center grid grid-cols-1 lg:grid-cols-12 lg:gap-4">
-	<div class="lg:col-span-8 lg:col-start-3">
-		<h2 class="title-section text-green"><?php the_field( 'intro_title' ); ?></h2>
-		<p class="text-body text-dark-green"><?php the_field( 'intro_description' ); ?></p>
-	</div>
+<section id="section-intro" class="section-intro az-container pt-28 xl:pt-48 overflow-hidden">
+	<div class="az-container-grid gap-y-3 xl:items-center">
+        <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 xl:max-w-[400px] text-center xl:text-left order-2 xl:order-1">
+            <h1 class="title-xl mb-10 md:mb-12 mt-12 xl:mt-0"><?php the_field( 'section_intro_title' ); ?></h1>
+            <p class="text-body mb-14 xl:mb-0 xl:max-w-[363px]"><?php the_field( 'section_intro_description' ); ?></p>
+        </div>
+        <div class="relative col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-7 max-w-none order-1 xl:order-2">
+            <?php 
+                $intro_image = get_field( 'section_intro_image' );
+                if( $intro_image ) {
+                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container' );
+                }
+            ?>
+        </div>
+    </div>
 </section>

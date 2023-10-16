@@ -23,7 +23,7 @@
                 </div>
             <?php endif; ?>
         </div>
-        <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 md:col-start-1 xl:col-start-3 order-3 pt-20 xl:pt-36">
+        <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 md:col-start-1 xl:col-start-3 order-3 pt-20 xl:pt-26">
             <span class="block mr-16 xl:mr-0"><a class="btn btn--arrow-left" href="<?php echo esc_url( get_post_type_archive_link( 'event' ) ); ?>"><?php echo esc_html_e( 'Zurück', 'alexzermatt' ) ?></a></span>
         </div>
     </div>

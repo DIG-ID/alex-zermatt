@@ -8,9 +8,9 @@
                 }
             ?>
         </div>
-        <div class="zermatt__intro--right relative col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-3 xl:col-start-8 max-w-none xl:max-w-[363px] text-center xl:text-left">
+        <div class="zermatt__intro--right relative col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-3 xl:col-start-8 text-center xl:text-left">
             <h1 class="title-xl mb-10 md:mb-12 mt-12 xl:mt-0"><?php the_field( 'section_intro_title' ); ?></h1>
-            <p class="text-body mb-14 xl:mb-0"><?php the_field( 'section_intro_description' ); ?></p>
+            <p class="text-body mb-14 xl:mb-0 max-w-none xl:max-w-[363px]"><?php the_field( 'section_intro_description' ); ?></p>
         </div>
     </div>
 </section>

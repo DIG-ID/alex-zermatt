@@ -27,7 +27,7 @@
                     $evente_query = new WP_Query($event_args);
 
                     if ($evente_query->have_posts()) { ?>
-                        <div class="col-span-1 md:col-span-8 xl:col-span-10">
+                        <div class="col-span-1 md:col-span-8 xl:col-span-9">
                             <h2 class="title-sub mb-8"><?php echo $term->name; ?> </h2>
                         </div>
                     <?php

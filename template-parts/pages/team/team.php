@@ -1,6 +1,6 @@
 <section id="section-rooms" class="section-rooms az-container overflow-hidden xl:mb-40">
 	<div class="az-container-grid">
-        <div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2 grid grid-cols-1 md:grid-cols-8 xl:grid-cols-10 md:gap-x-4 xl:gap-x-9">
+        <div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2 grid grid-cols-1 md:grid-cols-8 xl:grid-cols-9 md:gap-x-4 xl:gap-x-[118px]">
         <?php
             $terms = get_terms(array(
                 'taxonomy' => 'team-position',

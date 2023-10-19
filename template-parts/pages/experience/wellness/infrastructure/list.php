@@ -11,8 +11,11 @@ if ( have_rows( 'infrastructure' ) ) :
 						<div class="col-span-1 hidden invisible xl:block xl:visible">
 							<h2 class="title-xl"><?php the_sub_field( 'title' ); ?></h2>
 						</div>
-						<div class="col-span-2 xl:col-span-1 xl:pr-12 grid grid-cols-1 md:grid-cols-2 xl:block md:gap-4 xl:gap-9">
-							<p class="text-body mb-6 xl:mb-8"><?php the_sub_field( 'description' ); ?></p>
+						<div class="col-span-1 md:col-span-1 xl:col-span-1">
+							<p class="text-body mb-6 xl:mb-8"><?php the_sub_field( 'description_1' ); ?></p>
+						</div>
+						<div class="col-span-1 md:col-span-1 xl:col-span-1">
+							<p class="text-body"><?php the_sub_field( 'description_2' ); ?></p>
 						</div>
 					</div>
 				</div>

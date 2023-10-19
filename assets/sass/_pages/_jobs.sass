@@ -1,0 +1,57 @@
+.htjobs
+    &-table
+        background-color: transparent !important
+        tbody > tr > td:nth-child(1)
+            display: none !important
+        tbody > tr > td
+            @apply pt-20 pb-14 md:pb-24 flex flex-col md:flex-row
+        a
+            color: #002850 !important
+            font-weight: 100
+            @apply font-serif leading-7 md:leading-none tracking-[2.6px] uppercase w-full md:w-9/12 relative pr-12
+            &::after
+                @apply block absolute -bottom-12 left-0 w-[141px] h-[31px]
+                content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='104' height='31' viewBox='0 0 104 31' fill='none'%3E%3Cline x1='104' y1='15.5' x2='-4.37114e-08' y2='15.5' stroke='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M81.5625 0C83.2593 3.90888 85.5893 6.93016 88.1857 9.2274C93.4429 13.8788 99.7492 15.5244 103.975 15.6103L103.995 14.6106C99.9717 14.5287 93.9034 12.9511 88.8484 8.47847C86.4561 6.36182 84.281 3.58828 82.6564 -3.70563e-07L81.5625 0Z' fill='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M81.5625 30.6104C83.2593 26.7015 85.5893 23.6802 88.1857 21.383C93.4429 16.7316 99.7492 15.086 103.975 15L103.995 15.9998C99.9717 16.0817 93.9034 17.6593 88.8484 22.1319C86.4561 24.2485 84.281 27.0221 82.6564 30.6104L81.5625 30.6104Z' fill='%23002850'/%3E%3C/svg%3E")
+            &:hover
+                color: #906841 !important
+                text-decoration: none !important
+                &::after
+                    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='104' height='31' viewBox='0 0 104 31' fill='none'%3E%3Cline x1='104' y1='15.5' x2='-4.37114e-08' y2='15.5' stroke='%23906841'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M81.5625 0C83.2593 3.90888 85.5893 6.93016 88.1857 9.2274C93.4429 13.8788 99.7492 15.5244 103.975 15.6103L103.995 14.6106C99.9717 14.5287 93.9034 12.9511 88.8484 8.47847C86.4561 6.36182 84.281 3.58828 82.6564 -3.70563e-07L81.5625 0Z' fill='%23906841'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M81.5625 30.6104C83.2593 26.7015 85.5893 23.6802 88.1857 21.383C93.4429 16.7316 99.7492 15.086 103.975 15L103.995 15.9998C99.9717 16.0817 93.9034 17.6593 88.8484 22.1319C86.4561 24.2485 84.281 27.0221 82.6564 30.6104L81.5625 30.6104Z' fill='%23906841'/%3E%3C/svg%3E")
+        span
+            color: #002850 !important
+            @apply font-sans font-normal leading-6 tracking-[0.42px] w-full md:w-3/12 mt-12 md:mt-0 break-words hyphens-auto
+        td
+            border-bottom: 0px !important
+        tr
+            border-bottom: 1px solid #002850 !important
+    &-js
+        span, a
+            color: #002850 !important
+
+#jobslisting
+    max-width: 640px
+
+@media ( min-width: 768px )
+    .htjobs
+        &-table
+            a
+                font-size: 1.75rem !important
+            span
+                font-size: 0.875rem !important
+
+@media ( max-width: 768px )
+    .htjobs
+        &-table
+            a
+                font-size: 1.5rem !important
+            span
+                font-size: 0.75rem !important
+
+@media ( min-width: 1280px )
+    .htjobs
+        &-table
+            a
+                font-size: 3rem !important
+            span
+                font-size: 0.875rem !important
+    

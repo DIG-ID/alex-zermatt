@@ -13,9 +13,12 @@
                 'Breakfast' => 'breakfast.svg',
                 'Flatscreen TV' => 'flatscreenTV.svg',
                 'Kingsize Bed' => 'kingsize-bed.svg',
+                'Single Bed' => 'single_extra.svg',
+                'Extra Bed' => 'single_extra.svg',
                 'Phone' => 'phone.svg',
                 'Safe' => 'safe.svg',
-                'Wifi' => 'wifi.svg'
+                'Wifi' => 'wifi.svg',
+                'Fireplace' => 'fireplace.svg',
             );
             $selected_features = get_field('furnishing_features');
             if ($selected_features) {

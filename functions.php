@@ -124,7 +124,6 @@ add_filter( 'body_class', 'custom_body_classes' );
 /**
  * Enqueue styles and scripts
  */
-
 function az_theme_enqueue_styles() {
 
 	//Get the theme data
@@ -151,53 +150,111 @@ function az_theme_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'az_theme_enqueue_styles' );
 
-function localize_swiper_data() {
-    $zimmer_query = new WP_Query(array(
-        'post_type' => 'zimmer',
-		'posts_per_page' => 3,
-        'order' => 'ASC',
-        'category_name' => 'zimmer'
-    ));
+/**
+ * Setup swiper data
+ */
+function az_theme_localize_swiper_data() {
+	$zimmer_query = new WP_Query(
+		array(
+			'post_type'      => 'zimmer',
+			'posts_per_page' => 3,
+			'order'          => 'ASC',
+			'category_name'  => 'zimmer',
+		),
+	);
 
-    $suite_query = new WP_Query(array(
-        'post_type' => 'zimmer',
-		'posts_per_page' => 2,
-        'order' => 'ASC',
-        'category_name' => 'suite'
-    ));
+	$suite_query = new WP_Query(
+		array(
+			'post_type'      => 'zimmer',
+			'posts_per_page' => 2,
+			'order'          => 'ASC',
+			'category_name'  => 'suite',
+		),
+	);
 
-    $zimmer_titles = array();
-    $zimmer_links = array();
+	$asommer_query = new WP_Query(
+		array(
+			'post_type'      => 'activities',
+			'posts_per_page' => 3,
+			'order'          => 'ASC',
+			'category_name'  => 'sommer',
+		),
+	);
 
-    $suite_titles = array();
-    $suite_links = array();
+	$awinter_query = new WP_Query(
+		array(
+			'post_type'      => 'activities',
+			'posts_per_page' => 3,
+			'order'          => 'ASC',
+			'category_name'  => 'winter',
+		),
+	);
 
-    if ($zimmer_query->have_posts()) {
-        while ($zimmer_query->have_posts()) {
-            $zimmer_query->the_post();
-            $zimmer_titles[] = get_the_title();
-            $zimmer_links[] = get_permalink();
-        }
-        wp_reset_postdata();
-    }
+	$zimmer_titles = array();
+	$zimmer_links  = array();
 
-    if ($suite_query->have_posts()) {
-        while ($suite_query->have_posts()) {
-            $suite_query->the_post();
-            $suite_titles[] = get_the_title();
-            $suite_links[] = get_permalink();
-        }
-        wp_reset_postdata();
-    }
+	$suite_titles = array();
+	$suite_links  = array();
 
-    wp_localize_script('theme-scripts', 'swiperData', array(
-        'zimmerTitles' => $zimmer_titles,
-        'zimmerLinks' => $zimmer_links,
-        'suiteTitles' => $suite_titles,
-        'suiteLinks' => $suite_links
-    ));
+	$sommer_titles = array();
+	$sommer_links  = array();
+
+	$winter_titles = array();
+	$winter_links  = array();
+
+	if ( $zimmer_query->have_posts() ) :
+		while ( $zimmer_query->have_posts() ) :
+			$zimmer_query->the_post();
+			$zimmer_titles[] = get_the_title();
+			$zimmer_links[]  = get_permalink();
+		endwhile;
+		wp_reset_postdata();
+	endif;
+
+	if ( $suite_query->have_posts() ) :
+		while ( $suite_query->have_posts() ) :
+			$suite_query->the_post();
+			$suite_titles[] = get_the_title();
+			$suite_links[]  = get_permalink();
+		endwhile;
+		wp_reset_postdata();
+	endif;
+
+	if ( $asommer_query->have_posts() ) :
+		while ( $asommer_query->have_posts() ) :
+			$asommer_query->the_post();
+			$sommer_titles[] = get_the_title();
+			$sommer_links[]  = get_permalink();
+		endwhile;
+		wp_reset_postdata();
+	endif;
+
+	if ( $awinter_query->have_posts() ) :
+		while ( $awinter_query->have_posts() ) :
+			$awinter_query->the_post();
+			$winter_titles[] = get_the_title();
+			$winter_links[]  = get_permalink();
+		endwhile;
+		wp_reset_postdata();
+	endif;
+
+	wp_localize_script(
+		'theme-scripts',
+		'swiperData',
+		array(
+			'zimmerTitles' => $zimmer_titles,
+			'zimmerLinks'  => $zimmer_links,
+			'suiteTitles'  => $suite_titles,
+			'suiteLinks'   => $suite_links,
+			'sommerTitles' => $sommer_titles,
+			'sommerLinks'  => $sommer_links,
+			'winterTitles' => $winter_titles,
+			'winterLinks'  => $winter_links,
+		),
+	);
 }
-add_action('wp_enqueue_scripts', 'localize_swiper_data');
+
+add_action( 'wp_enqueue_scripts', 'az_theme_localize_swiper_data' );
 
 /**
  * Wrap the post thumbnail image in a figure element only in the blog posts and project posts.

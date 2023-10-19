@@ -14,7 +14,7 @@
 
 		</div>
 		<div class="col-span-1 md:col-span-8 xl:col-span-8 xl:col-start-6 order-1 xl:order-2 text-center">
-			<h2 class="title-xl xl:hidden xl:invisible mb-6 md:mb-14"><?php the_field( 'wedding_title' ); ?></h2>
+			<h2 class="title-xl xl:hidden xl:invisible mb-6 md:mb-14"><?php the_title(); ?></h2>
 			<?php
 			if ( has_post_thumbnail() ) :
 				the_post_thumbnail( 'full', array( 'class' => 'mb-6 md:mb-4 xl:mb-0 w-full object-fit' ) );

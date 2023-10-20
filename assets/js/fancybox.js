@@ -8,9 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
       Fancybox.bind("[data-fancybox]", {
         Toolbar: {
           display: {
-            left: [],
+            left: ["download"],
             middle: [],
             right: ["close"],
+          },
+          buttons: {
+            download: {
+              action: "download",
+              download: "image",
+              svg: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M19 8h4v9h5v13H4V17h5v-9h4l3-4h5v4z"/></svg>`,
+            },
           },
         },
       });

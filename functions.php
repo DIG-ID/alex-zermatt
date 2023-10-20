@@ -41,6 +41,7 @@ function az_theme_setup() {
 
 	add_image_size( 'angebote-slider-image', 615, 640, array( 'center', 'center' ) );
 
+	add_image_size( 'gallery-square', 290, 290, array( 'center', 'center' ) );
 
 	//set_post_thumbnail_size( 500, 350, 'center', 'center' );
 

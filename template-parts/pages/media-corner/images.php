@@ -10,13 +10,13 @@
         $images = get_field('galleries_images');
         $size = 'full';
         if( $images ): ?>
-            
-                <?php foreach( $images as $image_id ): ?>
-                    <div class="col-span-2 md:col-span-2 xl:col-span-2">
-                        <?php echo wp_get_attachment_image( $image_id, $size ); ?>
-                    </div>
-                <?php endforeach; ?>
-            
+            <?php foreach( $images as $image_id ): ?>
+                <div class="col-span-2 md:col-span-2 xl:col-span-2">
+                    <a data-fancybox="image-gallery" href="<?php echo wp_get_attachment_image_url($image_id, $size); ?>">
+                        <?php echo wp_get_attachment_image($image_id, $size); ?>
+                    </a>
+                </div>
+            <?php endforeach; ?>
         <?php endif; ?>
         </div>
     </div>

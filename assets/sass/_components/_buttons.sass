@@ -25,7 +25,7 @@
   &--arrow-left
     @apply relative ml-7
     &::after
-      @apply block absolute top-0 -left-8 w-[24px] h-[22px]
+      @apply block absolute top-[2px] -left-8 w-[24px] h-[22px]
       content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='22' viewBox='0 0 24 22' fill='none'%3E%3Cline x1='0.00401307' y1='10.5918' x2='23.1842' y2='10.5918' stroke='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.047 21.0918C13.9114 18.4486 12.3421 16.4054 10.5877 14.8531C7.07125 11.7418 2.85375 10.6403 0.020333 10.5827L-1.06362e-05 11.5825C2.63123 11.636 6.6107 12.6696 9.92506 15.602C11.4754 16.9737 12.8896 18.7692 13.9531 21.0918L15.047 21.0918Z' fill='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15.047 0.0917969C13.9114 2.735 12.3421 4.77822 10.5877 6.33049C7.07125 9.44177 2.85375 10.5433 0.0203319 10.6009L-1.16553e-05 9.60113C2.63123 9.54759 6.6107 8.51403 9.92506 5.58155C11.4754 4.20988 12.8896 2.4144 13.9531 0.0917965L15.047 0.0917969Z' fill='%23002850'/%3E%3C/svg%3E")
     &:hover
       @apply text-gold
@@ -51,3 +51,17 @@
   &-overline
     &::after
       @apply content-[''] inline-block w-[1px] h-[125px] md:h-[200px] xl:h-[290px] bg-blue absolute left-1/2 -translate-x-1/2 top-16
+
+
+@media (max-width: 1280px)
+  .btn
+    &--arrow-left
+      @apply relative ml-6
+      &::after
+        @apply block absolute top-[2px] -left-6 w-[15px] h-[13px]
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='13' viewBox='0 0 15 13' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M14.3529 6.79041H0.00657264L0.00657266 5.79041H14.3529V6.79041Z' fill='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.52391 12.676C8.80834 10.9793 7.80806 9.66731 6.68319 8.67205C4.46833 6.71239 1.81273 6.01772 0.0205905 5.98125L0.000245886 6.98104C1.59021 7.01339 4.00777 7.64012 6.02055 9.42098C6.94129 10.2356 7.78648 11.2999 8.42982 12.676L9.52391 12.676Z' fill='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.52366 3.42738e-07C8.80809 1.6967 7.80782 3.00865 6.68294 4.00392C4.46808 5.96358 1.81249 6.65825 0.0203445 6.69472L0 5.69492C1.58997 5.66257 4.00753 5.03584 6.0203 3.25498C6.94105 2.44032 7.78624 1.37611 8.42958 0L9.52366 3.42738e-07Z' fill='%23002850'/%3E%3C/svg%3E")
+    &--arrow-down
+      @apply mr-4
+      &::after
+        @apply -right-6
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='16' viewBox='0 0 13 16' fill='none'%3E%3Cline x1='6.45312' y1='15.168' x2='6.45312' y2='0.82163' stroke='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.8398 5.65234C11.1431 6.36792 9.83119 7.36819 8.83593 8.49306C6.87627 10.7079 6.18159 13.3635 6.14513 15.1557L7.14492 15.176C7.17727 13.586 7.804 11.1685 9.58486 9.15571C10.3995 8.23496 11.4637 7.38977 12.8398 6.74643L12.8398 5.65234Z' fill='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.164062 5.65234C1.86076 6.36792 3.17271 7.36819 4.16798 8.49306C6.12764 10.7079 6.82231 13.3635 6.85878 15.1557L5.85899 15.176C5.82663 13.586 5.19991 11.1685 3.41904 9.15571C2.60438 8.23496 1.54017 7.38977 0.164062 6.74643L0.164062 5.65234Z' fill='%23002850'/%3E%3C/svg%3E")

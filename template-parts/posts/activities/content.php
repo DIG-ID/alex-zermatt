@@ -1,6 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'activities-content az-container py-20 xl:pt-40 xl:pb-52 overflow-hidden' ); ?>>
 	<div class="az-container-grid">
-		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1">
+		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1 relative">
 			<div class="grid grid-cols-2 xl:grid-cols-1 order-2 xl:order-1 md:gap-4 xl:gap-9">
 				<div class="col-span-1 hidden invisible xl:block xl:visible">
 					<h2 class="title-xl hidden xl:block"><?php the_title(); ?></h2>
@@ -15,7 +15,9 @@
 					<div class="col-span-1 md:col-span-1 xl:col-span-1">
 						<p class="text-body"><?php the_field( 'descriptions_description_2' ); ?></p>
 					</div>
-					<a href="<?php echo esc_url( get_post_type_archive_link( 'activities' ) ); ?>" class="btn btn--arrow-left mt-12"><?php esc_html_e( 'Back', 'az' ); ?></a>
+					<div class="col-span-1 md:col-span-1 xl:col-span-1">
+						<a href="<?php echo esc_url( get_post_type_archive_link( 'activities' ) ); ?>" class="btn btn--arrow-left mt-12 xl:absolute xl:block xl:left-0 xl:bottom-0"><?php esc_html_e( 'Back', 'az' ); ?></a>
+					</div>
 				</div>
 			</div>
 

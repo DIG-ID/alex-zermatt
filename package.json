@@ -19,6 +19,8 @@
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "@fancyapps/ui": "^5.0.24",
     "@studio-freight/lenis": "^1.0.22",
     "swiper": "^10.2.0"
   }

@@ -1,4 +1,4 @@
-<section id="section-intro" class="section-intro az-container pt-28 xl:pt-48  overflow-hidden">
+<section id="section-intro" class="section-intro az-container pt-28 xl:pt-96 overflow-hidden">
 	<div class="az-container-grid gap-y-3">
         <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-3">
             <h1 class="title-xl mb-10 md:mb-12 mt-12 xl:mt-0"><?php the_title(); ?></h1>

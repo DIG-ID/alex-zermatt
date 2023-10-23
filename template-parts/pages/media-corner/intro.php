@@ -1,20 +1,20 @@
-<section id="section-intro" class="section-intro az-container pt-28 xl:pt-96 overflow-hidden">
-	<div class="az-container-grid gap-y-3">
+<section id="section-intro" class="section-intro az-container pt-28 xl:pt-96 pb-14 xl:pb-0 overflow-hidden">
+	<div class="az-container-grid gap-y-3 pb-5 xl:pb-0">
         <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-3">
             <h1 class="title-xl mb-10 md:mb-12 mt-12 xl:mt-0"><?php the_title(); ?></h1>
-            <p class="text-body xl:max-w-[363px]"><?php the_field( 'section_intro_description' ); ?></p>			
+            <p class="text-body md:max-w-[280px] xl:max-w-[363px]"><?php the_field( 'section_intro_description' ); ?></p>			
         </div>
         <div class="relative col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-5 xl:col-start-7">
             <h2 class="title-xl mb-10 md:mb-12 mt-12 xl:mt-0"><?php the_field( 'section_intro_media_contacts_title' ); ?></h2>
             <p class="text-body xl:max-w-[363px]"><?php the_field( 'section_intro_media_contacts_address' ); ?></p>
         </div>
     </div>
-    <div class="az-container-grid gap-y-3 mt-5 pb-10 md:pb-20 xl:pb-40">
-        <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 xl:col-start-3 h-1 border-t border-blue "></div>
-        <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-5 xl:col-start-7 h-1 border-t border-blue hidden md:block"></div>
+    <div class="az-container-grid gap-y-3 mt-5 pb-10 md:pb-6 xl:pb-40">
+        <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 xl:col-start-3 h-1 border-t border-blue "></div>
+        <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-5 xl:col-start-7 h-1 border-t border-blue hidden xl:block"></div>
     </div>
     <div class="az-container-grid gap-y-3 mb-10 md:mb-5">
-        <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-3 mb-6 md:mb-0">
+        <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-3 mb-6 xl:mb-0">
             <a href="<?php the_field( 'section_intro_media_texts_link' ); ?>" class="link__arrow-right title-xl mb-10 md:mb-12 mt-12 xl:mt-0 hover:text-gold">
                 <span style="max-width:90%;"><?php esc_html_e( 'Medienmitteilungen', 'alexzermatt' ); ?></span>
                 <span class="float-right">
@@ -24,7 +24,7 @@
                 </span>
             </a>			
         </div>
-        <div class="relative col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-5 xl:col-start-7">
+        <div class="relative col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-7">
             <a href="<?php the_field( 'section_intro_media_results_link' ); ?>" class="link__arrow-right title-xl mb-10 md:mb-12 mt-12 xl:mt-0 hover:text-gold">
                 <span style="max-width:90%;"><?php esc_html_e( 'Medienresultate', 'alexzermatt' ); ?></span>
                 <span class="float-right">
@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="az-container-grid gap-y-3 xl:pb-64">
-        <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 xl:col-start-3 h-1 border-t border-blue"></div>
-        <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-5 xl:col-start-7 h-1 border-t border-blue hidden md:block"></div>
+        <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 xl:col-start-3 h-1 border-t border-blue"></div>
+        <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-5 xl:col-start-7 h-1 border-t border-blue hidden xl:block"></div>
     </div>
 </section>

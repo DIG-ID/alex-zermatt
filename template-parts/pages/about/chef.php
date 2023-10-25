@@ -34,7 +34,7 @@
             <?php endif; ?>
         </div>
     </div>
-    <div class="az-container-grid pt-20 xl:pt-52">
+    <div class="az-container-grid pt-20 xl:pt-52 !hidden">
         <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 text-right">
             <h3 class="title-xl"><?php the_field( 'section_chef_team_title' ); ?></h3>
         </div>

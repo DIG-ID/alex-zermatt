@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       });
     }
+    if (document.body.classList.contains("page-template-page-gallery")) {
+      Fancybox.bind('[data-fancybox]', {
+
+      });
+    }
   }, false);
 });
 

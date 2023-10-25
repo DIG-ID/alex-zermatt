@@ -257,6 +257,25 @@ function az_theme_localize_swiper_data() {
 
 add_action( 'wp_enqueue_scripts', 'az_theme_localize_swiper_data' );
 
+
+//enable pagination for archives
+function enable_pagination_for_custom_post_types() {
+    if (is_post_type_archive(array('news', 'event'))) {
+        global $wp_query;
+        if ($wp_query->is_main_query()) {
+            if (is_post_type_archive('news')) {
+                $wp_query->set('posts_per_page', 9); 
+            } elseif (is_post_type_archive('event')) {
+                $wp_query->set('posts_per_page', 4); 
+            }
+            $wp_query->get('paged');
+        }
+    }
+}
+add_action('pre_get_posts', 'enable_pagination_for_custom_post_types');
+
+
+
 /**
  * Wrap the post thumbnail image in a figure element only in the blog posts and project posts.
  */

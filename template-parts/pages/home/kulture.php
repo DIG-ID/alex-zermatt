@@ -5,7 +5,7 @@
 			<?php
 			$stay_img_lg = get_field( 'kulture_image_large' );
 			if ( $stay_img_lg ) :
-				echo wp_get_attachment_image( $stay_img_lg, 'full', false, array( 'class' => 'w-full object-cover mb-12 xl:mb-0 max-h-[377px] md:max-h-[800px]' ) );
+				echo wp_get_attachment_image( $stay_img_lg, 'full', false, array( 'class' => 'w-full object-cover mb-12 xl:mb-0 max-h-[377px] md:max-h-[800px] img-xl' ) );
 			endif;
 			?>
 		</div>
@@ -15,7 +15,7 @@
 					<h3 class="title-xl mb-6 md:mb-0 xl:mb-16 xl:mt-48"><?php the_field( 'kulture_title' ); ?></h3>
 				</div>
 				<div class="col-span-1 md:col-span-4 xl:col-span-3">
-					<p class="body-text mb-12 md:mb-14 xl:mb-16"><?php the_field( 'kulture_description' ); ?></p>
+					<p class="text-body mb-12 md:mb-14 xl:mb-16"><?php the_field( 'kulture_description' ); ?></p>
 				</div>
 			</div>
 			<?php

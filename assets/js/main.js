@@ -1,4 +1,4 @@
 import "./fancybox";
-import "./lenis";
+import "./gsap";
 import "./swiper";
 import "./navigation";

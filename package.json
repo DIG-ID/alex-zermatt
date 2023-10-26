@@ -22,6 +22,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "@fancyapps/ui": "^5.0.24",
     "@studio-freight/lenis": "^1.0.22",
+    "gsap": "^3.12.2",
     "swiper": "^10.2.0"
   }
 }

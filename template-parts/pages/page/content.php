@@ -5,7 +5,7 @@
 		</div>
 	</div>
 </section>
-<section id="page-content" class="section-lpage-content az-container overflow-hidden">
+<section id="page-content" class="section-page-content az-container overflow-hidden">
 	<div class="az-container-grid">
 		<div class="col-span-2 md:col-span-8 xl:col-span-5 xl:col-start-3">
 			<?php the_content(); ?>

@@ -7,12 +7,12 @@
   &--arrow-right
     @apply relative
     &::after
-      @apply block absolute bottom-0 -right-14 w-[141px] h-[14px] transition-transform duration-300 ease-in-out
+      @apply block absolute bottom-0 -right-14 w-[141px] h-[14px] lg:transition-transform lg:duration-150 lg:ease-in-out
       content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='141' height='14' viewBox='0 0 141 14' fill='none'%3E%3Cline y1='-0.5' x2='141' y2='-0.5' transform='matrix(-1 8.74228e-08 8.74228e-08 1 141 13.5625)' stroke='%23002850'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M117 0C118.801 3.42176 121.28 6.05938 124.037 8.05737C129.581 12.0744 136.218 13.4886 140.651 13.5625L140.667 12.5627C136.392 12.4914 129.966 11.119 124.624 7.24763C122.117 5.43052 119.842 3.05902 118.137 -2.98239e-07L117 0Z' fill='%23002850'/%3E%3C/svg%3E")
     &:hover
       @apply text-gold
       &::after
-        @apply translate-x-16
+        @apply lg:translate-x-12
         content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='141' height='14' viewBox='0 0 141 14' fill='none'%3E%3Cline y1='-0.5' x2='141' y2='-0.5' transform='matrix(-1 8.74228e-08 8.74228e-08 1 141 13.5625)' stroke='%23906841'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M117 0C118.801 3.42176 121.28 6.05938 124.037 8.05737C129.581 12.0744 136.218 13.4886 140.651 13.5625L140.667 12.5627C136.392 12.4914 129.966 11.119 124.624 7.24763C122.117 5.43052 119.842 3.05902 118.137 -2.98239e-07L117 0Z' fill='%23906841'/%3E%3C/svg%3E")
   &--arrow-right-white
     @apply relative

@@ -1,6 +1,6 @@
 <header id="header-main" class="header-main w-full fixed top-0 z-40 bg-white" itemscope itemtype="http://schema.org/WebSite">
 	<nav class="navigation-main w-full flex items-center py-8 xl:py-10" role="navigation" aria-label="<?php esc_attr_e( 'main navigation', 'az' ); ?>">
-		<div class="mega-menu-buttons md:px-8 absolute top-1/2 -translate-y-1/2 md:translate-y-0 left-8 md:top-0 md:left-0 md:relative leading-[0]">
+		<div class="mega-menu-buttons md:px-8 absolute top-1/2 -translate-y-1/2 md:translate-y-0 left-8 md:top-0 md:left-0 md:relative leading-[0] xl:w-32">
 			<button class="main-menu-toggle">
 				<span class="bars">
 					<span class="bar"></span>

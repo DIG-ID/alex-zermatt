@@ -47,16 +47,20 @@ document.addEventListener("DOMContentLoaded", () => {
       $('#header-main').toggleClass('mega-menu-open');
       //$('body').toggleClass('mega-menu-open');
     
-      // Select the span element within the button
       const $spanElement = $('.main-menu-toggle span.text');
     
-      // Check if the text is currently 'Menu' and change it to 'Close', or vice versa
       if ($spanElement.text().trim() === 'Menu') {
-        $spanElement.text('Close');
+        $spanElement.text('Schliessen');
       } else {
         $spanElement.text('Menu');
       }
     });
+
+    //test for languages
+    /*if(window.location.href.indexOf("/en/") > -1) {
+        alert("Spanish language");
+    }*/
+
 
     /*const megaMenu = document.querySelector('.mega-menu-wrapper');
     const navHeight = 108; // Replace with the actual height of your navigation bar

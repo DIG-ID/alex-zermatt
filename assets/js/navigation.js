@@ -43,9 +43,19 @@ document.addEventListener("DOMContentLoaded", () => {
     /* Hamburguer toogle */ 
     const $toggleBtn = $('.main-menu-toggle')
 
-    $toggleBtn.on( 'click', (e) => {
+    $toggleBtn.on('click', (e) => {
       $('#header-main').toggleClass('mega-menu-open');
       //$('body').toggleClass('mega-menu-open');
+    
+      // Select the span element within the button
+      const $spanElement = $('.main-menu-toggle span.text');
+    
+      // Check if the text is currently 'Menu' and change it to 'Close', or vice versa
+      if ($spanElement.text().trim() === 'Menu') {
+        $spanElement.text('Close');
+      } else {
+        $spanElement.text('Menu');
+      }
     });
 
     /*const megaMenu = document.querySelector('.mega-menu-wrapper');

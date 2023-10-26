@@ -4,7 +4,7 @@
 			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden uppercase mt-10"><?php esc_html_e( 'Menu', 'az' ); ?></p>
 
 			<button class="menu-accordion flex items-center xl:items-start xl:text-left xl:block xl:w-full">
-				<h3 class="font-serif font-light text-blue text-sm xl:text-2xl tracking-[0.98px] xl:tracking-[1.54px] uppercase xl:mb-14"><a href="<?php echo esc_url( get_field( 'parent_pages_stay_page', 'options' ) ); ?>" class="hidden invisible xl:inline-block xk:visible"><?php esc_html_e( 'Aufenthalt', 'az' ); ?></a><span class="xl:hidden xl:invisible"><?php esc_html_e( 'Aufenthalt', 'az' ); ?></span></h3>
+				<h3 class="font-serif font-light text-blue text-sm xl:text-2xl tracking-[0.98px] xl:tracking-[1.54px] uppercase xl:mb-14"><a href="<?php echo esc_url( get_field( 'parent_pages_stay_page', 'options' ) ); ?>" class="hidden invisible xl:inline-block xl:visible"><?php esc_html_e( 'Aufenthalt', 'az' ); ?></a><span class="xl:hidden xl:invisible"><?php esc_html_e( 'Aufenthalt', 'az' ); ?></span></h3>
 				<svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none" class="-mt-1 ml-2 xl:invisible xl:hidden">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M8.72217 0C7.53138 0.490841 6.61008 1.18688 5.91234 1.97548C4.56776 3.49516 4.09038 5.31655 4.06523 6.55254L5.06502 6.57289C5.08606 5.53907 5.4955 3.95572 6.66128 2.63812C7.1784 2.05366 7.85196 1.51281 8.72217 1.09444L8.72217 0Z" fill="#002850"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C1.19079 0.490841 2.11209 1.18688 2.80982 1.97548C4.15441 3.49516 4.63179 5.31655 4.65694 6.55254L3.65715 6.57289C3.63611 5.53907 3.22667 3.95572 2.06089 2.63812C1.54377 2.05366 0.870212 1.51281 -2.9501e-07 1.09444L0 0Z" fill="#002850"/>
@@ -24,7 +24,7 @@
 		</div>
 		<div class="col-span-2 xl:col-span-1">
 			<button class="menu-accordion flex items-center xl:items-start xl:text-left xl:block xl:w-full">
-				<h3 class="font-serif font-light text-blue text-sm xl:text-2xl tracking-[0.98px] xl:tracking-[1.54px] uppercase xl:mb-14"><a href="<?php echo esc_url( get_field( 'parent_pages_eat_&_drink_page', 'options' ) ); ?>" class="hidden invisible xl:inline-block xk:visible"><?php esc_html_e( 'Genuss', 'az' ); ?></a><span class="xl:hidden xl:invisible"><?php esc_html_e( 'Genuss', 'az' ); ?></span></h3>
+				<h3 class="font-serif font-light text-blue text-sm xl:text-2xl tracking-[0.98px] xl:tracking-[1.54px] uppercase xl:mb-14"><a href="<?php echo esc_url( get_field( 'parent_pages_eat_&_drink_page', 'options' ) ); ?>" class="hidden invisible xl:inline-block xl:visible"><?php esc_html_e( 'Genuss', 'az' ); ?></a><span class="xl:hidden xl:invisible"><?php esc_html_e( 'Genuss', 'az' ); ?></span></h3>
 				<svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none" class="-mt-1 ml-2 xl:invisible xl:hidden transition-all duration-300 ease-in-out rotate-0">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M8.72217 0C7.53138 0.490841 6.61008 1.18688 5.91234 1.97548C4.56776 3.49516 4.09038 5.31655 4.06523 6.55254L5.06502 6.57289C5.08606 5.53907 5.4955 3.95572 6.66128 2.63812C7.1784 2.05366 7.85196 1.51281 8.72217 1.09444L8.72217 0Z" fill="#002850"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C1.19079 0.490841 2.11209 1.18688 2.80982 1.97548C4.15441 3.49516 4.63179 5.31655 4.65694 6.55254L3.65715 6.57289C3.63611 5.53907 3.22667 3.95572 2.06089 2.63812C1.54377 2.05366 0.870212 1.51281 -2.9501e-07 1.09444L0 0Z" fill="#002850"/>
@@ -47,7 +47,7 @@
 		</div>
 		<div class="col-span-2 xl:col-span-1 xl:text-right">
 			<button class="menu-accordion flex items-center xl:block xl:w-full xl:text-right">
-				<h3 class="font-serif font-light text-blue text-sm xl:text-2xl tracking-[0.98px] xl:tracking-[1.54px] uppercase xl:mb-14"><a href="<?php echo esc_url( get_field( 'parent_pages_experience_page', 'options' ) ); ?>" class="hidden invisible xl:inline-block xk:visible"><?php esc_html_e( 'Erlebnis', 'az' ); ?></a><span class="xl:hidden xl:invisible"><?php esc_html_e( 'Erlebnis', 'az' ); ?></span></h3>
+				<h3 class="font-serif font-light text-blue text-sm xl:text-2xl tracking-[0.98px] xl:tracking-[1.54px] uppercase xl:mb-14"><a href="<?php echo esc_url( get_field( 'parent_pages_experience_page', 'options' ) ); ?>" class="hidden invisible xl:inline-block xl:visible"><?php esc_html_e( 'Erlebnis', 'az' ); ?></a><span class="xl:hidden xl:invisible"><?php esc_html_e( 'Erlebnis', 'az' ); ?></span></h3>
 				<svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none" class="-mt-1 ml-2 xl:invisible xl:hidden transition-all duration-300 ease-in-out rotate-0">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M8.72217 0C7.53138 0.490841 6.61008 1.18688 5.91234 1.97548C4.56776 3.49516 4.09038 5.31655 4.06523 6.55254L5.06502 6.57289C5.08606 5.53907 5.4955 3.95572 6.66128 2.63812C7.1784 2.05366 7.85196 1.51281 8.72217 1.09444L8.72217 0Z" fill="#002850"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C1.19079 0.490841 2.11209 1.18688 2.80982 1.97548C4.15441 3.49516 4.63179 5.31655 4.65694 6.55254L3.65715 6.57289C3.63611 5.53907 3.22667 3.95572 2.06089 2.63812C1.54377 2.05366 0.870212 1.51281 -2.9501e-07 1.09444L0 0Z" fill="#002850"/>
@@ -67,7 +67,7 @@
 		</div>
 		<div class="col-span-2 xl:col-span-1 xl:text-right">
 			<button class="menu-accordion flex items-center xl:block xl:w-full xl:text-right">
-				<h3 class="font-serif font-light text-blue text-sm xl:text-2xl tracking-[0.98px] xl:tracking-[1.54px] uppercase xl:mb-14"><a href="<?php echo esc_url( get_field( 'parent_pages_culture_page', 'options' ) ); ?>" class="hidden invisible xl:inline-block xk:visible"><?php esc_html_e( 'Kultur', 'az' ); ?></a><span class="xl:hidden xl:invisible"><?php esc_html_e( 'Kultur', 'az' ); ?></span></h3>
+				<h3 class="font-serif font-light text-blue text-sm xl:text-2xl tracking-[0.98px] xl:tracking-[1.54px] uppercase xl:mb-14"><a href="<?php echo esc_url( get_field( 'parent_pages_culture_page', 'options' ) ); ?>" class="hidden invisible xl:inline-block xl:visible"><?php esc_html_e( 'Kultur', 'az' ); ?></a><span class="xl:hidden xl:invisible"><?php esc_html_e( 'Kultur', 'az' ); ?></span></h3>
 				<svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none" class="-mt-1 ml-2 xl:invisible xl:hidden transition-all duration-300 ease-in-out rotate-0">
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M8.72217 0C7.53138 0.490841 6.61008 1.18688 5.91234 1.97548C4.56776 3.49516 4.09038 5.31655 4.06523 6.55254L5.06502 6.57289C5.08606 5.53907 5.4955 3.95572 6.66128 2.63812C7.1784 2.05366 7.85196 1.51281 8.72217 1.09444L8.72217 0Z" fill="#002850"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C1.19079 0.490841 2.11209 1.18688 2.80982 1.97548C4.15441 3.49516 4.63179 5.31655 4.65694 6.55254L3.65715 6.57289C3.63611 5.53907 3.22667 3.95572 2.06089 2.63812C1.54377 2.05366 0.870212 1.51281 -2.9501e-07 1.09444L0 0Z" fill="#002850"/>

@@ -28,13 +28,22 @@ gsap.ticker.add((time)=>{
 
 $(function() {
 
+
+
+
+
+  const sm = 640;
+  const md = 768;
+  const xl = 1280;
+
+
   if ( $(".page-template-page-home")[0] ) {
     //Section Intro
     let introtl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",
-        start: "top 70%",
-        end: "+=300", 
+        start: "top 75%",
+        end: "bottom center", 
         scrub: 1.2, 
         //markers: true,
         toggleActions: "play none reverse none"
@@ -45,6 +54,8 @@ $(function() {
       .from(".section-intro .title-sub", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-intro .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-intro .text-body ", { opacity: 0, y: '50px', autoAlpha: 0 });
+
+
     
     //Section Stay
     let staytl = gsap.timeline({
@@ -58,12 +69,18 @@ $(function() {
       },
       defaults: { duration: 0.8 },
     });
+    if ( window.innerWidth <= sm ) {
+      staytl.from(".section-stay .title-overline--sm ", { opacity: 0, y: '50px', autoAlpha: 0 });
+    } else {
+      staytl.from(".section-stay .title-overline--xl ", { opacity: 0, y: '50px', autoAlpha: 0 });
+    };
     staytl
       .from(".section-stay .img-sm", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-stay .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-stay .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-stay .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-stay .btn", { opacity: 0, y: '50px', autoAlpha: 0 });
+
 
     //Section Enjoy
     let enjoytl = gsap.timeline({
@@ -77,6 +94,11 @@ $(function() {
       },
       defaults: { duration: 0.8 },
     });
+    if ( window.innerWidth <= sm ) {
+      enjoytl.from(".section-enjoy .title-overline--sm ", { opacity: 0, y: '50px', autoAlpha: 0 });
+    } else {
+      enjoytl.from(".section-enjoy .title-overline--xl ", { opacity: 0, y: '50px', autoAlpha: 0 });
+    };
     enjoytl
       .from(".section-enjoy .img-sm", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-enjoy .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
@@ -97,6 +119,7 @@ $(function() {
       defaults: { duration: 0.8 },
     });
     experiencetl
+      .from(".section-experience .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-experience .img-sm", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-experience .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-experience .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
@@ -116,6 +139,7 @@ $(function() {
       defaults: { duration: 0.8 },
     });
     kulturetl
+      .from(".section-kulture .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-kulture .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-kulture .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-kulture .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })

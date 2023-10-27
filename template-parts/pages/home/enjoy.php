@@ -1,7 +1,7 @@
 <section class="section-enjoy az-container mb-28 xl:mb-72">
 	<div class="az-container-grid xl:items-end">
 		<div class="col-span-1 md:col-span-8 xl:col-span-4 xl:col-start-3">
-			<h2 class="title-overline !block mx-auto xl:!hidden xl:invisible"><?php the_field( 'enjoy_subtitle' ); ?></h2>
+			<h2 class="title-overline title-overline--sm !block mx-auto xl:!hidden xl:invisible"><?php the_field( 'enjoy_subtitle' ); ?></h2>
 			<?php
 			$stay_img_lg = get_field( 'enjoy_image_large' );
 			if ( $stay_img_lg ) :
@@ -10,7 +10,7 @@
 			?>
 		</div>
 		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-8">
-			<h2 class="title-overline mx-auto !hidden invisible xl:!block xl:visible"><?php the_field( 'enjoy_subtitle' ); ?></h2>
+			<h2 class="title-overline title-overline--xl mx-auto !hidden invisible xl:!block xl:visible"><?php the_field( 'enjoy_subtitle' ); ?></h2>
 			<?php
 			$stay_img_sm = get_field( 'enjoy_image_small' );
 			if ( $stay_img_sm ) :

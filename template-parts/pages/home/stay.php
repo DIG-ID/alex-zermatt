@@ -1,7 +1,7 @@
 <section class="section-stay az-container mb-28 xl:mb-72">
 	<div class="az-container-grid xl:items-end">
 		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1">
-			<h2 class="title-overline mx-auto !hidden invisible xl:!block xl:visible"><?php the_field( 'stay_subtitle' ); ?></h2>
+			<h2 class="title-overline title-overline--xl mx-auto !hidden invisible xl:!block xl:visible"><?php the_field( 'stay_subtitle' ); ?></h2>
 			<?php
 			$stay_img_sm = get_field( 'stay_image_small' );
 			if ( $stay_img_sm ) :
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 		<div class="col-span-1 md:col-span-8 xl:col-span-4 xl:col-start-7 order-1 xl:order-2">
-			<h2 class="title-overline !block mx-auto xl:hidden xl:invisible"><?php the_field( 'stay_subtitle' ); ?></h2>
+			<h2 class="title-overline title-overline--sm !block mx-auto xl:hidden xl:invisible"><?php the_field( 'stay_subtitle' ); ?></h2>
 			<?php
 			$stay_img_lg = get_field( 'stay_image_large' );
 			if ( $stay_img_lg ) :

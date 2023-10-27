@@ -1,16 +1,16 @@
 <section id="section-chef" class="section-chef az-container xl:pb-32 overflow-hidden">
 	<div class="az-container-grid">
         <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 flex flex-col justify-center">
-    	    <h2 class="title-overline"><?php the_field( 'section_chef_title_overline' ); ?></h2>
+    	    <h2 class="title-overline z-20"><?php the_field( 'section_chef_title_overline' ); ?></h2>
             <?php 
             $image_3 = get_field('section_chef_image_1');
             if ( $image_3 ) : 
             ?>
-                <div class="featured-image">
+                <div class="featured-image z-10">
                 <?php echo wp_get_attachment_image( $image_3, 'full' ); ?>
                 </div>
             <?php else : ?>
-                <div class="featured-image">
+                <div class="featured-image z-10">
                     <img src="https://placehold.co/453x462">
                 </div>
             <?php endif; ?>

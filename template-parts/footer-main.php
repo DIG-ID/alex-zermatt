@@ -35,6 +35,10 @@
 		</div>
 		<div class="col-span-2 md:col-span-3 xl:col-span-2 mb-12 xl:mb-16">
 			<h3 class="title-footer"><?php esc_html_e( 'Newsletter', 'az' ); ?></h3>
+			<?php 
+			$form_shortcode = get_field('contacts_newsletter_form_shortcode', 'options');
+			echo do_shortcode($form_shortcode);
+			?>
 		</div>
 	</div>
 

@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					clickable: true,
 					renderBullet: function (index, className) {
 						if (typeof swiperData.zimmerLinks !== 'undefined' && swiperData.zimmerLinks[index] !== '') {
-							return '<a href="' + swiperData.zimmerLinks[index] + '" class="' + className + '">' + swiperData.zimmerTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" class="swiper-arrow" alt="arrow"></a>';
+							return '<a href="' + swiperData.zimmerLinks[index] + '" class="' + className + '">' + swiperData.zimmerTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" class="swiper-arrow w-20 2xl:w-[118px]" alt="arrow"></a>';
 						} else {
 							return '<span class="' + className + '">' + swiperData.zimmerTitles[index] + '<img src="/wp-content/themes/alex-zermatt/assets/images/slider-arrow.svg" class="swiper-arrow" alt="arrow"></span>';
 						}
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					window.location.href = link.href;
 				}
 			});
-			//rooms category - zimmer
+			//rooms category - Suite
 			var postsSuiteSwiper = new Swiper('.swiper-suite-container', {
 				effect: 'fade',
 				pagination: {

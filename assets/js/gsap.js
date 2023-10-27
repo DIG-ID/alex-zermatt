@@ -28,12 +28,6 @@ gsap.ticker.add((time)=>{
 
 $(function() {
 
-
-
-
-
-  const sm = 640;
-  const md = 768;
   const xl = 1280;
 
 
@@ -43,33 +37,31 @@ $(function() {
       scrollTrigger: {
         trigger: ".section-intro",
         start: "top 75%",
-        end: "bottom center", 
-        scrub: 1.2, 
+        end: "bottom 80%", 
+        scrub: 1, 
         //markers: true,
         toggleActions: "play none reverse none"
       },
-      defaults: { duration: 0.8 },
+      defaults: { duration: 1.2 },
     });
     introtl
       .from(".section-intro .title-sub", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-intro .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-intro .text-body ", { opacity: 0, y: '50px', autoAlpha: 0 });
 
-
-    
     //Section Stay
     let staytl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-stay",
         start: "top 75%",
-        end: "bottom center", 
-        scrub: 1.2, 
+        end: "bottom 80%",
+        scrub: 1,
         //markers: true,
         toggleActions: "play none reverse none"
       },
-      defaults: { duration: 0.8 },
+      defaults: { duration: 1.2 },
     });
-    if ( window.innerWidth <= sm ) {
+    if ( window.innerWidth <= xl ) {
       staytl.from(".section-stay .title-overline--sm ", { opacity: 0, y: '50px', autoAlpha: 0 });
     } else {
       staytl.from(".section-stay .title-overline--xl ", { opacity: 0, y: '50px', autoAlpha: 0 });
@@ -81,20 +73,19 @@ $(function() {
       .from(".section-stay .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-stay .btn", { opacity: 0, y: '50px', autoAlpha: 0 });
 
-
     //Section Enjoy
     let enjoytl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-enjoy",
         start: "top 75%",
-        end: "bottom center", 
-        scrub: 1.2, 
+        end: "bottom 80%", 
+        scrub: 1, 
         //markers: true,
         toggleActions: "play none reverse none"
       },
-      defaults: { duration: 0.8 },
+      defaults: { duration: 1.2 },
     });
-    if ( window.innerWidth <= sm ) {
+    if ( window.innerWidth <= xl ) {
       enjoytl.from(".section-enjoy .title-overline--sm ", { opacity: 0, y: '50px', autoAlpha: 0 });
     } else {
       enjoytl.from(".section-enjoy .title-overline--xl ", { opacity: 0, y: '50px', autoAlpha: 0 });
@@ -111,12 +102,12 @@ $(function() {
       scrollTrigger: {
         trigger: ".section-experience",
         start: "top 75%",
-        end: "bottom center", 
-        scrub: 1.2, 
+        end: "bottom 80%", 
+        scrub: 1, 
         //markers: true,
         toggleActions: "play none reverse none"
       },
-      defaults: { duration: 0.8 },
+      defaults: { duration: 1.2 },
     });
     experiencetl
       .from(".section-experience .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
@@ -131,12 +122,12 @@ $(function() {
       scrollTrigger: {
         trigger: ".section-kulture",
         start: "top 75%",
-        end: "bottom center", 
-        scrub: 1.2, 
+        end: "bottom 80%", 
+        scrub: 1, 
         //markers: true,
         toggleActions: "play none reverse none"
       },
-      defaults: { duration: 0.8 },
+      defaults: { duration: 1.2 },
     });
     kulturetl
       .from(".section-kulture .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
@@ -144,8 +135,24 @@ $(function() {
       .from(".section-kulture .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-kulture .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
       .from(".section-kulture .btn", { opacity: 0, y: '50px', autoAlpha: 0 });
+
+    //Section Box Teasers
+    let boxteaserstl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-box-teasers",
+        start: "top 75%",
+        end: "bottom 80%", 
+        scrub: 1, 
+        //markers: true,
+        toggleActions: "play none reverse none"
+      },
+      defaults: { duration: 1.2 },
+    });
+    boxteaserstl
+      .from(".section-box-teasers .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
+      .from(".section-box-teasers img", { opacity: 0, y: '50px', autoAlpha: 0 })
+      .from(".section-kulture .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
+      .from(".section-kulture .btn", { opacity: 0, y: '50px', autoAlpha: 0 });
   }
-
-
 
 });

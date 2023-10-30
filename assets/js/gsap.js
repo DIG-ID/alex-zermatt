@@ -29,254 +29,325 @@ gsap.ticker.add((time)=>{
 $(function() {
 
   const xl = 1280;
+  const scrubSpeed = 1;
+  const animDuration = 1.2;
+  const fadeDistance = "50px";
+  const defaultStart = "top 70%";
+  const defaultEnd = "bottom 80%";
+  const defaultActions = "play none reverse none";
 
-  // Home Page
+  /****************************************
+   *                                        *
+   *               Home Page                *
+   *                                        *
+   ****************************************/
   if ( $(".page-template-page-home")[0] ) {
     //Section Intro
     let introtl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",
         start: "top 80%",
-        end: "bottom 80%", 
-        scrub: 1, 
+        end: defaultEnd,
+        scrub: scrubSpeed,
         //markers: true,
-        toggleActions: "play none reverse none"
+        toggleActions: defaultActions
       },
-      defaults: { duration: 1.2 },
+      defaults: { duration: animDuration },
     });
     introtl
-      .from(".section-intro .title-sub", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-intro .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-intro .text-body ", { opacity: 0, y: '50px', autoAlpha: 0 });
+      .from(".section-intro .title-sub", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-intro .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-intro .text-body ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
 
     //Section Stay
     let staytl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-stay",
-        start: "top 75%",
-        end: "bottom 80%",
-        scrub: 1,
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
         //markers: true,
-        toggleActions: "play none reverse none"
+        toggleActions: defaultActions
       },
-      defaults: { duration: 1.2 },
+      defaults: { duration: animDuration },
     });
     if ( window.innerWidth <= xl ) {
-      staytl.from(".section-stay .title-overline--sm ", { opacity: 0, y: '50px', autoAlpha: 0 });
+      staytl.from(".section-stay .title-overline--sm ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
     } else {
-      staytl.from(".section-stay .title-overline--xl ", { opacity: 0, y: '50px', autoAlpha: 0 });
+      staytl.from(".section-stay .title-overline--xl ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
     };
     staytl
-      .from(".section-stay .img-sm", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-stay .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-stay .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-stay .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-stay .btn-wrapper", { opacity: 0, y: '50px', autoAlpha: 0 });
+      .from(".section-stay .img-sm", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-stay .img-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-stay .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-stay .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-stay .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
 
     //Section Enjoy
     let enjoytl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-enjoy",
-        start: "top 75%",
-        end: "bottom 80%", 
-        scrub: 1, 
+        start: defaultStart,
+        end: defaultEnd, 
+        scrub: scrubSpeed, 
         //markers: true,
-        toggleActions: "play none reverse none"
+        toggleActions: defaultActions
       },
-      defaults: { duration: 1.2 },
+      defaults: { duration: animDuration },
     });
     if ( window.innerWidth <= xl ) {
-      enjoytl.from(".section-enjoy .title-overline--sm ", { opacity: 0, y: '50px', autoAlpha: 0 });
+      enjoytl.from(".section-enjoy .title-overline--sm ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
     } else {
-      enjoytl.from(".section-enjoy .title-overline--xl ", { opacity: 0, y: '50px', autoAlpha: 0 });
+      enjoytl.from(".section-enjoy .title-overline--xl ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
     };
     enjoytl
-      .from(".section-enjoy .img-sm", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-enjoy .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-enjoy .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-enjoy .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-enjoy .btn-wrapper", { opacity: 0, y: '50px', autoAlpha: 0 });
+      .from(".section-enjoy .img-sm", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-enjoy .img-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-enjoy .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-enjoy .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-enjoy .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
 
     //Section Enjoy
     let experiencetl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-experience",
-        start: "top 75%",
-        end: "bottom 80%", 
-        scrub: 1, 
+        start: defaultStart,
+        end: defaultEnd, 
+        scrub: scrubSpeed, 
         //markers: true,
-        toggleActions: "play none reverse none"
+        toggleActions: defaultActions
       },
-      defaults: { duration: 1.2 },
+      defaults: { duration: animDuration },
     });
     experiencetl
-      .from(".section-experience .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-experience .img-sm", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-experience .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-experience .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-experience .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-experience .btn-wrapper", { opacity: 0, y: '50px', autoAlpha: 0 });
+      .from(".section-experience .title-overline", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-experience .img-sm", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-experience .img-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-experience .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-experience .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-experience .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
 
     //Section Kultur
     let kulturetl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-kulture",
-        start: "top 75%",
-        end: "bottom 80%", 
+        start: defaultStart,
+        end: defaultEnd, 
         scrub: 1, 
         //markers: true,
-        toggleActions: "play none reverse none"
+        toggleActions: defaultActions
       },
-      defaults: { duration: 1.2 },
+      defaults: { duration: animDuration },
     });
     kulturetl
-      .from(".section-kulture .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .btn-wrapper", { opacity: 0, y: '50px', autoAlpha: 0 });
+      .from(".section-kulture .title-overline", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .img-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
 
     //Section Box Teasers
     let boxteaserstl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-box-teasers",
-        start: "top 75%",
-        end: "bottom 80%", 
-        scrub: 1, 
+        start: defaultStart,
+        end: defaultEnd, 
+        scrub: scrubSpeed, 
         //markers: true,
-        toggleActions: "play none reverse none"
+        toggleActions: defaultActions
       },
-      defaults: { duration: 1.2 },
+      defaults: { duration: animDuration },
     });
     boxteaserstl
-      .from(".section-box-teasers .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-box-teasers img", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .btn-wrapper", { opacity: 0, y: '50px', autoAlpha: 0 });
+      .from(".section-box-teasers .title-overline", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-box-teasers img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
   }
 
-  // Stay Page
+  /****************************************
+ *                                        *
+ *               Stay Page                *
+ *                                        *
+ ****************************************/
   if ( $(".page-template-page-stay")[0] ) {
     //Section Intro
     let introtl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",
-        start: "top 80%",
-        end: "bottom 80%", 
-        scrub: 1, 
+        start: defaultStart,
+        end: defaultEnd, 
+        scrub: scrubSpeed, 
         //markers: true,
-        toggleActions: "play none reverse none"
+        toggleActions: defaultActions
       },
-      defaults: { duration: 1.2 },
+      defaults: { duration: animDuration },
     });
     introtl
-      .from(".section-intro .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-intro .text-body ", { opacity: 0, y: '50px', autoAlpha: 0 });
+      .from(".section-intro .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-intro .text-body ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
 
     //Section Rooms
-    let staytl = gsap.timeline({
+    let roomstl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-rooms",
-        start: "top 75%",
-        end: "bottom 80%",
-        scrub: 1,
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
         //markers: true,
-        toggleActions: "play none reverse none"
+        toggleActions: defaultActions
       },
-      defaults: { duration: 1.2 },
+      defaults: { duration: animDuration },
     });
-    if ( window.innerWidth <= xl ) {
-      staytl.from(".section-stay .title-overline--sm ", { opacity: 0, y: '50px', autoAlpha: 0 });
-    } else {
-      staytl.from(".section-stay .title-overline--xl ", { opacity: 0, y: '50px', autoAlpha: 0 });
-    };
-    staytl
-      .from(".section-rooms .az-vertical-line-img", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-rooms img", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-rooms .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-rooms .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-rooms .btn-wrapper", { opacity: 0, y: '50px', autoAlpha: 0 });
-
-    //Section Enjoy
-    let enjoytl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section-enjoy",
-        start: "top 75%",
-        end: "bottom 80%", 
-        scrub: 1, 
-        //markers: true,
-        toggleActions: "play none reverse none"
-      },
-      defaults: { duration: 1.2 },
-    });
-    if ( window.innerWidth <= xl ) {
-      enjoytl.from(".section-enjoy .title-overline--sm ", { opacity: 0, y: '50px', autoAlpha: 0 });
-    } else {
-      enjoytl.from(".section-enjoy .title-overline--xl ", { opacity: 0, y: '50px', autoAlpha: 0 });
-    };
-    enjoytl
-      .from(".section-enjoy .img-sm", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-enjoy .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-enjoy .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-enjoy .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-enjoy .btn-wrapper", { opacity: 0, y: '50px', autoAlpha: 0 });
-
-    //Section Enjoy
-    let experiencetl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section-experience",
-        start: "top 75%",
-        end: "bottom 80%", 
-        scrub: 1, 
-        //markers: true,
-        toggleActions: "play none reverse none"
-      },
-      defaults: { duration: 1.2 },
-    });
-    experiencetl
-      .from(".section-experience .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-experience .img-sm", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-experience .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-experience .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-experience .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-experience .btn-wrapper", { opacity: 0, y: '50px', autoAlpha: 0 });
-
-    //Section Kultur
-    let kulturetl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section-kulture",
-        start: "top 75%",
-        end: "bottom 80%", 
-        scrub: 1, 
-        //markers: true,
-        toggleActions: "play none reverse none"
-      },
-      defaults: { duration: 1.2 },
-    });
-    kulturetl
-      .from(".section-kulture .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .img-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .text-body", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .btn-wrapper", { opacity: 0, y: '50px', autoAlpha: 0 });
+    roomstl
+      .from(".section-rooms .az-vertical-line-img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-rooms img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-rooms .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-rooms .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-rooms .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
 
     //Section Box Teasers
     let boxteaserstl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-box-teasers",
-        start: "top 75%",
-        end: "bottom 80%", 
-        scrub: 1, 
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
         //markers: true,
-        toggleActions: "play none reverse none"
+        toggleActions: defaultActions
       },
-      defaults: { duration: 1.2 },
+      defaults: { duration: animDuration },
     });
     boxteaserstl
-      .from(".section-box-teasers .title-overline", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-box-teasers img", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .title-xl", { opacity: 0, y: '50px', autoAlpha: 0 })
-      .from(".section-kulture .btn-wrapper", { opacity: 0, y: '50px', autoAlpha: 0 });
+      .from(".section-box-teasers .title-overline", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-box-teasers img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section Seminare
+    let seminaretl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-seminare",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    seminaretl
+      .from(".section-seminare .az-vertical-line-img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-seminare img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-seminare .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-seminare .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-seminare .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+  }
+    /****************************************
+   *                                        *
+   *            Eat & Drink Page            *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-eat--drink")[0] ) {
+    //Section Intro
+    let introtl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-intro",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    introtl
+      .from(".section-intro .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-intro .text-body ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section Grill
+    let grilltl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-alex-grill",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    grilltl
+      .from(".section-alex-grill .az-vertical-line-img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-alex-grill img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-alex-grill .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-alex-grill .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-alex-grill .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section le Jardin
+    let jardintl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-le-jardin",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+       // markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    if ( window.innerWidth <= xl ) {
+      jardintl.from(".section-le-jardin .title-overline--sm ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+    } else {
+      jardintl.from(".section-le-jardin .title-overline--xl ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+    };
+    jardintl
+      .from(".section-le-jardin img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-le-jardin .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-le-jardin .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-le-jardin .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section Lounge Bar
+    let loungebartl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-lounge-bar",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    if ( window.innerWidth <= xl ) {
+      loungebartl.from(".section-lounge-bar .title-overline--sm ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+    } else {
+      loungebartl.from(".section-lounge-bar .title-overline--xl ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+    };
+    loungebartl
+      .from(".section-lounge-bar img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-lounge-bar .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-lounge-bar .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-lounge-bar .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section Box Teasers
+    let boxteaserstl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-box-teasers",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    boxteaserstl
+      .from(".section-box-teasers .title-overline", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-box-teasers img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
   }
 
 });

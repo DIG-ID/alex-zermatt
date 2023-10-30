@@ -36,10 +36,10 @@ $(function() {
   const defaultEnd = "bottom 80%";
   const defaultActions = "play none reverse none";
 
-  /****************************************
-   *                                        *
-   *               Home Page                *
-   *                                        *
+  /*****************************************
+   *                                       *
+   *               Home Page               *
+   *                                       *
    ****************************************/
   if ( $(".page-template-page-home")[0] ) {
     //Section Intro
@@ -165,11 +165,11 @@ $(function() {
       .from(".section-kulture .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
   }
 
-  /****************************************
- *                                        *
- *               Stay Page                *
- *                                        *
- ****************************************/
+  /*****************************************
+   *                                       *
+   *               Stay Page               *
+   *                                       *
+   ****************************************/
   if ( $(".page-template-page-stay")[0] ) {
     //Section Intro
     let introtl = gsap.timeline({
@@ -244,7 +244,7 @@ $(function() {
       .from(".section-seminare .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
 
   }
-    /****************************************
+  /******************************************
    *                                        *
    *            Eat & Drink Page            *
    *                                        *
@@ -350,4 +350,162 @@ $(function() {
       .from(".section-kulture .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
   }
 
+  /******************************************
+   *                                        *
+   *            Experience Page             *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-experience")[0] ) {
+    //Section Intro
+    let introtl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-intro",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    introtl
+      .from(".section-intro .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-intro .text-body ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section Wellness
+    let wellnesstl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-wellness",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    wellnesstl
+      .from(".section-wellness .az-vertical-line-img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-wellness img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-wellness .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-wellness .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-wellness .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section Sport
+    let sporttl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-sport",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+       // markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    sporttl
+      .from(".section-sport .title-overline", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-sport img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-sport .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-sport .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-sport .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section Activities
+    let activitestl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-activities",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+       // markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    activitestl
+      .from(".section-activities .title-overline", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-activities img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-activities .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-activities .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-activities .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+  }
+
+  /******************************************
+   *                                        *
+   *              Culture Page              *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-culture")[0] ) {
+    //Section Intro
+    let introtl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-intro",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    introtl
+      .from(".section-intro .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-intro .text-body ", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section Museum
+    let museumtl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-museum",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    museumtl
+      .from(".section-museum .az-vertical-line-img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-museum img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-museum .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-museum .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-museum .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section Zermatt
+    let zermatttl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-zermatt",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    zermatttl
+      .from(".section-zermatt .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-zermatt .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-zermatt .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+    //Section Box Teasers
+    let boxteaserstl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-box-teasers",
+        start: defaultStart,
+        end: defaultEnd,
+        scrub: scrubSpeed,
+        //markers: true,
+        toggleActions: defaultActions
+      },
+      defaults: { duration: animDuration },
+    });
+    boxteaserstl
+      .from(".section-box-teasers .title-overline", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-box-teasers img", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-kulture .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
+
+  }
 });

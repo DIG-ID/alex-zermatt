@@ -1,4 +1,4 @@
-<section class="section-buttons-bar fixed left-0 right-0 bottom-0 z-10 bg-white drop-shadow-[0_-4px_3px_rgba(0,0,0,0.06)] sm:filter-none">
+<section class="section-buttons-bar fixed left-0 right-0 bottom-0 z-10 bg-white drop-shadow-[0_-4px_3px_rgba(0,0,0,0.06)]">
 	<div class="az-container-grid az-container">
 		<div class="col-span-1 md:col-span-8 xl:col-span-8 xl:col-start-3 flex sm:justify-between justify-center items-center py-4 sm:py-10">
 			<?php

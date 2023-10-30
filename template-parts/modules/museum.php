@@ -7,10 +7,10 @@
 	</div>
 	<div class="az-container-grid py-12 md:py-16 xl:py-24 az-container">
 		<div class="col-span-1 md:col-span-4 xl:col-start-3">
-			<p class="body-text mb-8 md:mb-0"><?php the_field( 'museum_text_box_left', 'options' ); ?></p>
+			<p class="text-body mb-8 md:mb-0"><?php the_field( 'museum_text_box_left', 'options' ); ?></p>
 		</div>
 		<div class="col-span-1 md:col-span-4">
-			<p class="body-text"><?php the_field( 'museum_text_box_right', 'options' ); ?></p>
+			<p class="text-body"><?php the_field( 'museum_text_box_right', 'options' ); ?></p>
 		</div>
 	</div>
 	<div class="w-full text-center mb-12 md:mb-24 flex justify-center">

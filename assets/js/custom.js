@@ -4,11 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	window.addEventListener("load", () => {
 
     let buttosnsBar = $('.section-buttons-bar');
-    let lastScroll = 0; 
+    let lastScroll = 0;
+    let topDistance = 0;
+
+
+    if ( $(".page-template-page-home")[0] ) {
+      topDistance = 800;
+    } else {
+      topDistance = 400;
+    };
   
     $(window).on( 'scroll', function() {
       const currentScroll = window.pageYOffset;
-      if ( currentScroll <= 800 ) {
+      if ( currentScroll <= topDistance ) {
         //console.log('current scroll is ' + currentScroll);
         buttosnsBar.removeClass( 'sticky' );
         return;

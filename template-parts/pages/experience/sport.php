@@ -15,7 +15,7 @@
 					<h3 class="title-xl mb-6 md:mb-0 xl:mb-16 xl:mt-48"><?php the_field( 'sport_title' ); ?></h3>
 				</div>
 				<div class="col-span-1 md:col-span-4 xl:col-span-3">
-					<p class="body-text mb-12 md:mb-14 xl:mb-16"><?php the_field( 'sport_description' ); ?></p>
+					<p class="text-body mb-12 md:mb-14 xl:mb-16"><?php the_field( 'sport_description' ); ?></p>
 				</div>
 			</div>
 			<?php

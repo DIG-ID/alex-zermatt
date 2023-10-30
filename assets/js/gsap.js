@@ -175,7 +175,7 @@ $(function() {
     let introtl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",
-        start: defaultStart,
+        start: "top 80%",
         end: defaultEnd, 
         scrub: scrubSpeed, 
         //markers: true,
@@ -254,7 +254,7 @@ $(function() {
     let introtl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",
-        start: defaultStart,
+        start: "top 80%",
         end: defaultEnd,
         scrub: scrubSpeed,
         //markers: true,
@@ -360,7 +360,7 @@ $(function() {
     let introtl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",
-        start: defaultStart,
+        start: "top 80%",
         end: defaultEnd,
         scrub: scrubSpeed,
         //markers: true,
@@ -441,7 +441,7 @@ $(function() {
     let introtl = gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",
-        start: defaultStart,
+        start: "top 80%",
         end: defaultEnd,
         scrub: scrubSpeed,
         //markers: true,
@@ -485,7 +485,7 @@ $(function() {
       defaults: { duration: animDuration },
     });
     zermatttl
-      .from(".section-zermatt .title-xl", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
+      .from(".section-zermatt h2", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
       .from(".section-zermatt .text-body", { opacity: 0, y: fadeDistance, autoAlpha: 0 })
       .from(".section-zermatt .btn-wrapper", { opacity: 0, y: fadeDistance, autoAlpha: 0 });
 

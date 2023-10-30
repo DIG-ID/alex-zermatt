@@ -2,7 +2,7 @@
 	<div class="grid grid-cols-1 md:grid-cols-8 xl:grid-cols-10">
 		<div class="col-span-1 md:col-span-8 xl:col-span-3">
 			<div class="room-details fade-content">
-				<h3 class="title-xl mb-10 xl:mb-0"><?php the_title(); ?></h3>
+				<h3 class="title-xl text-center md:text-left mb-10 xl:mb-0"><?php the_title(); ?></h3>
 				<p class="text-body !font-bold !text-xl mb-7 mt-9 xl:mb-1 xl:mt-1 2xl:mb-7 2xl:mt-9 hidden xl:block"><?php the_field( 'overview_subtitle' ); ?></p>
 				<p class="text-body pr-12 hidden xl:block"><?php the_field( 'overview_description' ); ?></p>
 			</div>

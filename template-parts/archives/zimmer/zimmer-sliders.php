@@ -11,6 +11,12 @@
             if ($rooms_query->have_posts()) : ?>
                 <div class="swiper-tabs-container relative overflow-hidden">
                     <div class="swiper-wrapper">
+                        <div class="swiper-button-next zimmer-swiper-slider-button-next flex md:hidden">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-arrow.svg" alt="Next">
+                        </div>
+                        <div class="swiper-button-prev zimmer-swiper-slider-button-prev flex md:hidden">
+                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-arrow.svg" alt="Previous">
+                        </div>
                         <?php $index = 0; ?>
                         <?php while ($rooms_query->have_posts()) : $rooms_query->the_post(); 
                         get_template_part( 'template-parts/components/tabs', 'slide' );

@@ -73,6 +73,10 @@ document.addEventListener("DOMContentLoaded", () => {
 						}
 					},
 				},
+				navigation: {
+					nextEl: ".zimmer-swiper-slider-button-next",
+					prevEl: ".zimmer-swiper-slider-button-prev",
+				},
 			});
 			//hover in slider pagination
 			var paginationBulletsZimmer = document.querySelectorAll('.swiper-tabs-pagination a');

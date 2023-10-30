@@ -1,4 +1,4 @@
-<section id="section-museum" class="section-museum az-container mb-32 md:mb-36 xl:mb-44">
+<section id="section-museum" class="section-museum az-container mb-32 md:mb-36 xl:mb-48">
     <div class="az-container-grid">
         <?php
         $museum_args = array(
@@ -10,12 +10,15 @@
             'paged' => ( get_query_var('paged') ) ? get_query_var('paged') : 1 
         );
         $museum_query = new WP_Query($museum_args);
-        if ($museum_query->have_posts()) :
+        if ($museum_query->have_posts()) : ?>
+            <div class="col-span-1 md:col-span-8 xl:col-span-8 col-start-1 xl:col-start-3 grid grid-cols-1 md:grid-cols-8 xl:grid-cols-8 md:gap-x-4 xl:gap-x-9">
+        <?php
             while ($museum_query->have_posts()) :
                 $museum_query->the_post();
                 get_template_part('template-parts/components/card-museum');
             endwhile;
             ?>
+            </div>
             <div class="col-span-1 md:col-span-8 xl:col-span-12 justify-center flex">
             <?php
             // Pagination
@@ -42,8 +45,10 @@
              ?>
             </div>
             <?php 
-            wp_reset_postdata();
+        wp_reset_postdata();
         endif;
         ?>
     </div>
+
+    
 </section>

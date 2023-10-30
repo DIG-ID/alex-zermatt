@@ -1,4 +1,4 @@
-<section id="section-intro" class="section-intro az-container pt-28 xl:pt-48 xl:pb-40 overflow-hidden">
+<section id="section-intro" class="section-intro az-container pt-28 xl:pt-48 xl:pb-[200px] overflow-hidden">
 	<div class="az-container-grid gap-y-3 xl:items-center">
         <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 xl:col-start-3">
             <?php 

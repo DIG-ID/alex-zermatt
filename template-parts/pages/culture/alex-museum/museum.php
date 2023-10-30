@@ -6,7 +6,7 @@
             'order'       => 'ASC',
             'orderby'     => 'date',
             'post_status' => 'publish',
-            'posts_per_page' => 3,
+            'posts_per_page' => 4,
             'paged' => ( get_query_var('paged') ) ? get_query_var('paged') : 1 
         );
         $museum_query = new WP_Query($museum_args);

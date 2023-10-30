@@ -11,10 +11,10 @@
             if ($rooms_query->have_posts()) : ?>
                 <div class="swiper-tabs-container relative overflow-hidden">
                     <div class="swiper-wrapper">
-                        <div class="swiper-button-next zimmer-swiper-slider-button-next flex md:hidden">
+                        <div class="swiper-button-next zimmer-swiper-slider-button-next flex xl:hidden">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-arrow.svg" alt="Next">
                         </div>
-                        <div class="swiper-button-prev zimmer-swiper-slider-button-prev flex md:hidden">
+                        <div class="swiper-button-prev zimmer-swiper-slider-button-prev flex xl:hidden">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-arrow.svg" alt="Previous">
                         </div>
                         <?php $index = 0; ?>

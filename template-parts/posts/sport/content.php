@@ -16,7 +16,7 @@
 						<p class="text-body"><?php the_field( 'descriptions_description_2' ); ?></p>
 					</div>
 					<div class="col-span-1 md:col-span-1 xl:col-span-1">
-						<a href="<?php echo esc_url( get_post_type_archive_link( 'sport' ) ); ?>" class="btn btn--arrow-left mt-12 xl:absolute xl:block xl:left-0 xl:bottom-0"><?php esc_html_e( 'Back', 'az' ); ?></a>
+						<a href="<?php echo esc_url( get_post_type_archive_link( 'sport' ) ); ?>" class="btn btn--arrow-left mt-12 xl:absolute xl:block xl:left-0 xl:bottom-0"><?php esc_html_e( 'ZURÜCK', 'az' ); ?></a>
 					</div>
 				</div>
 			</div>

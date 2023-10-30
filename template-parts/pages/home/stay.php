@@ -22,7 +22,7 @@
 					$link_title  = $stay_link['title'];
 					$link_target = $stay_link['target'] ? $stay_link['target'] : '_self';
 					?>
-					<div class="col-span-1 md:col-span-8 xl:col-span-3 flex justify-end xl:justify-start mr-16 xl:mr-0">
+					<div class="col-span-1 md:col-span-8 xl:col-span-3 flex justify-end xl:justify-start mr-16 xl:mr-0 btn-wrapper">
 						<a class="btn btn--arrow-right" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 					</div>
 					<?php

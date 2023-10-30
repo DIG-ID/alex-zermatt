@@ -85,7 +85,7 @@
 			);
 			?>
 		</div>
-		<div class="col-span-5 invisible hidden xl:flex lx:items-center xl:justify-center">
+		<div class="col-span-5 invisible hidden xl:flex xl:items-center xl:justify-center xl:visible">
 			<span class="separator inline-block w-32 h-[1px] bg-blue my-16"></span>
 		</div>
 		<div class="col-span-1 xl:col-span-2">

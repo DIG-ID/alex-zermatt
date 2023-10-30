@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if ( $(".page-template-page-home")[0] ) {
       topDistance = 800;
     } else {
-      topDistance = 400;
+      topDistance = 0;
     };
   
     $(window).on( 'scroll', function() {

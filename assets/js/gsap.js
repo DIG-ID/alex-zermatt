@@ -682,6 +682,26 @@ $(function() {
   if ( $(".page-template-page-culture-zermatt")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+
+    //Section Village
+    let villagetl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-village",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        //markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    villagetl
+      .from(".section-village .title-overline", {  ...defaultitemcfg  })
+      .from(".section-village .img-wide", {  ...defaultitemcfg  })
+      .from(".section-village .title-xl", {  ...defaultitemcfg  })
+      .from(".section-village .text-body-1", {  ...defaultitemcfg  })
+      .from(".section-village .text-body-2", {  ...defaultitemcfg  })
+      .from(".section-village .img-square", {  ...defaultitemcfg  });
   }
 
   /******************************************

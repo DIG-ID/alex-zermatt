@@ -16,14 +16,14 @@
 				$link_title  = $link['title'];
 				$link_target = $link['target'] ? $link['target'] : '_self';
 				?>
-				<div class="col-span-1 md:col-span-8 xl:col-span-3 flex justify-end xl:justify-start mr-16 xl:mr-0">
+				<div class="btn-wrapper col-span-1 md:col-span-8 xl:col-span-3 flex justify-end xl:justify-start mr-16 xl:mr-0">
 					<a class="btn btn--arrow-right" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 				</div>
 				<?php
 			endif;
 			$img_sm = get_field( 'infrastructure_image_sm' );
 			if ( $img_sm ) :
-				echo wp_get_attachment_image( $img_sm, 'full', false, array( 'class' => 'hidden invisible xl:block xl:visible w-full object-cover mt-24' ) );
+				echo wp_get_attachment_image( $img_sm, 'full', false, array( 'class' => 'hidden invisible xl:block xl:visible w-full object-cover mt-24 img-sm' ) );
 			endif;
 			?>
 		</div>
@@ -32,7 +32,7 @@
 			<?php
 			$img = get_field( 'infrastructure_image' );
 			if ( $img ) :
-				echo wp_get_attachment_image( $img, 'full', false, array( 'class' => 'w-full object-cover mb-12 xl:mb-0 max-h-[377px] md:max-h-[800px]' ) );
+				echo wp_get_attachment_image( $img, 'full', false, array( 'class' => 'w-full object-cover mb-12 xl:mb-0 max-h-[377px] md:max-h-[800px] img-xl' ) );
 			endif;
 			?>
 		</div>

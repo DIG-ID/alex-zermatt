@@ -1,4 +1,4 @@
-<section class="section-infrastucture az-container mb-28 xl:mb-52">
+<section class="section-massage az-container mb-28 xl:mb-52">
 	<div class="az-container-grid">
 		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1">
 			<div class="grid grid-cols-1 md:grid-cols-8 xl:grid-cols-3 md:gap-4 xl:gap-9">
@@ -16,7 +16,7 @@
 				$link_title  = $link['title'];
 				$link_target = $link['target'] ? $link['target'] : '_self';
 				?>
-				<div class="col-span-1 md:col-span-8 xl:col-span-3 flex justify-end xl:justify-start mr-16 xl:mr-0">
+				<div class="btn-wrapper col-span-1 md:col-span-8 xl:col-span-3 flex justify-end xl:justify-start mr-16 xl:mr-0">
 					<a class="btn btn--arrow-right" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 				</div>
 				<?php

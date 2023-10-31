@@ -652,6 +652,53 @@ $(function() {
   if ( $(".page-template-page-experience-wellness")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+
+    //Section Infrastructure
+    let infratl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-infrastructure",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        // markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+
+    infratl
+      .from(".section-infrastructure .title-overline", { ...defaultitemcfg })
+      .from(".section-infrastructure .img-xl", { ...defaultitemcfg })
+      .from(".section-infrastructure .title-xl", { ...defaultitemcfg })
+      .from(".section-infrastructure .text-body", { ...defaultitemcfg })
+      .from(".section-infrastructure .btn-wrapper", { ...defaultitemcfg });
+    if ( window.innerWidth >= xl ) {
+      infratl.from(".section-infrastructure .img-sm ", { ...defaultitemcfg });
+    };
+
+    //Section Massage
+    let massagetl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-massage",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        // markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+
+    massagetl
+      .from(".section-massage .title-overline", { ...defaultitemcfg })
+      .from(".section-massage .img-xl", { ...defaultitemcfg })
+      .from(".section-massage .title-xl", { ...defaultitemcfg })
+      .from(".section-massage .text-body", { ...defaultitemcfg })
+      .from(".section-massage .btn-wrapper", { ...defaultitemcfg });
+    if ( window.innerWidth >= xl ) {
+      massagetl.from(".section-massage .img-sm ", { ...defaultitemcfg });
+    };
+
   }
 
   /******************************************
@@ -698,9 +745,9 @@ $(function() {
     villagetl
       .from(".section-village .title-overline", {  ...defaultitemcfg  })
       .from(".section-village .img-wide", {  ...defaultitemcfg  })
-      .from(".section-village .img-square", {  ...defaultitemcfg  })
       .from(".section-village .title-xl", {  ...defaultitemcfg  })
       .from(".section-village .text-body-1", {  ...defaultitemcfg  })
+      .from(".section-village .img-square", {  ...defaultitemcfg  })
       .from(".section-village .text-body-2", {  ...defaultitemcfg  });
 
     //Section Matterhorn
@@ -718,9 +765,9 @@ $(function() {
     matterhorntl
       .from(".section-matterhorn-content .title-overline", {  ...defaultitemcfg  })
       .from(".section-matterhorn-content .img-wide", {  ...defaultitemcfg  })
-      .from(".section-matterhorn-content .img-square", {  ...defaultitemcfg  })
       .from(".section-matterhorn-content .text-body-1", {  ...defaultitemcfg  })
       .from(".section-matterhorn-content .title-xl", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-content .img-square", {  ...defaultitemcfg  })
       .from(".section-matterhorn-content .text-body-2", {  ...defaultitemcfg  });
       
     //Section Matterhorn - tradition

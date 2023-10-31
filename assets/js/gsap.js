@@ -590,6 +590,73 @@ $(function() {
   if ( $(".page-template-page-eat--drink-alex-grill")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+
+    //Section hours
+    let hoursTargets = gsap.utils.toArray([".opening-hours .title-overline", ".opening-hours img", ".opening-hours p"]);
+    hoursTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section Snack
+    let snackTargets = gsap.utils.toArray([".wine-food-list .title-overline", ".wine-food-list img", ".wine-food-list .text-body", ".wine-food-list .list-links "]);
+    snackTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section Gallery
+    let galleryTargets = gsap.utils.toArray([".section-gallery img", ".section-gallery .title-xl", ".section-gallery .btn-wrapper"]);
+    galleryTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section Bodega
+    let bodegaTargets = gsap.utils.toArray([".section-bodega .title-xl", ".section-bodega img", ".section-bodega .text-body" ]);
+    bodegaTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
   }
 
   /******************************************
@@ -600,6 +667,72 @@ $(function() {
   if ( $(".page-template-page-eat--drink-le-jardin")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+
+    //Section Terrace
+    let terraceTargets = gsap.utils.toArray([".section-sun-terrace .title-overline", ".section-sun-terrace img"]);
+    terraceTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section Snack
+    let snackTargets = gsap.utils.toArray([".wine-food-list .title-overline", ".wine-food-list img", ".wine-food-list .text-body", ".wine-food-list .list-links "]);
+    snackTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section hours
+    let hoursTargets = gsap.utils.toArray([".opening-hours .title-overline", ".opening-hours img", ".opening-hours p"]);
+    hoursTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section Gallery
+    let galleryTargets = gsap.utils.toArray([".section-gallery img", ".section-gallery .title-xl", ".section-gallery .btn-wrapper"]);
+    galleryTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
   }
 
   /******************************************
@@ -610,6 +743,73 @@ $(function() {
   if ( $(".page-template-page-eat--drink-lounge--bar")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+
+    //Section Wine 
+    let wineTargets = gsap.utils.toArray([".wine-food-list .title-overline", ".wine-food-list img", ".wine-food-list .text-body", ".wine-food-list .menus-links "]);
+    wineTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section hours
+    let hoursTargets = gsap.utils.toArray([".opening-hours .title-overline", ".opening-hours img", ".opening-hours p"]);
+    hoursTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section Smoke
+    let smokeTargets = gsap.utils.toArray([".section-smoke .title-overline", ".section-smoke img", ".section-smoke .text-body"]);
+    smokeTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section Gallery
+    let galleryTargets = gsap.utils.toArray([".section-gallery img", ".section-gallery .title-xl", ".section-gallery .btn-wrapper"]);
+    galleryTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
   }
 
   /******************************************
@@ -740,9 +940,8 @@ $(function() {
 
     infraTargets .forEach( target => {
       gsap.from(target, {
-        opacity: 0,
-        y: defaultCfg.fadeDistance,
-        autoAlpha: 0,
+        ...defaultitemcfg,
+        stagger: 0.20,
         scrollTrigger: {
           trigger: target,
           start: defaultCfg.defaultStart,
@@ -770,9 +969,8 @@ $(function() {
 
     treatTargets .forEach( target => {
       gsap.from(target, {
-        opacity: 0,
-        y: defaultCfg.fadeDistance,
-        autoAlpha: 0,
+        ...defaultitemcfg,
+        stagger: 0.20,
         scrollTrigger: {
           trigger: target,
           start: defaultCfg.defaultStart,

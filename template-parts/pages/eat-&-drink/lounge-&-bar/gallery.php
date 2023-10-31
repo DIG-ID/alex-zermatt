@@ -35,7 +35,7 @@
 					$link_title  = $link['title'];
 					$link_target = $link['target'] ? $link['target'] : '_self';
 					?>
-					<span class="block text-right xl:text-left mr-16 xl:mr-0">
+					<span class="btn-wrapper block text-right xl:text-left mr-16 xl:mr-0">
 						<a class="btn btn--arrow-right" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 					</span>
 					<?php

@@ -77,7 +77,7 @@ $(function() {
   // Create intro page timeline
   function createIntroPageTimeline() {
     let targets = gsap.utils.toArray([".section-intro img", ".section-intro .title-xl", ".section-intro .text-body"]);
-    return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0 } )
+    return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.8 } )
    /* return gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",

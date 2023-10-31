@@ -79,7 +79,7 @@ $(function() {
   function createIntroPageTimeline() {
     let targets = gsap.utils.toArray([".section-intro img", ".section-intro .title-xl", ".section-intro .text-body"]);
     imagesLoaded('.section-intro img', { background: true }, function() {
-      return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.6, stagger: 0.20 } )
+      return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.7, stagger: 0.20 } )
     } );
   }
   
@@ -1270,7 +1270,7 @@ $(function() {
     //Section Intro
     let targets = gsap.utils.toArray([".section-intro img", ".section-intro .title-xl", ".section-intro .text-bigger-light", ".section-intro a"]);
     imagesLoaded('.section-intro img', { background: true }, function() {
-      return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.6, stagger: 0.20 } )
+      return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.7, stagger: 0.20 } )
     } );
   }
 
@@ -1347,7 +1347,8 @@ $(function() {
     gsap.from(introTargets, {
       opacity: 0,
       y: introCfg.fadeDistance,
-      autoAlpha: 0, duration: 0.6,
+      autoAlpha: 0,
+      duration: 0.7,
       stagger: 0.20
     });
   }
@@ -1363,7 +1364,8 @@ $(function() {
     gsap.from(introTargets, {
       opacity: 0,
       y: introCfg.fadeDistance,
-      autoAlpha: 0, duration: 0.6,
+      autoAlpha: 0,
+      duration: 0.7,
       stagger: 0.20
     });
   }
@@ -1379,7 +1381,8 @@ $(function() {
     gsap.from(introTargets, {
       opacity: 0,
       y: introCfg.fadeDistance,
-      autoAlpha: 0, duration: 0.6,
+      autoAlpha: 0,
+      duration: 0.7,
       stagger: 0.20
     });
   }

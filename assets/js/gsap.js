@@ -556,7 +556,7 @@ $(function() {
 
     //Section cards
     const elements = gsap.utils.toArray('.card-seminare');
-    const anim = gsap.to(element, { ...defaultitemcfg });
+    const anim = gsap.from(elements, { ...defaultitemcfg });
 
     // Use callbacks to control the state of the animation
     ScrollTrigger.create({

@@ -79,7 +79,7 @@ $(function() {
   function createIntroPageTimeline() {
     let targets = gsap.utils.toArray([".section-intro img", ".section-intro .title-xl", ".section-intro .text-body"]);
     imagesLoaded('.section-intro img', { background: true }, function() {
-      return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.7, stagger: 0.25 } )
+      return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.6, stagger: 0.20 } )
     } );
   }
   
@@ -1270,7 +1270,7 @@ $(function() {
     //Section Intro
     let targets = gsap.utils.toArray([".section-intro img", ".section-intro .title-xl", ".section-intro .text-bigger-light", ".section-intro a"]);
     imagesLoaded('.section-intro img', { background: true }, function() {
-      return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.7, stagger: 0.20 } )
+      return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.6, stagger: 0.20 } )
     } );
   }
 
@@ -1346,16 +1346,10 @@ $(function() {
     let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body"]);
     introTargets.forEach( target => {
       gsap.from(target, {
-        ...defaultitemcfg,
-        stagger: 0.20,
-        scrollTrigger: {
-          trigger: target,
-          start: defaultCfg.defaultStart,
-          end: defaultCfg.defaultEnd,
-          scrub: defaultCfg.scrubSpeed,
-          //markers: true,
-          toggleActions: defaultCfg.defaultActions
-        }
+        opacity: 0,
+        y: introCfg.fadeDistance,
+        autoAlpha: 0, duration: 0.6,
+        stagger: 0.20
       });
     });
   }
@@ -1370,16 +1364,10 @@ $(function() {
     let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body"]);
     introTargets.forEach( target => {
       gsap.from(target, {
-        ...defaultitemcfg,
-        stagger: 0.20,
-        scrollTrigger: {
-          trigger: target,
-          start: defaultCfg.defaultStart,
-          end: defaultCfg.defaultEnd,
-          scrub: defaultCfg.scrubSpeed,
-          //markers: true,
-          toggleActions: defaultCfg.defaultActions
-        }
+        opacity: 0,
+        y: introCfg.fadeDistance,
+        autoAlpha: 0, duration: 0.6,
+        stagger: 0.20
       });
     });
   }
@@ -1394,16 +1382,10 @@ $(function() {
     let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body"]);
     introTargets.forEach( target => {
       gsap.from(target, {
-        ...defaultitemcfg,
-        stagger: 0.20,
-        scrollTrigger: {
-          trigger: target,
-          start: defaultCfg.defaultStart,
-          end: defaultCfg.defaultEnd,
-          scrub: defaultCfg.scrubSpeed,
-          //markers: true,
-          toggleActions: defaultCfg.defaultActions
-        }
+        opacity: 0,
+        y: introCfg.fadeDistance,
+        autoAlpha: 0, duration: 0.6,
+        stagger: 0.20
       });
     });
   }

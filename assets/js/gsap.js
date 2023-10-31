@@ -555,40 +555,22 @@ $(function() {
     createIntroPageTimeline();
 
     //Section cards
-
-    function animateCard(card) {
-      gsap.from(card, {
+    let targets = gsap.utils.toArray(".card-seminar");
+    gsap.from(targets, {
         opacity: 0,
-        y: 50,
-        duration: 0.5,
+        y: introCfg.fadeDistance,
         autoAlpha: 0,
+        duration: 0.7,
+        stagger: 0.25,
         scrollTrigger: {
-          trigger: card,
+          trigger: ".card-seminar",
           start: defaultCfg.defaultStart,
           end: defaultCfg.defaultEnd,
           scrub: defaultCfg.scrubSpeed,
           toggleActions: defaultCfg.defaultActions
         },
-      });
-    }
-
-    // Get all the card elements
-    const cards = document.querySelectorAll('.card-seminare');
-
-    // Loop through each card and apply the animation
-    cards.forEach(animateCard);
-    /*let cardstl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".card-seminare",
-        start: defaultCfg.defaultStart,
-        end: defaultCfg.defaultEnd,
-        scrub: defaultCfg.scrubSpeed,
-        markers: true,
-        toggleActions: defaultCfg.defaultActions
-      },
-      defaults: { duration: defaultCfg.animDuration },
-    });
-    cardstl.from(".card-seminar ", { ...defaultitemcfg });*/
+      }
+    );
    
   }
 

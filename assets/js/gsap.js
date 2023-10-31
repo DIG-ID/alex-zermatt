@@ -553,6 +553,21 @@ $(function() {
   if ( $(".post-type-archive-seminar")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+
+    //Section cards
+    let cardstl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".card-seminare",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        //markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    cardstl.from(".card-seminar ", { ...defaultitemcfg });
+   
   }
 
   /******************************************

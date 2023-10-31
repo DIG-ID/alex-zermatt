@@ -79,6 +79,8 @@ $(function() {
     return gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",
+        start: "top",
+        toggleActions: introCfg.defaultActions
       },
       defaults: { duration: defaultCfg.animDuration },
     })
@@ -500,7 +502,7 @@ $(function() {
 
   /******************************************
    *                                        *
-   *           Zimmer ARchive Page          *
+   *           Zimmer Archive Page          *
    *                                        *
    ****************************************/
   if ( $(".post-type-archive-zimmer")[0] ) {
@@ -537,10 +539,144 @@ $(function() {
 
   }
 
+  /******************************************
+   *                                        *
+   *           Seminar Archive Page         *
+   *                                        *
+   ****************************************/
+  if ( $(".post-type-archive-seminar")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
 
-  
+  /******************************************
+   *                                        *
+   *           Angebot Archive Page         *
+   *                                        *
+   ****************************************/
+  if ( $(".post-type-archive-angebot")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
 
+  /******************************************
+   *                                        *
+   *           Information Page            *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-stay-information")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
 
+  /******************************************
+   *                                        *
+   *              Grill Page                *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-eat--drink-alex-grill")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
 
+  /******************************************
+   *                                        *
+   *           le Jardin Page               *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-eat--drink-le-jardin")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
+
+  /******************************************
+   *                                        *
+   *             Lounge Page                *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-eat--drink-lounge--bar")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
+
+  /******************************************
+   *                                        *
+   *            Halfboard Page              *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-eat--drink-halfboard")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
+
+  /******************************************
+   *                                        *
+   *            Bankette Page               *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-eat--drink-bankette")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
+
+  /******************************************
+   *                                        *
+   *            Wellness Page               *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-experience-wellness")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
+
+  /******************************************
+   *                                        *
+   *              Sport Page                *
+   *                                        *
+   ****************************************/
+  if ( $(".post-type-archive-sport")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
+
+  /******************************************
+   *                                        *
+   *            Activities Page             *
+   *                                        *
+   ****************************************/
+  if ( $(".post-type-archive-activities")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
+
+  /******************************************
+   *                                        *
+   *          Kultur Zermatt Page           *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-culture-zermatt")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
+
+  /******************************************
+   *                                        *
+   *         Events Archives Page           *
+   *                                        *
+   ****************************************/
+  if ( $(".post-type-archive-event")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
+
+  /******************************************
+   *                                        *
+   *           Alex Museum Page             *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-culture-alex-museum")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+  }
 
 });

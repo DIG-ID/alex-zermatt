@@ -1,5 +1,5 @@
 <section id="section-anreise" class="section-anreise az-container xl:pb-32 overflow-hidden">
-	<div class="az-container-grid">
+	<div class="az-container-grid section-anreise-zug">
         <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 flex flex-col justify-center">
     	    <h2 class="title-overline"><?php the_field( 'arrival_title_overline_1' ); ?></h2>
             <?php 
@@ -17,7 +17,7 @@
             <p class="text-body mt-12 mb-20"><?php the_field( 'arrival_description_1' ); ?></p>
         </div>
     </div>
-    <div class="az-container-grid">
+    <div class="az-container-grid section-anreise-auto">
         <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-8 flex flex-col justify-center xl:-mt-[30rem]">
             <h2 class="title-overline"><?php the_field( 'arrival_title_overline_2' ); ?></h2>
             <?php 
@@ -35,7 +35,7 @@
             <p class="text-body mt-12 mb-20"><?php the_field( 'arrival_description_2' ); ?></p>
         </div>
     </div>
-    <div class="az-container-grid">
+    <div class="az-container-grid section-anreise-service">
         <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 flex flex-col justify-center xl:-mt-[16rem]">
             <h2 class="title-overline"><?php the_field( 'arrival_title_overline_3' ); ?></h2>
             <?php 

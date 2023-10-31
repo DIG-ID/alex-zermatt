@@ -1263,7 +1263,7 @@ $(function() {
 
   /******************************************
    *                                        *
-   *           Alex Museum Page             *
+   *              Contact Page              *
    *                                        *
    ****************************************/
   if ( $(".page-template-page-contact")[0] ) {
@@ -1273,5 +1273,34 @@ $(function() {
       return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.7, stagger: 0.20 } )
     } );
   }
+
+  /******************************************
+   *                                        *
+   *             Arrival Page               *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-arrival")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+
+    //Section Enraise
+    let enreiseTargets = gsap.utils.toArray([".section-anreise-zue", ".section-anreise-auto", ".section-anreise-service", ]);
+    enreiseTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+  }
+
 
 });

@@ -510,7 +510,7 @@ $(function() {
     //Section Zimmer
     let zimmertl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".section-zimmer-sliders",
+        trigger: ".section-zimmer-sliders .rooms-zimmer",
         start: defaultCfg.defaultStart,
         end: defaultCfg.defaultEnd,
         scrub: defaultCfg.scrubSpeed,
@@ -519,14 +519,12 @@ $(function() {
       },
       defaults: { duration: defaultCfg.animDuration },
     });
-    zimmertl
-    .from(".section-zimmer-sliders .rooms-zimmer", { ...defaultitemcfg })
-    .from(".section-zimmer-sliders .rooms-suite", { ...defaultitemcfg });
+    zimmertl.from(".section-zimmer-sliders .rooms-zimmer", { ...defaultitemcfg });
 
-    //Section Angebote
-    let angebotetl = gsap.timeline({
+    //Section Suite
+    let suitetl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".section-angebote-slider",
+        trigger: ".section-zimmer-sliders .rooms-suite",
         start: defaultCfg.defaultStart,
         end: defaultCfg.defaultEnd,
         scrub: defaultCfg.scrubSpeed,
@@ -535,7 +533,8 @@ $(function() {
       },
       defaults: { duration: defaultCfg.animDuration },
     });
-    angebotetl.from(".section-angebote-slider", { ...defaultitemcfg });
+    suitetl.from(".section-zimmer-sliders .rooms-suite", { ...defaultitemcfg });
+
   }
 
 

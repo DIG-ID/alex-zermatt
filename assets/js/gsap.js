@@ -79,10 +79,8 @@ $(function() {
     return gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",
-        start: "top",
-        toggleActions: introCfg.defaultActions
       },
-      defaults: { duration: defaultCfg.animDuration },
+      defaults: { duration: 0.8},
     })
     .from('.section-intro img', { ...defaultitemcfg })
     .from('.section-intro .title-xl', { ...defaultitemcfg })

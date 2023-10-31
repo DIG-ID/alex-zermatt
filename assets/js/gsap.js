@@ -81,18 +81,6 @@ $(function() {
     imagesLoaded('.section-intro img', { background: true }, function() {
       return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.7, stagger: 0.25 } )
     } );
-   /* return gsap.timeline({
-      scrollTrigger: {
-        trigger: ".section-intro",
-      },
-      defaults: { duration: 0.8},
-    })
-
-    
-
-    .from('.section-intro img', { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0 })
-    .from('.section-intro .title-xl', { ...defaultitemcfg }, '<')
-    .from('.section-intro .text-body', { ...defaultitemcfg }, '<');*/
   }
   
 
@@ -632,6 +620,26 @@ $(function() {
   if ( $(".page-template-page-eat--drink-halfboard")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+
+    //Section dinner and breakfast
+    let boxTargets = gsap.utils.toArray([".breakfast", ".dinner" ]);
+
+    boxTargets.forEach( target => {
+      gsap.from(target, {
+        opacity: 0,
+        y: defaultCfg.fadeDistance,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+    
   }
 
   /******************************************
@@ -642,6 +650,23 @@ $(function() {
   if ( $(".page-template-page-eat--drink-bankette")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+    //Section bankrtt List
+    let banketteTargets = gsap.utils.toArray([".section-wedding", ".section-celebrations", ".section-corporate-events" ]);
+    banketteTargets.forEach( target => {
+      gsap.from(target, {
+        opacity: 0,
+        y: defaultCfg.fadeDistance,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
   }
 
   /******************************************
@@ -698,6 +723,66 @@ $(function() {
     if ( window.innerWidth >= xl ) {
       massagetl.from(".section-massage .img-sm ", { ...defaultitemcfg });
     };
+
+  }
+
+  /******************************************
+   *                                        *
+   *          Infrastructure Page            *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-experience-wellness-infrastructure")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+
+    //Section infrastructure List
+    let infraTargets = gsap.utils.toArray(".infrastructure-content");
+
+    infraTargets .forEach( target => {
+      gsap.from(target, {
+        opacity: 0,
+        y: defaultCfg.fadeDistance,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+  }
+
+  /******************************************
+   *                                        *
+   *          Treatments Page               *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-experience-wellness-treatments")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+
+    //Section treatments List
+    let treatTargets = gsap.utils.toArray(".treatments-content");
+
+    treatTargets .forEach( target => {
+      gsap.from(target, {
+        opacity: 0,
+        y: defaultCfg.fadeDistance,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
 
   }
 

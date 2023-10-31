@@ -4,7 +4,7 @@ if ( have_rows( 'infrastructure' ) ) :
 	while ( have_rows( 'infrastructure' ) ) :
 		the_row();
 		?>
-		<div class="activity-content az-container xl:pt-40 pb-20 md:pb-24 xl:pb-36 overflow-hidden">
+		<div class="infrastructure-content az-container xl:pt-40 pb-20 md:pb-24 xl:pb-36 overflow-hidden">
 			<div class="az-container-grid">
 				<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1">
 					<div class="grid grid-cols-2 xl:grid-cols-1 order-2 xl:order-1 md:gap-4 xl:gap-0">

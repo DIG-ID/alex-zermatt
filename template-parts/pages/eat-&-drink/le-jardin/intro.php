@@ -1,4 +1,4 @@
-<section class="section-intro az-container mt-16 xl:mt-64 mb-16 md:mb-28 xl:mb-28">
+<section class="section-intro az-container mt-16 xl:mt-64 mb-16 md:mb-28 xl:mb-48">
 	<div class="az-container-grid items-center">
 		<div class="col-span-1 md:col-span-8 xl:col-span-4 xl:col-start-3">
 			<?php

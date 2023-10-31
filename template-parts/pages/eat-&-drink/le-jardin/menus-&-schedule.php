@@ -1,6 +1,6 @@
 <section class="section-lists-&-schedule az-container mb-32 md:mb-36 xl:mb-72">
 	<div class="az-container-grid">
-		<div class="xl:col-start-3 col-span-1 md:col-span-8 xl:col-span-3 mb-28 xl:mb-0 xl:mt-[100%] ">
+		<div class="xl:col-start-3 col-span-1 md:col-span-8 xl:col-span-3 mb-28 xl:mb-0">
 			<div class="wine-food-list md:mx-auto md:max-w-lg xl:max-w-none text-center">
 				<h2 class="title-overline"><?php the_field( 'menus_subtitle' ); ?></h2>
 				<?php

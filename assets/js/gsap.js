@@ -80,7 +80,7 @@ $(function() {
       scrollTrigger: {
         trigger: ".section-intro",
       },
-      defaults: { duration: defaultCfg.animDuration },
+      defaults: { duration: .6 },
     })
     .from('.section-intro img', { ...defaultitemcfg })
     .from('.section-intro .title-xl', { ...defaultitemcfg })

@@ -1200,4 +1200,51 @@ $(function() {
     createIntroPageTimeline();
   }
 
+  /******************************************
+   *                                        *
+   *            Uber uns Page               *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-about")[0] ) {
+    //Section Intro
+    createIntroPageTimeline();
+
+    //Section Hosts
+    let banketteTargets = gsap.utils.toArray([".host-container .title-overline", ".host-container img", ".host-container .text-xl", ".host-container .text-body", ]);
+    banketteTargets.forEach( target => {
+      gsap.from(target, {
+        opacity: 0,
+        y: defaultCfg.fadeDistance,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section chefs
+    let chefTargets = gsap.utils.toArray([".section-chef .title-overline", ".section-chef .featured-image", ".section-chef .title-xl", ".section-chef .text-body"]);
+    chefTargets.forEach( target => {
+      gsap.from(target, {
+        opacity: 0,
+        y: defaultCfg.fadeDistance,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+  }
+
 });

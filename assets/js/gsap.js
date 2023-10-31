@@ -555,18 +555,30 @@ $(function() {
     createIntroPageTimeline();
 
     //Section cards
-    let cardstl = gsap.timeline({
+    const elements = gsap.utils.toArray('.card-seminare');
+    const anim = gsap.to(element, { ...defaultitemcfg });
+
+    // Use callbacks to control the state of the animation
+    ScrollTrigger.create({
+      trigger: elements,
+      start: defaultCfg.defaultStart,
+      end: defaultCfg.defaultEnd,
+      scrub: defaultCfg.scrubSpeed,
+      //markers: true,
+      animation: anim
+    });
+    /*let cardstl = gsap.timeline({
       scrollTrigger: {
         trigger: ".card-seminare",
         start: defaultCfg.defaultStart,
         end: defaultCfg.defaultEnd,
         scrub: defaultCfg.scrubSpeed,
-        //markers: true,
+        markers: true,
         toggleActions: defaultCfg.defaultActions
       },
       defaults: { duration: defaultCfg.animDuration },
     });
-    cardstl.from(".card-seminar ", { ...defaultitemcfg });
+    cardstl.from(".card-seminar ", { ...defaultitemcfg });*/
    
   }
 

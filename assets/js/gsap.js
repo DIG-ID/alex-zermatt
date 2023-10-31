@@ -702,6 +702,27 @@ $(function() {
       .from(".section-village .text-body-1", {  ...defaultitemcfg  })
       .from(".section-village .text-body-2", {  ...defaultitemcfg  })
       .from(".section-village .img-square", {  ...defaultitemcfg  });
+
+    //Section Matterhorn
+    let matterhorntl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-matterhorn",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        //markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    matterhorntl
+      .from(".section-matterhorn .title-overline", {  ...defaultitemcfg  })
+      .from(".section-matterhorn .img-wide", {  ...defaultitemcfg  })
+      .from(".section-matterhorn .text-body-1", {  ...defaultitemcfg  })
+      .from(".section-matterhorn .title-xl", {  ...defaultitemcfg  })
+      .from(".section-matterhorn .text-body-2", {  ...defaultitemcfg  })
+      .from(".section-matterhorn .img-square", {  ...defaultitemcfg  });
+
   }
 
   /******************************************

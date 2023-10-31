@@ -1,3 +1,4 @@
+import imagesLoaded from 'imagesloaded';
 import { gsap } from "gsap";
 import Lenis from '@studio-freight/lenis';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -77,7 +78,9 @@ $(function() {
   // Create intro page timeline
   function createIntroPageTimeline() {
     let targets = gsap.utils.toArray([".section-intro img", ".section-intro .title-xl", ".section-intro .text-body"]);
-    return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.7, stagger: 0.25 } );
+    imagesLoaded('.section-intro img', { background: true }, function() {
+      return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0, duration: 0.7, stagger: 0.25 } )
+    } );
    /* return gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",

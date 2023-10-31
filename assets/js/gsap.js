@@ -519,7 +519,9 @@ $(function() {
       },
       defaults: { duration: defaultCfg.animDuration },
     });
-    zimmertl.from(".section-zimmer-sliders", { ...defaultitemcfg });
+    zimmertl
+    .from(".section-zimmer-sliders .rooms-zimmer", { ...defaultitemcfg })
+    .from(".section-zimmer-sliders .rooms-suite", { ...defaultitemcfg });
 
     //Section Angebote
     let angebotetl = gsap.timeline({

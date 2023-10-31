@@ -16,7 +16,7 @@
 				$link_title  = $link['title'];
 				$link_target = $link['target'] ? $link['target'] : '_self';
 				?>
-				<div class="col-span-1 md:col-span-8 xl:col-span-3 flex justify-end xl:justify-start mr-16 xl:mr-0">
+				<div class="btn-wrapper col-span-1 md:col-span-8 xl:col-span-3 flex justify-end xl:justify-start mr-16 xl:mr-0">
 					<a class="btn btn--arrow-right" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 				</div>
 				<?php
@@ -28,7 +28,7 @@
 			<?php
 			$img = get_field( 'sport_archive_fitness_image', 'options' );
 			if ( $img ) :
-				echo wp_get_attachment_image( $img, 'full', false, array( 'class' => 'w-full object-cover mb-12 xl:mb-0 h-[380px] md:h-[800px] xl:h-[780px]' ) );
+				echo wp_get_attachment_image( $img, 'full', false, array( 'class' => 'w-full object-cover mb-12 xl:mb-0 h-[380px] md:h-[800px] xl:h-[780px] img-xl' ) );
 			endif;
 			?>
 		</div>

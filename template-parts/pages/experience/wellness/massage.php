@@ -23,7 +23,7 @@
 			endif;
 			$img_sm = get_field( 'massage_image_sm' );
 			if ( $img_sm ) :
-				echo wp_get_attachment_image( $img_sm, 'full', false, array( 'class' => 'hidden invisible xl:block xl:visible w-full object-cover mt-24' ) );
+				echo wp_get_attachment_image( $img_sm, 'full', false, array( 'class' => 'hidden invisible xl:block xl:visible w-full object-cover mt-24 img-sm' ) );
 			endif;
 			?>
 		</div>
@@ -32,7 +32,7 @@
 			<?php
 			$img = get_field( 'massage_image' );
 			if ( $img ) :
-				echo wp_get_attachment_image( $img, 'full', false, array( 'class' => 'w-full object-cover mb-12 xl:mb-0 max-h-[377px] md:max-h-[800px]' ) );
+				echo wp_get_attachment_image( $img, 'full', false, array( 'class' => 'w-full object-cover mb-12 xl:mb-0 max-h-[377px] md:max-h-[800px] img-xl' ) );
 			endif;
 			?>
 		</div>

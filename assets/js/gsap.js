@@ -709,6 +709,83 @@ $(function() {
   if ( $(".post-type-archive-sport")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+
+    //Section Fitness
+    let fitnesstl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-fitness",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        // markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    fitnesstl
+      .from(".section-fitness .title-overline", { ...defaultitemcfg })
+      .from(".section-fitness .img-xl", { ...defaultitemcfg })
+      .from(".section-fitness .title-xl", { ...defaultitemcfg })
+      .from(".section-fitness .text-body", { ...defaultitemcfg })
+      .from(".section-fitness .btn-wrapper", { ...defaultitemcfg });
+
+    //Section Tennis
+    let tennistl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-tennis",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        // markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    tennistl
+      .from(".section-tennis .title-overline", { ...defaultitemcfg })
+      .from(".section-tennis .img-xl", { ...defaultitemcfg })
+      .from(".section-tennis .title-xl", { ...defaultitemcfg })
+      .from(".section-tennis .text-body", { ...defaultitemcfg })
+      .from(".section-tennis .btn-wrapper", { ...defaultitemcfg });
+
+    //Section Squash
+    let squashtl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-squash",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        // markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    squashtl
+      .from(".section-squash .title-overline", { ...defaultitemcfg })
+      .from(".section-squash .img-xl", { ...defaultitemcfg })
+      .from(".section-squash .title-xl", { ...defaultitemcfg })
+      .from(".section-squash .text-body", { ...defaultitemcfg })
+      .from(".section-squash .btn-wrapper", { ...defaultitemcfg });
+
+    //Section Golf
+    let golftl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-golf",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        // markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    golftl
+      .from(".section-golf .title-overline", { ...defaultitemcfg })
+      .from(".section-golf .img-xl", { ...defaultitemcfg })
+      .from(".section-golf .title-xl", { ...defaultitemcfg })
+      .from(".section-golf .text-body", { ...defaultitemcfg })
+      .from(".section-golf .btn-wrapper", { ...defaultitemcfg });
+
   }
 
   /******************************************

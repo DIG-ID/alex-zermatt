@@ -506,8 +506,16 @@ $(function() {
   if ( $(".post-type-archive-zimmer")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+
+    //Section Zermatt
+    gsap.from(".section-zimmer-sliders", { ScrollTrigger: { start: defaultCfg.defaultStart, end: defaultCfg.defaultEnd, scrub: defaultCfg.scrubSpeed, toggleActions: defaultCfg.defaultActions }, duration: defaultCfg.animDuration, ...defaultitemcfg  });
+
+    //Section Angebote
+    gsap.from(".section-angebote-slider", { ScrollTrigger: { start: defaultCfg.defaultStart, end: defaultCfg.defaultEnd, scrub: defaultCfg.scrubSpeed, toggleActions: defaultCfg.defaultActions }, duration: defaultCfg.animDuration, ...defaultitemcfg  });
   }
 
+
+  
 
 
 

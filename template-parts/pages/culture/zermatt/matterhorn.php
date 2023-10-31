@@ -23,7 +23,7 @@
 			<?php
 			$image = get_field( 'section_matterhorn_image_1' );
 			if ( $image ) :
-				echo wp_get_attachment_image( $image, 'full', null, array( 'class' => 'mb-6 w-full' ) );
+				echo wp_get_attachment_image( $image, 'full', null, array( 'class' => 'mb-6 w-full img-square' ) );
 			endif;
 			?>
 		</div>
@@ -40,7 +40,7 @@
 			<?php
 			$image = get_field( 'section_matterhorn_image_2' );
 			if ( $image ) :
-				echo wp_get_attachment_image( $image, 'full', null, array( 'class' => 'mb-6 w-full img-square' ) );
+				echo wp_get_attachment_image( $image, 'full', null, array( 'class' => 'mb-6 w-full' ) );
 			endif;
 			?>
 		</div>

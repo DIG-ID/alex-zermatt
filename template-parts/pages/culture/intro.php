@@ -1,10 +1,27 @@
 <section id="section-intro" class="section-intro az-container pt-28 overflow-hidden">
 	<div class="az-container-grid gap-y-3">
-		<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2">
-			<?php
+		<?php 
 			$intro_image = get_field( 'section_intro_image' );
+			$size = 'main-header-image';
+			$size_md = 'main-header-image-small';
+		?>
+		<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2 hidden xl:block">
+			<?php
 			if ( $intro_image ) :
-				echo wp_get_attachment_image( $intro_image, 'main-header-image' );
+				$image_args = array(
+					'class' => 'w-full',
+				);
+				echo wp_get_attachment_image( $intro_image, $size, false, $image_args );
+			endif;
+			?>
+		</div>
+		<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2 block xl:hidden">
+			<?php
+			if ( $intro_image ) :
+				$image_args = array(
+					'class' => 'w-full',
+				);
+				echo wp_get_attachment_image( $intro_image, $size_md, false, $image_args );
 			endif;
 			?>
 		</div>

@@ -76,15 +76,20 @@ $(function() {
   
   // Create intro page timeline
   function createIntroPageTimeline() {
-    return gsap.timeline({
+    let targets = gsap.utils.toArray([".section-intro img", ".section-intro .title-xl", ".section-intro .text-body"]);
+    return gsap.from(targets, { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0 } )
+   /* return gsap.timeline({
       scrollTrigger: {
         trigger: ".section-intro",
       },
       defaults: { duration: 0.8},
     })
+
+    
+
     .from('.section-intro img', { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0 })
     .from('.section-intro .title-xl', { ...defaultitemcfg }, '<')
-    .from('.section-intro .text-body', { ...defaultitemcfg }, '<');
+    .from('.section-intro .text-body', { ...defaultitemcfg }, '<');*/
   }
   
 

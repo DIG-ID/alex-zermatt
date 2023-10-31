@@ -1,12 +1,30 @@
 <section id="section-rooms" class="section-rooms az-container overflow-hidden">
 	<div class="az-container-grid">
-		<div class="col-span-1 md:col-span-8 xl:col-span-8 col-start-1 xl:col-start-3 mb-12 md:mb-8 xl:mb-7">
+		<?php 
+			$image_rooms = get_field('section_rooms_image');
+			$size = 'full';
+			$size_md = 'angebote-slider-image';
+		?>
+		<div class="col-span-1 md:col-span-8 xl:col-span-8 col-start-1 xl:col-start-3 mb-12 md:mb-8 xl:mb-7 hidden xl:block">
 			<span class="az-vertical-line-img"></span>
-			<?php 
-				$image_rooms = get_field('section_rooms_image');
-				if( $image_rooms ) {
-					echo wp_get_attachment_image( $image_rooms, 'full' );
-				}
+			<?php
+			if ( $image_rooms ) :
+				$image_args = array(
+					'class' => 'w-full',
+				);
+				echo wp_get_attachment_image( $image_rooms, $size, false, $image_args );
+			endif;
+			?>
+		</div>
+		<div class="col-span-1 md:col-span-8 xl:col-span-8 col-start-1 xl:col-start-3 mb-12 md:mb-8 xl:mb-7 block xl:hidden">
+			<span class="az-vertical-line-img"></span>
+			<?php
+			if ( $image_rooms ) :
+				$image_args = array(
+					'class' => 'w-full',
+				);
+				echo wp_get_attachment_image( $image_rooms, $size_md, false, $image_args );
+			endif;
 			?>
 		</div>
 		<div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 xl:col-start-3">

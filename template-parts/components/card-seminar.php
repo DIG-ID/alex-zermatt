@@ -18,7 +18,7 @@
             </div>
             <div class="col-span-1 md:col-span-6 xl:col-span-3 col-start-1 grid xl:hidden 2xl:grid grid-cols-5">
                 <div class="col-span-5 my-8 md:mt-12 md:mb-9 xl:mt-0">
-                    <p class="title-sm !normal-case"><?php esc_html_e('Bestuhlung & Kapazität', 'alexzermatt') ?></p>
+                    <p class="font-serif font-bold text-sm md:text-xl tracking-[0.6px]"><?php esc_html_e('Bestuhlung & Kapazität', 'alexzermatt') ?></p>
                 </div>
                 <?php
                 $capacity_types = [
@@ -61,7 +61,7 @@
     <div class="az-container-grid">
         <div class="col-span-7 col-start-1 hidden xl:grid 2xl:hidden grid-cols-5">
             <div class="col-span-5 my-8 md:mt-12 md:mb-9 xl:mt-0">
-                <p class="title-sm !normal-case"><?php esc_html_e('Bestuhlung & Kapazität', 'alexzermatt') ?></p>
+                <p class="font-serif font-bold text-sm md:text-xl tracking-[0.6px]"><?php esc_html_e('Bestuhlung & Kapazität', 'alexzermatt') ?></p>
             </div>
             <?php
             $capacity_types = [

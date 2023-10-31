@@ -708,9 +708,9 @@ $(function() {
       scrollTrigger: {
         trigger: ".section-matterhorn",
         start: defaultCfg.defaultStart,
-        end: "bottom 85%",
+        end: defaultCfg.defaultEnd,
         scrub: defaultCfg.scrubSpeed,
-        //markers: true,
+        markers: true,
         toggleActions: defaultCfg.defaultActions
       },
       defaults: { duration: defaultCfg.animDuration },
@@ -720,8 +720,10 @@ $(function() {
       .from(".section-matterhorn .img-wide", {  ...defaultitemcfg  })
       .from(".section-matterhorn .text-body-1", {  ...defaultitemcfg  })
       .from(".section-matterhorn .title-xl", {  ...defaultitemcfg  })
-      .from(".section-matterhorn .text-body-2", {  ...defaultitemcfg  })
-      .from(".section-matterhorn .img-square", {  ...defaultitemcfg  });
+      .from(".section-matterhorn .img-square", {  ...defaultitemcfg  })
+      .from(".section-matterhorn .text-body-2", {  ...defaultitemcfg  });
+      
+      
 
   }
 

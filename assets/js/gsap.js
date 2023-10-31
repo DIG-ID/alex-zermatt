@@ -796,6 +796,35 @@ $(function() {
   if ( $(".post-type-archive-activities")[0] ) {
     //Section Intro
     createIntroPageTimeline();
+
+    //Section Sommer
+    let sommertl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-sommer-sliders",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        //markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    sommertl.from(".section-sommer-sliders", { ...defaultitemcfg });
+
+    //Section Winter
+    let wintertl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-winter-sliders",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        //markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    wintertl.from(".section-winter-sliders", { ...defaultitemcfg });
+    
   }
 
   /******************************************

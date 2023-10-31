@@ -82,9 +82,9 @@ $(function() {
       },
       defaults: { duration: 0.8},
     })
-    .from('.section-intro img', { ...defaultitemcfg })
-    .from('.section-intro .title-xl', { ...defaultitemcfg })
-    .from('.section-intro .text-body', { ...defaultitemcfg });
+    .from('.section-intro img', { opacity: 0, y: introCfg.fadeDistance, autoAlpha: 0 })
+    .from('.section-intro .title-xl', { ...defaultitemcfg }, '<')
+    .from('.section-intro .text-body', { ...defaultitemcfg }, '<');
   }
   
 

@@ -82,9 +82,9 @@ $(function() {
       },
       defaults: { duration: defaultCfg.animDuration },
     })
-    .from('.section-intro .section-intro img', { ...defaultitemcfg })
-    .from('.section-intro .section-intro .title-xl', { ...defaultitemcfg })
-    .from('.section-intro .section-intro .text-body', { ...defaultitemcfg });
+    .from('.section-intro img', { ...defaultitemcfg })
+    .from('.section-intro .title-xl', { ...defaultitemcfg })
+    .from('.section-intro .text-body', { ...defaultitemcfg });
   }
   
 

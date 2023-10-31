@@ -507,11 +507,33 @@ $(function() {
     //Section Intro
     createIntroPageTimeline();
 
-    //Section Zermatt
-    gsap.from(".section-zimmer-sliders", { ScrollTrigger: { trigger:".section-angebote-slider", start: defaultCfg.defaultStart, end: defaultCfg.defaultEnd, scrub: defaultCfg.scrubSpeed, toggleActions: defaultCfg.defaultActions }, duration: defaultCfg.animDuration, ...defaultitemcfg  });
+    //Section Zimmer
+    let zimmertl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-zimmer-sliders",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        //markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    zimmertl.from(".section-zimmer-sliders", { ...defaultitemcfg });
 
     //Section Angebote
-    gsap.from(".section-angebote-slider", { ScrollTrigger: { trigger:".section-angebote-slider", start: defaultCfg.defaultStart, end: defaultCfg.defaultEnd, scrub: defaultCfg.scrubSpeed, toggleActions: defaultCfg.defaultActions }, duration: defaultCfg.animDuration, ...defaultitemcfg  });
+    let angebotetl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-angebote-slider",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        //markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    angebotetl.from(".section-angebote-slider", { ...defaultitemcfg });
   }
 
 

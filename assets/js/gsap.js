@@ -1336,5 +1336,76 @@ $(function() {
 
   }
 
+  /******************************************
+   *                                        *
+   *            News Archive Page           *
+   *                                        *
+   ****************************************/
+  if ( $(".post-type-archive-news")[0] ) {
+    //Section Intro
+    let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body"]);
+    introTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+  }
+
+  /******************************************
+   *                                        *
+   *              Gallery Page              *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-gallery")[0] ) {
+    //Section Intro
+    let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body"]);
+    introTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+  }
+
+  /******************************************
+   *                                        *
+   *               Jobs Page                *
+   *                                        *
+   ****************************************/
+  if ( $(".page-template-page-jobs")[0] ) {
+    //Section Intro
+    let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body"]);
+    introTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+  }
 
 });

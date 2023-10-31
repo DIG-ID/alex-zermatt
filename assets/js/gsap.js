@@ -1283,9 +1283,43 @@ $(function() {
     //Section Intro
     createIntroPageTimeline();
 
-    //Section Enraise
-    let enreiseTargets = gsap.utils.toArray([".section-anreise-zue", ".section-anreise-auto", ".section-anreise-service", ]);
-    enreiseTargets.forEach( target => {
+    //Section Zug
+    let zugTargets = gsap.utils.toArray([".section-anreise-zug .title-overline", ".section-anreise-zug img", ".section-anreise-zug .text-body", ]);
+    zugTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section auto
+    let autoTargets = gsap.utils.toArray([".section-anreise-auto .title-overline", ".section-anreise-auto img", ".section-anreise-auto .text-body", ]);
+    autoTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section service
+    let serviceTargets = gsap.utils.toArray([".section-anreise-service .title-overline", ".section-anreise-service img", ".section-anreise-service .text-body", ]);
+    serviceTargets.forEach( target => {
       gsap.from(target, {
         ...defaultitemcfg,
         stagger: 0.20,

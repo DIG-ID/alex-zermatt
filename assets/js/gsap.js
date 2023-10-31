@@ -1344,13 +1344,11 @@ $(function() {
   if ( $(".post-type-archive-news")[0] ) {
     //Section Intro
     let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body"]);
-    introTargets.forEach( target => {
-      gsap.from(target, {
-        opacity: 0,
-        y: introCfg.fadeDistance,
-        autoAlpha: 0, duration: 0.6,
-        stagger: 0.20
-      });
+    gsap.from(introTargets, {
+      opacity: 0,
+      y: introCfg.fadeDistance,
+      autoAlpha: 0, duration: 0.6,
+      stagger: 0.20
     });
   }
 
@@ -1362,13 +1360,11 @@ $(function() {
   if ( $(".page-template-page-gallery")[0] ) {
     //Section Intro
     let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body"]);
-    introTargets.forEach( target => {
-      gsap.from(target, {
-        opacity: 0,
-        y: introCfg.fadeDistance,
-        autoAlpha: 0, duration: 0.6,
-        stagger: 0.20
-      });
+    gsap.from(introTargets, {
+      opacity: 0,
+      y: introCfg.fadeDistance,
+      autoAlpha: 0, duration: 0.6,
+      stagger: 0.20
     });
   }
 
@@ -1380,13 +1376,11 @@ $(function() {
   if ( $(".page-template-page-jobs")[0] ) {
     //Section Intro
     let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body"]);
-    introTargets.forEach( target => {
-      gsap.from(target, {
-        opacity: 0,
-        y: introCfg.fadeDistance,
-        autoAlpha: 0, duration: 0.6,
-        stagger: 0.20
-      });
+    gsap.from(introTargets, {
+      opacity: 0,
+      y: introCfg.fadeDistance,
+      autoAlpha: 0, duration: 0.6,
+      stagger: 0.20
     });
   }
 

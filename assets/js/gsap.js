@@ -698,10 +698,10 @@ $(function() {
     villagetl
       .from(".section-village .title-overline", {  ...defaultitemcfg  })
       .from(".section-village .img-wide", {  ...defaultitemcfg  })
+      .from(".section-village .img-square", {  ...defaultitemcfg  })
       .from(".section-village .title-xl", {  ...defaultitemcfg  })
       .from(".section-village .text-body-1", {  ...defaultitemcfg  })
-      .from(".section-village .text-body-2", {  ...defaultitemcfg  })
-      .from(".section-village .img-square", {  ...defaultitemcfg  });
+      .from(".section-village .text-body-2", {  ...defaultitemcfg  });
 
     //Section Matterhorn
     let matterhorntl = gsap.timeline({
@@ -718,9 +718,9 @@ $(function() {
     matterhorntl
       .from(".section-matterhorn-content .title-overline", {  ...defaultitemcfg  })
       .from(".section-matterhorn-content .img-wide", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-content .img-square", {  ...defaultitemcfg  })
       .from(".section-matterhorn-content .text-body-1", {  ...defaultitemcfg  })
       .from(".section-matterhorn-content .title-xl", {  ...defaultitemcfg  })
-      .from(".section-matterhorn-content .img-square", {  ...defaultitemcfg  })
       .from(".section-matterhorn-content .text-body-2", {  ...defaultitemcfg  });
       
     //Section Matterhorn - tradition
@@ -736,9 +736,10 @@ $(function() {
       defaults: { duration: defaultCfg.animDuration },
     });
     matterhorntraditiontl
-      .from(".section-matterhorn-tradition .title-xl", {  ...defaultitemcfg  })
-      .from(".section-matterhorn-tradition .text-body", {  ...defaultitemcfg  })
       .from(".section-matterhorn-tradition img", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-tradition .title-xl", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-tradition .text-body", {  ...defaultitemcfg  });
+      
 
 
   }

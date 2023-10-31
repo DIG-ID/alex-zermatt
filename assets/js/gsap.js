@@ -706,24 +706,40 @@ $(function() {
     //Section Matterhorn
     let matterhorntl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".section-matterhorn",
+        trigger: ".section-matterhorn-content",
         start: defaultCfg.defaultStart,
         end: defaultCfg.defaultEnd,
         scrub: defaultCfg.scrubSpeed,
-        markers: true,
+        //markers: true,
         toggleActions: defaultCfg.defaultActions
       },
       defaults: { duration: defaultCfg.animDuration },
     });
     matterhorntl
-      .from(".section-matterhorn .title-overline", {  ...defaultitemcfg  })
-      .from(".section-matterhorn .img-wide", {  ...defaultitemcfg  })
-      .from(".section-matterhorn .text-body-1", {  ...defaultitemcfg  })
-      .from(".section-matterhorn .title-xl", {  ...defaultitemcfg  })
-      .from(".section-matterhorn .img-square", {  ...defaultitemcfg  })
-      .from(".section-matterhorn .text-body-2", {  ...defaultitemcfg  });
+      .from(".section-matterhorn-content .title-overline", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-content .img-wide", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-content .text-body-1", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-content .title-xl", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-content .img-square", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-content .text-body-2", {  ...defaultitemcfg  });
       
-      
+    //Section Matterhorn - tradition
+    let matterhorntraditiontl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-matterhorn-tradition",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        //markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    matterhorntraditiontl
+      .from(".section-matterhorn-tradition .title-xl", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-tradition .text-body", {  ...defaultitemcfg  })
+      .from(".section-matterhorn-tradition img", {  ...defaultitemcfg  })
+
 
   }
 

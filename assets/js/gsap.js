@@ -508,10 +508,10 @@ $(function() {
     createIntroPageTimeline();
 
     //Section Zermatt
-    gsap.from(".section-zimmer-sliders", { ScrollTrigger: { start: defaultCfg.defaultStart, end: defaultCfg.defaultEnd, scrub: defaultCfg.scrubSpeed, toggleActions: defaultCfg.defaultActions }, duration: defaultCfg.animDuration, ...defaultitemcfg  });
+    gsap.from(".section-zimmer-sliders", { ScrollTrigger: { trigger:".section-angebote-slider", start: defaultCfg.defaultStart, end: defaultCfg.defaultEnd, scrub: defaultCfg.scrubSpeed, toggleActions: defaultCfg.defaultActions }, duration: defaultCfg.animDuration, ...defaultitemcfg  });
 
     //Section Angebote
-    gsap.from(".section-angebote-slider", { ScrollTrigger: { start: defaultCfg.defaultStart, end: defaultCfg.defaultEnd, scrub: defaultCfg.scrubSpeed, toggleActions: defaultCfg.defaultActions }, duration: defaultCfg.animDuration, ...defaultitemcfg  });
+    gsap.from(".section-angebote-slider", { ScrollTrigger: { trigger:".section-angebote-slider", start: defaultCfg.defaultStart, end: defaultCfg.defaultEnd, scrub: defaultCfg.scrubSpeed, toggleActions: defaultCfg.defaultActions }, duration: defaultCfg.animDuration, ...defaultitemcfg  });
   }
 
 

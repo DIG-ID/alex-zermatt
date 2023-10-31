@@ -708,7 +708,7 @@ $(function() {
       scrollTrigger: {
         trigger: ".section-matterhorn",
         start: defaultCfg.defaultStart,
-        end: "top 85%",
+        end: "bottom 70%",
         scrub: defaultCfg.scrubSpeed,
         //markers: true,
         toggleActions: defaultCfg.defaultActions

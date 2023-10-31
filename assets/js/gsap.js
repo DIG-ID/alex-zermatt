@@ -555,18 +555,28 @@ $(function() {
     createIntroPageTimeline();
 
     //Section cards
-    const elements = gsap.utils.toArray('.card-seminare');
-    const anim = gsap.from(elements, { ...defaultitemcfg });
 
-    // Use callbacks to control the state of the animation
-    ScrollTrigger.create({
-      trigger: elements,
-      start: defaultCfg.defaultStart,
-      end: defaultCfg.defaultEnd,
-      scrub: defaultCfg.scrubSpeed,
-      //markers: true,
-      animation: anim
-    });
+    function animateCard(card) {
+      gsap.from(card, {
+        opacity: 0,
+        y: 50,
+        duration: 0.5,
+        autoAlpha: 0,
+        scrollTrigger: {
+          trigger: card,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          toggleActions: defaultCfg.defaultActions
+        },
+      });
+    }
+
+    // Get all the card elements
+    const cards = document.querySelectorAll('.card-seminare');
+
+    // Loop through each card and apply the animation
+    cards.forEach(animateCard);
     /*let cardstl = gsap.timeline({
       scrollTrigger: {
         trigger: ".card-seminare",

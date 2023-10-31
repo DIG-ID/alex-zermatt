@@ -826,9 +826,8 @@ $(function() {
 
     boxTargets.forEach( target => {
       gsap.from(target, {
-        opacity: 0,
-        y: defaultCfg.fadeDistance,
-        autoAlpha: 0,
+        ...defaultitemcfg,
+        stagger: 0.20,
         scrollTrigger: {
           trigger: target,
           start: defaultCfg.defaultStart,
@@ -854,9 +853,8 @@ $(function() {
     let banketteTargets = gsap.utils.toArray([".section-wedding", ".section-celebrations", ".section-corporate-events" ]);
     banketteTargets.forEach( target => {
       gsap.from(target, {
-        opacity: 0,
-        y: defaultCfg.fadeDistance,
-        autoAlpha: 0,
+        ...defaultitemcfg,
+        stagger: 0.20,
         scrollTrigger: {
           trigger: target,
           start: defaultCfg.defaultStart,
@@ -1209,13 +1207,29 @@ $(function() {
     //Section Intro
     createIntroPageTimeline();
 
-    //Section Hosts
-    let banketteTargets = gsap.utils.toArray([".host-container .title-overline", ".host-container img", ".host-container .text-xl", ".host-container .text-body", ]);
-    banketteTargets.forEach( target => {
+    //Section Host 1
+    let host1Targets = gsap.utils.toArray([".host-1 .title-overline", ".host-1 img", ".host-1 .text-xl", "host-1 .text-body", ]);
+    host1Targets.forEach( target => {
       gsap.from(target, {
-        opacity: 0,
-        y: defaultCfg.fadeDistance,
-        autoAlpha: 0,
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section Host 2
+    let host2Targets = gsap.utils.toArray([".host-2 img", ".host-2 .text-xl", "host-2 .text-body", ]);
+    host2Targets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
         scrollTrigger: {
           trigger: target,
           start: defaultCfg.defaultStart,
@@ -1231,9 +1245,8 @@ $(function() {
     let chefTargets = gsap.utils.toArray([".section-chef .title-overline", ".section-chef .featured-image", ".section-chef .title-xl", ".section-chef .text-body"]);
     chefTargets.forEach( target => {
       gsap.from(target, {
-        opacity: 0,
-        y: defaultCfg.fadeDistance,
-        autoAlpha: 0,
+        ...defaultitemcfg,
+        stagger: 0.20,
         scrollTrigger: {
           trigger: target,
           start: defaultCfg.defaultStart,

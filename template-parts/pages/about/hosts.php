@@ -1,6 +1,6 @@
 <section id="section-hosts" class="section-hosts az-container xl:pb-32 overflow-hidden">
 	<div class="az-container-grid">
-        <div class="host-container col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 flex flex-col justify-center">
+        <div class="host-container host-1 col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 flex flex-col justify-center">
     	    <h2 class="title-overline z-10"><?php the_field( 'section_hosts_title_overline' ); ?></h2>
             <?php 
             $image_1 = get_field('section_hosts_host_picture_1');
@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="az-container-grid">
-        <div class="host-container col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-8 flex flex-col justify-center xl:-mt-[30rem]">
+        <div class="host-container host-2 col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-8 flex flex-col justify-center xl:-mt-[30rem]">
             <?php 
             $image_2 = get_field('section_hosts_host_picture_2');
             if ( $image_2 ) : 

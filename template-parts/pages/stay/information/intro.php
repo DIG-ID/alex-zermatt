@@ -8,7 +8,7 @@
             <?php 
                 $intro_image = get_field( 'section_intro_image' );
                 if( $intro_image ) {
-                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container', falase, array( 'class' => 'invisible' ) );
+                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container', false, array( 'class' => 'invisible' ) );
                 }
             ?>
         </div>

@@ -9,8 +9,8 @@
             ?>
         </div>
         <div class="rooms__intro--right relative col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-3 xl:col-start-8 max-w-none xl:max-w-[510px] text-center xl:text-left">
-            <h1 class="title-xl mb-10 md:mb-12 mt-12 xl:mt-0"><?php the_field( 'archive_zimmer_title', 'option' ); ?></h1>
-            <p class="text-body mb-14 xl:mb-0"><?php the_field( 'archive_zimmer_description', 'option' ); ?></p>
+            <h1 class="title-xl mb-10 md:mb-12 mt-12 xl:mt-0 invisible"><?php the_field( 'archive_zimmer_title', 'option' ); ?></h1>
+            <p class="text-body mb-14 xl:mb-0 invisible"><?php the_field( 'archive_zimmer_description', 'option' ); ?></p>
         </div>
         <div class="block xl:hidden col-span-1 md:col-span-8 text-center">
             <span class="az-vertical-line-medium"></span>

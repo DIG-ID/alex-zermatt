@@ -608,7 +608,7 @@ $(function() {
     });
 
     //Section Snack
-    let snackTargets = gsap.utils.toArray([".wine-food-list .title-overline", ".wine-food-list img", ".wine-food-list .text-body", ".wine-food-list .list-links "]);
+    let snackTargets = gsap.utils.toArray([".wine-food-list .title-overline", ".wine-food-list img", ".wine-food-list .text-body", ".wine-food-list .menus-links"]);
     snackTargets.forEach( target => {
       gsap.from(target, {
         ...defaultitemcfg,

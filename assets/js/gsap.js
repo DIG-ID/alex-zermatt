@@ -543,22 +543,21 @@ $(function() {
     createIntroPageTimeline();
 
     //Section cards
-    let targets = gsap.utils.toArray(".card-seminar");
-    gsap.from(targets, {
-        opacity: 0,
-        y: introCfg.fadeDistance,
-        autoAlpha: 0,
-        duration: 0.7,
-        stagger: 0.25,
+    let cardTargets = gsap.utils.toArray([".card-seminar", ]);
+    cardTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
         scrollTrigger: {
-          trigger: ".card-seminar",
+          trigger: target,
           start: defaultCfg.defaultStart,
           end: defaultCfg.defaultEnd,
           scrub: defaultCfg.scrubSpeed,
+          //markers: true,
           toggleActions: defaultCfg.defaultActions
-        },
-      }
-    );
+        }
+      });
+    });
    
   }
 

@@ -8,7 +8,7 @@
 				$link_title  = $tr_link['title'];
 				$link_target = $tr_link['target'] ? $tr_link['target'] : '_self';
 				?>
-				<a class="btn whitespace-nowrap !hidden !invisible sm:!inline-block sm:!visible" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+				<a class="btn whitespace-nowrap !hidden !invisible sm:!inline-block sm:!visible" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" data-fancybox="reservation-footer" data-caption="<?php echo esc_html( $link_title ); ?>"><?php echo esc_html( $link_title ); ?></a>
 				<span class="w-full bg-blue h-[1px] mx-4 lg:mx-14 hidden invisible sm:inline-block sm:visible"></span>
 				<?php
 			endif;

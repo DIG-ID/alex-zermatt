@@ -119,32 +119,60 @@
 		</div>
 		<div class="col-span-1 xl:col-span-5 flex flex-col xl:flex-row xl:items-center xl:justify-between mt-8 xl:mt-16">
 			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden uppercase"><?php esc_html_e( 'Book', 'az' ); ?></p>
-			<a href="#" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[160px] xl:max-w-none">
-				<?php esc_html_e( 'Tisch reservieren', 'az' ); ?>
+			<?php
+			$tr_link = get_field( 'booking_links_table_reservation', 'options' );
+			if ( $tr_link ) :
+				$link_url    = $tr_link['url'];
+				$link_title  = $tr_link['title'];
+				$link_target = $tr_link['target'] ? $tr_link['target'] : '_self';
+				?>
+			<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" data-fancybox="reservation" data-caption="<?php echo esc_html( $link_title ); ?>" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[160px] xl:max-w-none">
+				<?php echo esc_html( $link_title ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" width="51" height="15" viewBox="0 0 51 15" fill="none" class="xl:invisible xl:hidden">
 					<line x1="51" y1="7.5" x2="4.37114e-08" y2="7.5" stroke="#002850"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M39.6584 0C40.4791 1.93329 41.6217 3.42803 42.904 4.56255C45.4445 6.81031 48.4908 7.60676 50.5434 7.64853L50.5638 6.64874C48.7133 6.61108 45.905 5.88258 43.5666 3.81361C42.4885 2.8597 41.501 1.6127 40.7525 -3.70621e-07L39.6584 0Z" fill="#002850"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M39.6584 14.999C40.4791 13.0657 41.6217 11.571 42.904 10.4365C45.4445 8.18871 48.4908 7.39226 50.5434 7.35049L50.5638 8.35028C48.7133 8.38794 45.905 9.11645 43.5666 11.1854C42.4885 12.1393 41.501 13.3863 40.7525 14.999L39.6584 14.999Z" fill="#002850"/>
 				</svg>
 			</a>
+			<?php
+			endif;
+			?>
 			<span class="invisible hidden xl:visible xl:block w-full h-[1px] bg-blue ml-20 mr-12"></span>
-			<a href="" class="flex items-center justify-between xl:block font-serif font-light xl:font-medium text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[160px] xl:max-w-none">
-				<?php esc_html_e( 'Jetzt buchen', 'az' ); ?>
+			<?php $br_link = get_field( 'booking_links_booking_reservation', 'options' );
+			if ( $br_link ) :
+				$link_url    = $br_link['url'];
+				$link_title  = $br_link['title'];
+				$link_target = $br_link['target'] ? $br_link['target'] : '_self';
+				?>
+			<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="flex items-center justify-between xl:block font-serif font-light xl:font-medium text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[160px] xl:max-w-none">
+				<?php echo esc_html( $link_title ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" width="51" height="15" viewBox="0 0 51 15" fill="none" class="xl:invisible xl:hidden">
 					<line x1="51" y1="7.5" x2="4.37114e-08" y2="7.5" stroke="#002850"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M39.6584 0C40.4791 1.93329 41.6217 3.42803 42.904 4.56255C45.4445 6.81031 48.4908 7.60676 50.5434 7.64853L50.5638 6.64874C48.7133 6.61108 45.905 5.88258 43.5666 3.81361C42.4885 2.8597 41.501 1.6127 40.7525 -3.70621e-07L39.6584 0Z" fill="#002850"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M39.6584 14.999C40.4791 13.0657 41.6217 11.571 42.904 10.4365C45.4445 8.18871 48.4908 7.39226 50.5434 7.35049L50.5638 8.35028C48.7133 8.38794 45.905 9.11645 43.5666 11.1854C42.4885 12.1393 41.501 13.3863 40.7525 14.999L39.6584 14.999Z" fill="#002850"/>
 				</svg>
 			</a>
+			<?php
+			endif;
+			?>
 			<span class="invisible hidden xl:visible xl:block w-full h-[1px] bg-blue mr-20 ml-12"></span>
-			<a href="" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[160px] xl:max-w-none">
-				<?php esc_html_e( 'Gutscheine', 'az' ); ?>
+			<?php $vouchers_link = get_field( 'booking_links_vouchers', 'options' );
+			if ( $vouchers_link ) :
+				$link_url    = $vouchers_link['url'];
+				$link_title  = $vouchers_link['title'];
+				$link_target = $vouchers_link['target'] ? $vouchers_link['target'] : '_self';
+				?>
+			<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[160px] xl:max-w-none">
+				<?php echo esc_html( $link_title ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" width="51" height="15" viewBox="0 0 51 15" fill="none" class="xl:invisible xl:hidden">
 					<line x1="51" y1="7.5" x2="4.37114e-08" y2="7.5" stroke="#002850"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M39.6584 0C40.4791 1.93329 41.6217 3.42803 42.904 4.56255C45.4445 6.81031 48.4908 7.60676 50.5434 7.64853L50.5638 6.64874C48.7133 6.61108 45.905 5.88258 43.5666 3.81361C42.4885 2.8597 41.501 1.6127 40.7525 -3.70621e-07L39.6584 0Z" fill="#002850"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M39.6584 14.999C40.4791 13.0657 41.6217 11.571 42.904 10.4365C45.4445 8.18871 48.4908 7.39226 50.5434 7.35049L50.5638 8.35028C48.7133 8.38794 45.905 9.11645 43.5666 11.1854C42.4885 12.1393 41.501 13.3863 40.7525 14.999L39.6584 14.999Z" fill="#002850"/>
 				</svg>
 			</a>
+			<?php
+			endif;
+			?>
 		</div>
 		<div class="col-span-2 mt-4 md:hidden md:invisible">
 			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden uppercase"><?php esc_html_e( 'Language', 'az' ); ?></p>

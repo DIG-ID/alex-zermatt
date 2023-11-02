@@ -4,6 +4,22 @@ import { Fancybox } from "@fancyapps/ui";
 document.addEventListener("DOMContentLoaded", () => {
 	//wait until images, links, fonts, stylesheets, and js is loaded
 	window.addEventListener("load", () => {
+    //General fancybox for the menu reservation
+    Fancybox.bind('[data-fancybox=reservation]', {
+      defaultType: "iframe",
+      id: "reservation",
+    });
+    Fancybox.bind('[data-fancybox=reservation-footer]', {
+      defaultType: "iframe",
+      id: "reservation-footer",
+    });
+    if (document.body.classList.contains("page-template-page-home")) {
+      Fancybox.bind('[data-fancybox=reservation-home]', {
+        defaultType: "iframe",
+        id: "reservation-home",
+      });
+    }
+    // Other Fancyboxes
     if (document.body.classList.contains("page-template-page-media-corner")) {
       Fancybox.bind("[data-fancybox]", {
         Toolbar: {

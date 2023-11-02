@@ -8,7 +8,7 @@
 				$link_title  = $tr_link['title'];
 				$link_target = $tr_link['target'] ? $tr_link['target'] : '_self';
 				?>
-				<a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+				<a class="btn" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" data-fancybox="reservation-home" data-caption="<?php echo esc_html( $link_title ); ?>"><?php echo esc_html( $link_title ); ?></a>
 				<?php
 			endif;
 			$br_link = get_field( 'booking_links_booking_reservation', 'options' );

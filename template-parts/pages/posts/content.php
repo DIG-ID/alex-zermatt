@@ -1,12 +1,23 @@
-<div class="post-content w-full px-4 lg:px-8 lg:py-32 relative grid grid-cols-1 lg:grid-cols-12 mb-16 lg:mb-0">
-	<?php
-	if ( has_post_thumbnail() ) :
-		?><figure class="absolute grid grid-cols-1 lg:grid-cols-12 gap-4 px-4 lg:px-8 w-full -top-[140px] lg:-top-[300px] xl:-top-[300px] left-1/2 -translate-x-1/2 "><?php
-			the_post_thumbnail( 'full', array( 'class' => 'w-full object-cover lg:col-span-10 lg:col-start-2 xl:col-start-2 max-h-[700px]' ) );
-		?></figure><?php
-	endif;
-	?>
-	<div class="post-content-wrapper lg:col-start-2 xl:col-start-3 lg:col-span-10 xl:col-span-8 pt-[120px] md:pt-[380px] lg:pt-[150px] xl:pt-[350px]">
-		<?php the_content(); ?>
+<div class="post-content az-container pt-28 xl:pt-48 pb-16 md:pb-32 xl:pb-60 overflow-hidden">
+	<div class="az-container-grid xl:items-center">
+		<div class="col-span-1 md:col-span-8 xl:col-span-6 col-start-1 md:col-start-1 xl:col-start-4 mb-7 xl:mb-0">
+			<?php if (has_post_thumbnail()) : 
+				$full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'featured-image-overview');
+			?>
+			<div class="featured-image">
+				<img src="<?php echo $full_image_url[0]; ?>" alt="<?php the_title(); ?>" class="angebote-slide-img size-featured-image-overview" />
+			</div>
+			<?php else : ?>
+			<div class="featured-image">
+				<img src="https://placehold.co/1105x605">
+			</div>
+			<?php endif; ?>
+		</div>
+		<div class="col-span-1 md:col-span-8 xl:col-span-6 col-start-1 md:col-start-1 xl:col-start-4 mb-7 xl:mb-0">
+			<div class="title-xl mt-5"><?php the_title(); ?></div>
+		</div>
+		<div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-4 mb-7 xl:mb-0">
+			<div class="text-body mb-20"><?php the_content(); ?></div>
+		</div>
 	</div>
 </div>

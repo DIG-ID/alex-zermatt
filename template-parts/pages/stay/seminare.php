@@ -33,7 +33,7 @@
 		</div>
 		<div class="col-span-1 md:col-span-4 xl:col-span-3 col-start-1 md:col-start-5 xl:col-start-8">
 			<p class="text-body mb-10 md:mb-20 xl:mb-16"><?php the_field( 'section_seminare_description' ); ?></p>
-			<span class="btn-wrapper block text-right xl:text-left mr-16 xl:mr-0"><a class="btn btn--arrow-right" href="<?php the_field( 'section_seminare_cta_page' ); ?>"><?php echo esc_html_e( 'Saminarräume', 'alexzermatt' ) ?></a></span>
+			<span class="btn-wrapper block text-right xl:text-left mr-16 xl:mr-0"><a class="btn btn--arrow-right" href="<?php the_field( 'section_seminare_cta_page' ); ?>"><?php echo esc_html_e( 'Seminarräume', 'alexzermatt' ) ?></a></span>
 		</div>
     </div>
 </section>

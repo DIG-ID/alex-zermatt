@@ -5,7 +5,7 @@
 				<div class="col-span-1 hidden invisible xl:block xl:visible">
 					<h2 class="title-xl hidden xl:block"><?php the_title(); ?></h2>
 				</div>
-				<div class="col-span-2 xl:col-span-1 xl:pr-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 xl:block md:gap-4 xl:gap-9">
+				<div class="col-span-2 xl:col-span-1 xl:pr-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 xl:block md:gap-4 xl:gap-9">
 					<div class="col-span-1 md:col-span-2 xl:col-span-1 xl:hidden mb-12">
 						<h2 class="title-xl"><?php the_title(); ?></h2>
 					</div>

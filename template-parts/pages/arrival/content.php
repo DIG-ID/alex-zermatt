@@ -52,7 +52,25 @@
             <?php endif; ?>
             <p class="text-body mt-12 mb-20"><?php the_field( 'arrival_description_3' ); ?></p>
         </div>
-        <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-8 flex items-end pb-[6rem]">
+    </div>
+    <div class="az-container-grid section-anreise-auto">
+        <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-8 flex flex-col justify-center xl:-mt-[30rem]">
+            <h2 class="title-overline"><?php the_field( 'arrival_title_overline_4' ); ?></h2>
+            <?php 
+            $image_4 = get_field('arrival_image_4');
+            if ( $image_4 ) : 
+            ?>
+                <div class="featured-image">
+                <?php echo wp_get_attachment_image( $image_4, 'full' ); ?>
+                </div>
+            <?php else : ?>
+                <div class="featured-image">
+                    <img src="https://placehold.co/453x462">
+                </div>
+            <?php endif; ?>
+            <p class="text-body mt-12 mb-20"><?php the_field( 'arrival_description_4' ); ?></p>
+        </div>
+        <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 flex items-end pb-[6rem] xl:-mt-[34rem]">
             <?php
             $link = get_field( 'link' );
             if ( $link ) :

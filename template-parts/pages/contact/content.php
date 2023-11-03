@@ -17,7 +17,7 @@
                 }
             ?>
         </div>
-        <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-3 xl:col-start-3 order-3">
+        <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-3 xl:col-start-3 order-3 xl:-mt-24">
             <?php
             $link = get_field( 'contacts_link', 'option' );
             if ( $link ) :

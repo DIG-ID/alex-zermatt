@@ -1,12 +1,12 @@
-<section class="section-le-jardin az-container pb-28 xl:py-28 overflow-hidden">
+<section class="section-le-jardin px-0 md:px-16 xl:px-0 pb-28 xl:py-28 overflow-hidden">
 	<div class="az-container-grid">
-		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-2 order-2 xl:order-1">
+		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-2 order-2 xl:order-1 px-7 md:px-0">
 			<div class="grid grid-cols-2 xl:grid-cols-1 order-2 xl:order-1 md:gap-4 xl:gap-9">
-				<div class="col-span-1">
+				<div class="col-span-2 md:col-span-1">
 					<h2 class="title-overline__horizontal title-overline--xl !hidden !invisible xl:!block xl:!visible"><?php the_field( 'le_jardin_subtitle' ); ?></h2>
-					<h3 class="title-xl xl:mb-8"><?php the_field( 'le_jardin_title' ); ?></h3>
+					<h3 class="title-xl mb-4 xl:mb-8"><?php the_field( 'le_jardin_title' ); ?></h3>
 				</div>
-				<div class="col-span-1">
+				<div class="col-span-2 md:col-span-1">
 					<p class="text-body mb-12 xl:mb-8"><?php the_field( 'le_jardin_description' ); ?></p>
 					<?php
 					$link = get_field( 'le_jardin_link' );
@@ -23,7 +23,6 @@
 					?>
 				</div>
 			</div>
-
 		</div>
 		<div class="col-span-1 md:col-span-8 xl:col-span-8 order-1 xl:order-2 text-center">
 			<h2 class="title-overline title-overline--sm xl:hidden xl:invisible"><?php the_field( 'le_jardin_subtitle' ); ?></h2>

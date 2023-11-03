@@ -6,19 +6,19 @@
         <div class="col-span-1 md:col-span-6 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-4 columns-2">
             <?php
             $feature_to_svg = array(
-                'Desk' => 'desk.svg',
-                'Bathtub' => 'bathtub.svg',
-                'Bathrobe' => 'bathrobe.svg',
-                'Balcony' => 'balcony.svg',
-                'Breakfast' => 'breakfast.svg',
-                'Flatscreen TV' => 'flatscreenTV.svg',
-                'Kingsize Bed' => 'kingsize-bed.svg',
-                'Single Bed' => 'single_extra.svg',
-                'Extra Bed' => 'single_extra.svg',
-                'Phone' => 'phone.svg',
+                'Schreibtisch' => 'desk.svg',
+                'Badewanne' => 'bathtub.svg',
+                'Bademantel' => 'bathrobe.svg',
+                'Balkon' => 'balcony.svg',
+                'Frühstück' => 'breakfast.svg',
+                'Flachbildschirm' => 'flatscreenTV.svg',
+                'Kingsize Bett' => 'kingsize-bed.svg',
+                'Einzelbett' => 'single_extra.svg',
+                'Zusatzbett' => 'single_extra.svg',
+                'Telefon' => 'phone.svg',
                 'Safe' => 'safe.svg',
-                'Wifi' => 'wifi.svg',
-                'Fireplace' => 'fireplace.svg',
+                'WLAN' => 'wifi.svg',
+                'Kamin' => 'fireplace.svg',
             );
             $selected_features = get_field('furnishing_features');
             if ($selected_features) {

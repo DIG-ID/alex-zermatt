@@ -1,4 +1,4 @@
-<section class="section-lounge-bar az-container pb-28 xl:py-28 overflow-hidden">
+<section class="section-lounge-bar px-0 md:px-16 xl:px-0 pb-28 xl:py-28 overflow-hidden">
 	<div class="az-container-grid">
 		<div class="col-span-1 md:col-span-8 xl:col-span-8 text-center">
 			<h2 class="title-overline title-overline--sm xl:hidden xl:invisible"><?php the_field( 'lounge_&_bar_subtitle' ); ?></h2>
@@ -9,13 +9,13 @@
 			endif;
 			?>
 		</div>
-		<div class="col-span-1 md:col-span-8 xl:col-span-3">
+		<div class="col-span-1 md:col-span-8 xl:col-span-3 px-7 md:px-0">
 			<div class="grid grid-cols-2 xl:grid-cols-1 md:gap-4 xl:gap-9">
-				<div class="col-span-1">
+				<div class="col-span-2 md:col-span-1">
 					<h2 class="title-overline__horizontal--right title-overline--xl text-end !hidden !invisible xl:!block xl:!visible"><?php the_field( 'lounge_&_bar_subtitle' ); ?></h2>
 					<h3 class="title-xl xl:mb-8"><?php the_field( 'lounge_&_bar_title' ); ?></h3>
 				</div>
-				<div class="col-span-1">
+				<div class="col-span-2 md:col-span-1">
 					<p class="text-body mb-12 xl:mb-8"><?php the_field( 'lounge_&_bar_description' ); ?></p>
 					<?php
 					$link = get_field( 'lounge_&_bar_link' );

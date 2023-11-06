@@ -20,4 +20,24 @@
 			<div class="text-body mb-20"><?php the_content(); ?></div>
 		</div>
 	</div>
+	<div class="az-container-grid">
+		<div class="col-span-1 md:col-span-8 xl:col-span-6 col-start-1 md:col-start-1 xl:col-start-4">
+			<?php
+			$previous_post = get_previous_post();
+			$next_post = get_next_post();
+
+			if ($previous_post) {
+				?>
+				<a href="<?php echo get_permalink($previous_post); ?>" class="btn btn--arrow-left mt-12"><?php esc_html_e('Vorherige', 'az'); ?></a>
+			<?php
+			}
+
+			if ($next_post) {
+				?>
+				<a href="<?php echo get_permalink($next_post); ?>" class="btn btn--arrow-left-inverted mt-12 float-right"><?php esc_html_e('Nächste', 'az'); ?></a>
+			<?php
+			}
+			?>
+		</div>
+	</div>
 </div>

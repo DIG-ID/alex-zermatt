@@ -199,8 +199,8 @@ document.addEventListener("DOMContentLoaded", () => {
 						}
 					},
 					navigation: {
-						nextEl: ".swiper-sommer-button-next",
-						prevEl: ".swiper-sommer-button-prev",
+						nextEl: ".swiper-winter-button-next",
+						prevEl: ".swiper-winter-button-prev",
 					},
 				},
 			});

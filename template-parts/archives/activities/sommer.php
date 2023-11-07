@@ -14,9 +14,13 @@
 
 			<div class="col-span-1 md:col-span-8 xl:col-span-7 order-1 xl:order-2">
 				<div class="flex justify-between items-center relative xl:hidden">
-					<div class="swiper-sommer-button-next"></div>
-					<h2 class="title-xl mb-12"><?php the_field( 'archive_activities_sommer_title', 'options' ); ?></h2>
-					<div class="swiper-sommer-button-prev"></div>
+					<div class="swiper-button-next swiper-sommer-button-next flex xl:hidden">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-arrow.svg" alt="Next">
+					</div>
+					<h2 class="title-xl mx-auto md:mx-0 py-[14px] md:py-0 md:mb-12"><?php the_field( 'archive_activities_sommer_title', 'options' ); ?></h2>
+					<div class="swiper-button-prev swiper-sommer-button-prev flex xl:hidden">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/slider-arrow.svg" alt="Previous">
+					</div>
 				</div>
 				<div class=" swiper swiper-sommer-container relative overflow-hidden w-full">
 					<div class="swiper-wrapper">

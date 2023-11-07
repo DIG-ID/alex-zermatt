@@ -3,16 +3,16 @@
         <?php if (has_post_thumbnail()) : 
             $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'overall-square');
         ?>
-            <div class="featured-image mb-7">
+            <div class="featured-image mb-4">
                 <img src="<?php echo $full_image_url[0]; ?>" alt="<?php the_title(); ?>" class="object-cover w-full" />
             </div>
         <?php else : ?>
-            <div class="featured-image mb-7">
+            <div class="featured-image mb-4">
                 <img src="https://placehold.co/453x453" class="object-cover w-full size-overall-square">
             </div>
         <?php endif; 
         $formatted_date = get_the_date('d/m/y');
-        echo '<p class="title-sub mb-5">' . $formatted_date . '</p>';
+        echo '<p class="title-sub mb-4">' . $formatted_date . '</p>';
         ?>
         <h2 class="font-serif font-extralight text-2xl md:text-[1.75rem] xl:text-[1.25rem] text-blue leading-7 md:leading-none tracking-[1.1px] md:tracking-[1.4px] xl:tracking-[2.6px] uppercase break-words mb-4"><?php the_title(); ?></h2>
         <div class="text-body mb-6 md:mb-7 xl:mb-10 max-w-none md:max-w-[393px]"><?php the_excerpt(); ?></div>

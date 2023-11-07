@@ -1,7 +1,5 @@
-<section id="section-sommer-sliders" class="section-sommer-sliders az-container overflow-hidden pb-12 md:pb-40 xl:pb-64 !px-0">
+<section id="section-sommer-sliders" class="section-sommer-sliders px-0 md:px-16 xl:px-0 overflow-hidden pb-12 md:pb-40 xl:pb-64">
 	<div class="az-container-grid">
-
-
 		<div class="col-span-1 md:col-span-8 xl:col-span-10 xl:col-start-3 grid grid-cols-1 md:grid-cols-8 xl:grid-cols-10">
 
 			<div class="col-span-1 md:col-span-8 xl:col-span-3 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 order-2 xl:order-1 md:gap-4 xl:gap-9">

@@ -1,4 +1,4 @@
-<section id="section-winter-sliders" class="section-winter-sliders az-container overflow-hidden pb-24 md:pb-40 xl:pb-64 !px-0">
+<section id="section-winter-sliders" class="section-winter-sliders px-0 md:px-16 xl:px-0 overflow-hidden pb-24 md:pb-40 xl:pb-64">
 	<div class="az-container-grid">
 
 

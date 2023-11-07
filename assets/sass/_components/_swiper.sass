@@ -9,7 +9,8 @@
 
 .swiper-button-prev.angebot-swiper-button-prev,
 .swiper-button-prev.single-zimmer-swiper-button-prev,
-.swiper-button-prev.zimmer-swiper-slider-button-prev
+.swiper-button-prev.zimmer-swiper-slider-button-prev,
+.swiper-button-prev.suite-swiper-slider-button-prev
     @apply -scale-x-100
 
 .swiper-button-next.angebot-swiper-button-next
@@ -17,10 +18,13 @@
 
 //prev-next arrows - zimmer overview
 .swiper-button-next.zimmer-swiper-slider-button-next,
-.swiper-button-prev.zimmer-swiper-slider-button-prev
-    @apply w-[52px] md:w-[118px] lg:w-[80px] 2xl:w-[118px] top-[50px] md:top-4
+.swiper-button-prev.zimmer-swiper-slider-button-prev,
+.swiper-button-next.suite-swiper-slider-button-next,
+.swiper-button-prev.suite-swiper-slider-button-prev
+    @apply w-[52px] md:w-[118px] lg:w-[80px] 2xl:w-[118px] top-[28px] md:top-4
 
-.swiper-button-prev.zimmer-swiper-slider-button-prev
+.swiper-button-prev.zimmer-swiper-slider-button-prev,
+.swiper-button-prev.suite-swiper-slider-button-prev
     @apply md:right-32 md:left-auto
 
 //prev-next arrows - zimmer single
@@ -51,7 +55,7 @@
 
 .swiper-pagination-horizontal.swiper-pagination-bullets
     .swiper-pagination-bullet
-        @apply font-serif font-thin text-sm md:text-base xl:text-[22px] text-blue leading-7 md:leading-none tracking-[2.6px] uppercase break-words hyphens-auto w-full bg-transparent min-h-[82px] rounded-none flex items-center opacity-100 pl-6 pr-5 m-0 justify-between border-b border-blue md:border-transparent
+        @apply font-serif font-thin text-sm md:text-base xl:text-[22px] text-blue leading-7 md:leading-none tracking-[2.6px] uppercase break-words hyphens-auto w-full bg-transparent min-h-[60px] md:min-h-[68px] xl:min-h-[82px] rounded-none flex items-center opacity-100 pl-6 pr-5 m-0 justify-between border-b border-blue md:border-transparent
         &-active
             @apply bg-[#FFF8F1] border-b border-blue
             .swiper-arrow

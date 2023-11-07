@@ -108,6 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
 						}
 					},
 				},
+				navigation: {
+					nextEl: ".suite-swiper-slider-button-next",
+					prevEl: ".suite-swiper-slider-button-prev",
+				},
 			});
 			//hover in slider pagination
 			var paginationBulletsSuite = document.querySelectorAll('.swiper-suite-pagination a');

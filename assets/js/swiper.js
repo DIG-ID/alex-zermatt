@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			var angeboteSummerSwiper = new Swiper(".angebote-summer-swiper", {
 				loop: true,
 				spaceBetween: 35,
-				slidesPerView: "auto",
+				slidesPerView: 3,
 				centeredSlides: true,
 				/*breakpoints: {
 					768: {

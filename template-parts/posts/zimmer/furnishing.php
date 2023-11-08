@@ -6,34 +6,38 @@
         <div class="col-span-1 md:col-span-6 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-4 columns-2">
             <?php
             $feature_to_svg = array(
-                'Schreibtisch' => 'desk.svg',
-                'Badewanne' => 'bathtub.svg',
-                'Bademantel' => 'bathrobe.svg',
-                'Balkon' => 'balcony.svg',
-                'Frühstück' => 'breakfast.svg',
-                'Flachbildschirm' => 'flatscreenTV.svg',
-                'Kingsize Bett' => 'kingsize-bed.svg',
-                'Einzelbett' => 'single_extra.svg',
-                'Zusatzbett' => 'single_extra.svg',
-                'Telefon' => 'phone.svg',
-                'Safe' => 'safe.svg',
+                'schreibtisch' => 'desk.svg',
+                'badewanne' => 'bathtub.svg',
+                'bademantel' => 'bathrobe.svg',
+                'balkon' => 'balcony.svg',
+                'frühstück' => 'breakfast.svg',
+                'flachbildschirm' => 'flatscreenTV.svg',
+                'kingsize Bett' => 'kingsize-bed.svg',
+                'einzelbett' => 'single_extra.svg',
+                'zusatzbett' => 'single_extra.svg',
+                'telefon' => 'phone.svg',
+                'safe' => 'safe.svg',
                 'WLAN' => 'wifi.svg',
-                'Kamin' => 'fireplace.svg',
+                'kamin' => 'fireplace.svg',
             );
-            $selected_features = get_field('furnishing_features');
+            $selected_features = get_field('furnishing_features'); 
+
             if ($selected_features) {
                 echo '<ul>';
                 foreach ($selected_features as $feature) {
-                    if (isset($feature_to_svg[$feature])) {
-                        $svg_filename = $feature_to_svg[$feature];
-                        echo '<li class="flex items-center mb-7"><img src="' . get_template_directory_uri() . '/assets/images/room-icons/' . $svg_filename . '" alt="' . $feature . '"><span class="font-serif font-light text-sm md:text-[22px] text-blue leading-[22px] md:leading-[30px] tracking-[1.54px] uppercase ml-3">' . $feature . '</span></li>';
+                    $feature_label = $feature['label'];
+                    $feature_value = $feature['value'];
+
+                    if (isset($feature_to_svg[$feature_value])) {
+                        $svg_filename = $feature_to_svg[$feature_value];
+                        echo '<li class="flex items-center mb-7"><img src="' . esc_url(get_template_directory_uri() . '/assets/images/room-icons/' . $svg_filename) . '" alt="' . esc_attr($feature_label) . '"><span class="font-serif font-light text-sm md:text-[22px] text-blue leading-[22px] md:leading-[30px] tracking-[1.54px] uppercase ml-3">' . esc_html($feature_label) . '</span></li>';
                     } else {
-                        echo '<li>' . $feature . '</li>';
+                        echo '<li>' . esc_html($feature_label) . '</li>';
                     }
                 }
                 echo '</ul>';
             } else {
-                echo 'No features selected.';
+                echo __('No features selected.', 'az');
             }
             ?>
         </div>

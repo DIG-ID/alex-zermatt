@@ -301,9 +301,9 @@ $(function() {
       scrollTrigger: {
         trigger: ".section-le-jardin",
         start: defaultCfg.defaultStart,
-        end: defaultCfg.defaultEnd,
+        end: "bottom 85%",
         scrub: defaultCfg.scrubSpeed,
-       // markers: true,
+        markers: true,
         toggleActions: defaultCfg.defaultActions
       },
       defaults: { duration: defaultCfg.animDuration },
@@ -324,7 +324,7 @@ $(function() {
       scrollTrigger: {
         trigger: ".section-lounge-bar",
         start: defaultCfg.defaultStart,
-        end: defaultCfg.defaultEnd,
+        end: "bottom 85%",
         scrub: defaultCfg.scrubSpeed,
         //markers: true,
         toggleActions: defaultCfg.defaultActions

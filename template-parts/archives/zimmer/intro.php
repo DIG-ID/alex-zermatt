@@ -4,7 +4,7 @@
             <?php 
                 $intro_image = get_field( 'archive_zimmer_image', 'option' );
                 if( $intro_image ) {
-                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container', false, array( 'class' => 'h-[380px] md:h-[800px] xl:h-[780px] object-cover invisible' ) );
+                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container', false, array( 'class' => 'h-[380px] md:h-[800px] xl:h-[780px] w-full object-cover invisible' ) );
                 }
             ?>
         </div>

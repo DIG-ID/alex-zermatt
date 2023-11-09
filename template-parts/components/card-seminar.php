@@ -34,7 +34,7 @@
                     $image_path = "/assets/images/seminar/{$type[1]}.svg";
                     $image_alt = strtolower($type[0]);
 
-                    echo '<div class="col-span-1 text-center text-body !break-keep">';
+                    echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
                     echo '<div class="text-body">' . esc_html_e($type[0], 'alexzermatt') . '</div>';
 
                     $capacity_value = get_field($capacity_key);

@@ -2,11 +2,11 @@
     <div class="az-container-grid">
         <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 md:col-start-1 xl:col-start-3 grid grid-cols-1 md:grid-cols-8 xl:grid-cols-3 md:gap-x-4 xl:gap-x-9 order-2 xl:order-1">
             <div class="col-span-1 md:col-span-8 xl:col-span-3">
-                <h1 class="title-xl mb-10 md:mb-12 xl:mb-32"><?php the_title(); ?></h1>
+                <h1 class="title-xl mb-10 md:mb-12 xl:mb-28"><?php the_title(); ?></h1>
                 <p class="text-body xl:max-w-[364px] mb-11 md:mb-14 xl:mb-0 columns-1 md:columns-2 xl:columns-1"><?php the_field( 'content_description' ); ?></p>
             </div>
             <div class="col-span-1 md:col-span-3 xl:col-span-2">
-                <span class="h-[1px] w-full border-b border-blue block mb-10 xl:mb-11"></span>
+                <span class="h-[1px] w-full border-b border-blue block mt-8 xl:mt-8 mb-10 xl:mb-10"></span>
                 <p class="text-body"><span class="font-bold mr-1"><?php esc_html_e( 'Datum:', 'alexzermatt' ) ?></span><?php the_field( 'content_event_date' ); ?></p>
             </div>
         </div>

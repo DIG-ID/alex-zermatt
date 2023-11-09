@@ -4,7 +4,7 @@
             <?php 
                 $intro_image = get_field( 'archive_seminare_image', 'option' );
                 if( $intro_image ) {
-                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container', false, array( 'class' => 'h-[380px] md:h-[800px] xl:h-[780px] mb-20 md:mb-12 xl:mb-0 object-cover invisible' ) );
+                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container', false, array( 'class' => 'h-[380px] md:h-[800px] xl:h-[780px] object-cover invisible' ) );
                 }
             ?>
         </div>

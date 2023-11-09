@@ -12,7 +12,7 @@
             while( have_rows('media_content_list') ) : the_row();
             $pdf = get_sub_field( 'pdf' ); ?>
                 <?php if ( get_sub_field( 'date' ) ) : ?>
-                    <p class="text-body"><?php the_sub_field( 'date' ); ?></p>
+                    <p class="text-body"><?php echo date('j. F Y', strtotime(get_sub_field('date'))); ?></p>
                 <?php endif; ?>
                 <?php if ( get_sub_field( 'url' ) ) : ?>
                     <a href="<?php the_sub_field( 'url' ) ?>" target="_blank" class="text-bigger-light mb-5 inline-block underline"><?php the_sub_field( 'title' ); ?></a>

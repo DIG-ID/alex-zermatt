@@ -7,7 +7,7 @@
 			</div>
 		</div>
 		<div class="col-span-2 md:col-span-2 xl:col-span-2 mb-12 xl:mb-16">
-			<h3 class="title-footer"><?php esc_html_e( 'Contacts', 'az' ); ?></h3>
+			<h3 class="title-footer"><?php esc_html_e( 'Kontakt', 'az' ); ?></h3>
 			<p class="text-footer"><?php the_field( 'contacts_text', 'options' ); ?></p>
 			<div class="flex flex-col">
 				<a class="text-footer--link" href="tel:<?php the_field( 'contacts_phone', 'options' ); ?>"><?php the_field( 'contacts_phone', 'options' ); ?></a>

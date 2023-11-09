@@ -54,7 +54,7 @@
 					echo wp_get_attachment_image( $schedule_image, 'full', null, array( 'class' => 'mb-6 md:mb-12 xl:mb-8' ) );
 				endif;
 				?>
-				<p class="text-body mb-4 text-left"><?php esc_html_e( 'Täglich für Sie von:', 'az' ); ?></p>
+				<p class="text-body mb-4 text-left"><?php the_field( 'opening_hours_hours_title' ); ?></p>
 				<p class="font-serif font-light text-sm md:text-xl xl:text-2xl text-blue leading-6 xl:leading-8 tracking-[0.98px] xl:tracking-[1.54px] uppercase mb-4 text-left"><?php the_field( 'opening_hours_hours' ); ?></p>
 				<p class="text-body text-left"><?php the_field( 'opening_hours_description' ); ?></p>
 			</div>

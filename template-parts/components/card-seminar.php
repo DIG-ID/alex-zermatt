@@ -22,11 +22,11 @@
                 </div>
                 <?php
                 $capacity_types = [
-                    ['Theatre', '1_theatre'],
-                    ['Reception', '2_reception'],
-                    ['Banquet', '3_banquet'],
-                    ['Classroom', '4_classroom'],
-                    ['U-shape', '5_ushape']
+                    ['Theater', '1_theatre'],
+                    ['Rezeption', '2_reception'],
+                    ['Bankett', '3_banquet'],
+                    ['Klassenzimmer', '4_classroom'],
+                    ['U-Form', '5_ushape']
                 ];
 
                 foreach ($capacity_types as $type) {

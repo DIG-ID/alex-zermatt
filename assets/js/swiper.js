@@ -8,17 +8,16 @@ document.addEventListener("DOMContentLoaded", () => {
 			var angeboteSummerSwiper = new Swiper(".angebote-summer-swiper", {
 				loop: true,
 				spaceBetween: 35,
-				slidesPerView: 2.5,
-				centeredSlides: true,
-				loop: true,
-				/*breakpoints: {
+				slidesPerView: 1,
+				//centeredSlides: true,
+				breakpoints: {
 					768: {
 						slidesPerView: 1.5,
 					},
 					1920: {
 						slidesPerView: 2.5,
 					},
-				},*/
+				},
 				navigation: {
 					nextEl: ".summer-swiper-button-next",
 					prevEl: ".summer-swiper-button-prev",

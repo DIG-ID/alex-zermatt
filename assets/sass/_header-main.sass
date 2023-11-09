@@ -1,6 +1,7 @@
 #header-main
   @apply transition-all duration-300 ease-in-out
   nav.navigation-main
+    @apply transition-all duration-300 ease-in-out
     .navbar-brand
       svg
         @apply max-w-[60px] xl:max-w-none h-auto
@@ -63,6 +64,10 @@
 
 #header-main.sticky
   @apply drop-shadow-[0_2px_2px_rgba(0,0,0,0.06)]
+  nav.navigation-main
+    @apply py-8 xl:py-6
+  .mega-menu-wrapper
+    @apply xl:top-[76px]
 
 #header-main.mega-menu-open
   nav.navigation-main

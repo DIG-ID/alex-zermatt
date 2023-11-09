@@ -31,7 +31,7 @@
 			</div>
 		</div>
 		<div class="col-span-1 md:col-span-8 xl:col-span-4 xl:col-start-7 order-1 xl:order-2">
-			<h2 class="title-overline title-overline--sm !block mx-auto xl:hidden xl:invisible"><?php the_field( 'stay_subtitle' ); ?></h2>
+			<p class="title-overline title-overline--sm !block mx-auto xl:hidden xl:invisible"><?php the_field( 'stay_subtitle' ); ?></p>
 			<?php
 			$stay_img_lg = get_field( 'stay_image_large' );
 			if ( $stay_img_lg ) :

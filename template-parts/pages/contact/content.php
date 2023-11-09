@@ -9,11 +9,11 @@
 			<p class="text-bigger-light mb-32 invisible"><?php esc_html_e( 'Fax:', 'alexzermatt' ); the_field( 'contacts_fax', 'option' ); ?></p>
 			<a href="<?php the_field( 'contacts_gmaps_link', 'option' ); ?>" class="inline-block mb-3 hover:cursor-pointer text-body !font-bold hover:text-gold"><?php esc_html_e( 'Auf Google Maps anzeigen', 'alexzermatt' ); ?></a>
         </div>
-        <div class="relative col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-7 max-w-none order-1 xl:order-2">
+        <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-7 order-1 xl:order-2">
             <?php 
                 $intro_image = get_field( 'contacts_image', 'option' );
                 if( $intro_image ) {
-                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container', false, array( 'class' => 'invisible' ) );
+                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container', false, array( 'class' => 'h-[380px] md:h-[800px] xl:h-[780px] object-cover invisible w-full' ) );
                 }
             ?>
         </div>

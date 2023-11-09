@@ -9,7 +9,7 @@
             <?php 
                 $intro_image = get_field( 'image' );
                 if( $intro_image ) {
-                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container', false, array( 'class' => 'invisible' ) );
+                    echo wp_get_attachment_image( $intro_image, 'main-header-image-half-container', false, array( 'class' => 'h-[380px] md:h-[800px] xl:h-[780px] object-cover invisible w-full' ) );
                 }
             ?>
         </div>

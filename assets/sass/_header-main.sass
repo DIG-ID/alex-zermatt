@@ -70,9 +70,10 @@
       ul
         li.wpml-ls-current-language
           a.wpml-ls-item-toggle
-            @apply border-none font-serif font-light text-xl text-blue uppercase tracking-[1.54px]
+            @apply border-none font-serif font-light text-xl text-blue uppercase tracking-[1.54px] px-3
+            &::after
+              @apply hidden invisible
           ul.wpml-ls-sub-menu
-            @apply transition-all duration-300 ease-in-out
             li.wpml-ls-slot-header_ls
               a.wpml-ls-link
                 @apply font-serif font-light text-xl text-blue uppercase tracking-[1.54px] hover:text-white hover:bg-gold

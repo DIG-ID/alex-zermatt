@@ -17,7 +17,7 @@
 			<div class="title-xl mt-5"><?php the_title(); ?></div>
 		</div>
 		<div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-4 mb-7 xl:mb-0">
-			<div class="text-body mb-20"><?php the_content(); ?></div>
+			<div class="section-post-content mb-20"><?php the_content(); ?></div>
 		</div>
 	</div>
 	<div class="az-container-grid">

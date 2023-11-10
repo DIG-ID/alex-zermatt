@@ -22,12 +22,13 @@
                 </div>
                 <?php
                 $capacity_types = [
-                    ['Theater', '1_theatre'],
+                    ['Theater', '1_theatre', __( 'Theater', 'az' ) ],
                     ['Rezeption', '2_reception'],
                     ['Bankett', '3_banquet'],
                     ['Klassenzimmer', '4_classroom'],
                     ['U-Form', '5_ushape']
                 ];
+
 
                 foreach ($capacity_types as $type) {
                     $capacity_key = 'capacity_' . strtolower(str_replace(' ', '-', $type[0]));
@@ -35,7 +36,10 @@
                     $image_alt = strtolower($type[0]);
 
                     echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
-                    echo '<div class="text-body">' . esc_html_e($type[0], 'alexzermatt') . '</div>';
+                    echo '<div class="text-body">' . esc_html__( $type[3], 'alexzermatt' ) . '</div>';
+                    //echo '<div class="text-body">' . sprintf( __('%s', 'alexzermatt' ), $type[0] ) . '</div>';
+
+                    //echo sprintf(__('%s', 'alexzermatt' ), $type[0]);
 
                     $capacity_value = get_field($capacity_key);
 

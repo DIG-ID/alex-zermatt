@@ -50,11 +50,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const $spanElement = $('.main-menu-toggle span.text');
     
       if ($spanElement.text().trim() === 'Menu') {
-        $spanElement.text('Schliessen');
+        if(window.location.href.indexOf("/en/") > -1) {
+          $spanElement.text('Close');
+        }
+        else if(window.location.href.indexOf("/fr/") > -1){
+          $spanElement.text('Fermer');
+        } else{
+          $spanElement.text('Schliessen');
+        }
+        
       } else {
         $spanElement.text('Menu');
       }
     });
+    
 
     //test for languages
     /*if(window.location.href.indexOf("/en/") > -1) {

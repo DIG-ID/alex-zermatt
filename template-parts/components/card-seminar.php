@@ -22,24 +22,24 @@
 					</div>
 					<?php
 					$capacity_types = [
-						['Theater', '1_theatre', __( 'Theater', 'az' ) ],
-						['Rezeption', '2_reception', __( 'Rezeption', 'az' ) ],
-						['Bankett', '3_banquet', __( 'Bankett', 'az' ) ],
-						['Klassenzimmer', '4_classroom', __( 'Klassenzimmer', 'az' ) ],
-						['U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
+						[ 'Theater', '1_theatre', __( 'Theater', 'az' ) ],
+						[ 'Rezeption', '2_reception', __( 'Rezeption', 'az' ) ],
+						[ 'Bankett', '3_banquet', __( 'Bankett', 'az' ) ],
+						[ 'Klassenzimmer', '4_classroom', __( 'Klassenzimmer', 'az' ) ],
+						[ 'U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
 					];
 
-					foreach ($capacity_types as $type) {
+					foreach ( $capacity_types as $type ) {
 						$capacity_key = 'capacity_' . strtolower(str_replace(' ', '-', $type[0]));
-						$image_path = "/assets/images/seminar/{$type[1]}.svg";
-						$image_alt = strtolower($type[0]);
+						$image_path   = "/assets/images/seminar/{$type[1]}.svg";
+						$image_alt    = strtolower($type[0]);
 
 						echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
 						echo '<div class="text-body !text-[.75rem]">' . $type[2] . '</div>';
 
-						$capacity_value = get_field($capacity_key);
+						$capacity_value = get_field( $capacity_key );
 
-						if ($capacity_value) {
+						if ( $capacity_value ) {
 							echo "<img class=\"mx-auto my-4\" src=\"" . get_stylesheet_directory_uri() . $image_path . "\" title=\"$image_alt\" alt=\"$image_alt\">";
 							echo "<p class=\"text-body\">" . get_field($capacity_key) . "</p>";
 						} else {
@@ -65,19 +65,24 @@
 			</div>
 			<?php
 			$capacity_types = [
-				['Theater', '1_theatre', __( 'Theater', 'az' ) ],
-				['Rezeption', '2_reception', __( 'Rezeption', 'az' ) ],
-				['Bankett', '3_banquet', __( 'Bankett', 'az' ) ],
-				['Klassenzimmer', '4_classroom', __( 'Klassenzimmer', 'az' ) ],
-				['U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
+				[ 'Theater', '1_theatre', __( 'Theater', 'az' ) ],
+				[ 'Rezeption', '2_reception', __( 'Rezeption', 'az' ) ],
+				[ 'Bankett', '3_banquet', __( 'Bankett', 'az' ) ],
+				[ 'Klassenzimmer', '4_classroom', __( 'Klassenzimmer', 'az' ) ],
+				[ 'U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
 			];
 
-				echo '<div class="col-span-1 text-center text-body !break-keep">';
+			foreach ( $capacity_types as $type ) {
+				$capacity_key = 'capacity_' . strtolower(str_replace(' ', '-', $type[0]));
+				$image_path   = "/assets/images/seminar/{$type[1]}.svg";
+				$image_alt    = strtolower($type[0]);
+
+				echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
 				echo '<div class="text-body">' . $type[2] . '</div>';
 
-				$capacity_value = get_field($capacity_key);
+				$capacity_value = get_field( $capacity_key );
 
-				if ($capacity_value) {
+				if ( $capacity_value ) {
 					echo "<img class=\"mx-auto my-4\" src=\"" . get_stylesheet_directory_uri() . $image_path . "\" title=\"$image_alt\" alt=\"$image_alt\">";
 					echo "<p class=\"text-body\">" . get_field($capacity_key) . "</p>";
 				} else {

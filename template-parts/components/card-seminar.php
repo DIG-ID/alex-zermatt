@@ -35,7 +35,7 @@
                     $image_alt = strtolower($type[0]);
 
                     echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
-                    echo '<div class="text-body">' . $type[2] . '</div>';
+                    echo '<div class="text-body !font-[.75rem]">' . $type[2] . '</div>';
    
                     $capacity_value = get_field($capacity_key);
 
@@ -65,11 +65,11 @@
             </div>
             <?php
             $capacity_types = [
-                ['Theater', '1_theatre'],
-                ['Rezeption', '2_reception'],
-                ['Bankett', '3_banquet'],
-                ['Klassenzimmer', '4_classroom'],
-                ['U-Form', '5_ushape']
+                ['Theater', '1_theatre', __( 'Theater', 'az' ) ],
+                ['Rezeption', '2_reception', __( 'Rezeption', 'az' ) ],
+                ['Bankett', '3_banquet', __( 'Bankett', 'az' ) ],
+                ['Klassenzimmer', '4_classroom', __( 'Klassenzimmer', 'az' ) ],
+                ['U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
             ];
 
             foreach ($capacity_types as $type) {
@@ -78,7 +78,7 @@
                 $image_alt = strtolower($type[0]);
 
                 echo '<div class="col-span-1 text-center text-body !break-keep">';
-                echo '<div class="text-body">' . esc_html_e($type[0], 'alexzermatt') . '</div>';
+                echo '<div class="text-body !font-[.75rem]">' . $type[2] . '</div>';
 
                 $capacity_value = get_field($capacity_key);
 

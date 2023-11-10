@@ -23,12 +23,11 @@
                 <?php
                 $capacity_types = [
                     ['Theater', '1_theatre', __( 'Theater', 'az' ) ],
-                    ['Rezeption', '2_reception'],
-                    ['Bankett', '3_banquet'],
-                    ['Klassenzimmer', '4_classroom'],
-                    ['U-Form', '5_ushape']
+                    ['Rezeption', '2_reception', __( 'Rezeption', 'az' ) ],
+                    ['Bankett', '3_banquet', __( 'Bankett', 'az' ) ],
+                    ['Klassenzimmer', '4_classroom', __( 'Klassenzimmer', 'az' ) ],
+                    ['U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
                 ];
-
 
                 foreach ($capacity_types as $type) {
                     $capacity_key = 'capacity_' . strtolower(str_replace(' ', '-', $type[0]));
@@ -37,10 +36,7 @@
 
                     echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
                     echo '<div class="text-body">' . $type[2] . '</div>';
-                    //echo '<div class="text-body">' . sprintf( __('%s', 'alexzermatt' ), $type[0] ) . '</div>';
-
-                    //echo sprintf(__('%s', 'alexzermatt' ), $type[0]);
-
+   
                     $capacity_value = get_field($capacity_key);
 
                     if ($capacity_value) {

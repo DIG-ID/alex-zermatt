@@ -75,6 +75,13 @@ function az_theme_footer_widgets_init() {
 		),
 	);
 
+	register_sidebar(
+		array(
+			'name' => 'Header Language Switcher',
+			'id'   => 'header_ls',
+		)
+	);
+
 }
 
 add_action( 'widgets_init', 'az_theme_footer_widgets_init' );

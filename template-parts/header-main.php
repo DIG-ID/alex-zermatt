@@ -35,7 +35,8 @@
 			?>
 		</div>
 		<div class="az-custom-language-switcher-menu-wrapper px-8 hidden invisible md:block md:visible">
-			<?php do_action( 'az_ls' ); ?>
+			<?php //do_action( 'az_ls' ); ?>
+			<?php dynamic_sidebar( 'header_ls' ); ?>
 		</div>
 
 	</nav>

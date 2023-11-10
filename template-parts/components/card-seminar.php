@@ -36,7 +36,7 @@
                     $image_alt = strtolower($type[0]);
 
                     echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
-                    echo '<div class="text-body">' . $type[3] . '</div>';
+                    echo '<div class="text-body">' . $type[2] . '</div>';
                     //echo '<div class="text-body">' . sprintf( __('%s', 'alexzermatt' ), $type[0] ) . '</div>';
 
                     //echo sprintf(__('%s', 'alexzermatt' ), $type[0]);

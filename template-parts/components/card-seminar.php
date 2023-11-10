@@ -35,7 +35,7 @@
 						$image_alt = strtolower($type[0]);
 
 						echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
-						echo '<div class="text-body !font-[.75rem]">' . $type[2] . '</div>';
+						echo '<div class="text-body !text-[.75rem]">' . $type[2] . '</div>';
 
 						$capacity_value = get_field($capacity_key);
 
@@ -72,13 +72,8 @@
 				['U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
 			];
 
-			foreach ($capacity_types as $type) {
-				$capacity_key = 'capacity_' . strtolower(str_replace(' ', '-', $type[0]));
-				$image_path = "/assets/images/seminar/{$type[1]}.svg";
-				$image_alt = strtolower($type[0]);
-
 				echo '<div class="col-span-1 text-center text-body !break-keep">';
-				echo '<div class="text-body !font-[.75rem]">' . $type[2] . '</div>';
+				echo '<div class="text-body">' . $type[2] . '</div>';
 
 				$capacity_value = get_field($capacity_key);
 

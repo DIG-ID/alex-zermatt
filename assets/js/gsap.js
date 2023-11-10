@@ -303,7 +303,7 @@ $(function() {
         start: defaultCfg.defaultStart,
         end: "bottom 85%",
         scrub: defaultCfg.scrubSpeed,
-        markers: true,
+        //markers: true,
         toggleActions: defaultCfg.defaultActions
       },
       defaults: { duration: defaultCfg.animDuration },

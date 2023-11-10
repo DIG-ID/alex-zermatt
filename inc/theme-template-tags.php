@@ -105,7 +105,7 @@ add_action( 'breadcrumbs', 'az_theme_breadcrumbs' );
 /**
  * Implement custom made WPML Language Switcher.
  */
-function az_theme_custom_ls() {
+/*function az_theme_custom_ls() {
 	global $sitepress;
 	$az_ls = $sitepress->get_ls_languages();
 
@@ -125,4 +125,4 @@ function az_theme_custom_ls() {
 
 }
 
-add_action( 'az_ls', 'az_theme_custom_ls' );
+add_action( 'az_ls', 'az_theme_custom_ls' );*/

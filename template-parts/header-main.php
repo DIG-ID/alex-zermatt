@@ -34,11 +34,11 @@
 			);
 			?>
 		</div>
-		<div class="az-custom-language-switcher-menu-wrapper px-8 hidden invisible md:block md:visible">
-			<?php //do_action( 'az_ls' ); ?>
-			<?php dynamic_sidebar( 'header_ls' ); ?>
-		</div>
-
+		<?php
+		if ( is_active_sidebar( 'header_ls' ) ) :
+			dynamic_sidebar( 'header_ls' );
+		endif;
+		?>
 	</nav>
 	<?php get_template_part( 'template-parts/mega-menu' ); ?>
 </header>

@@ -44,7 +44,7 @@
           @apply transition-all duration-[0.4s] ease-in-out
 
 
-  .az-custom-language-switcher-menu-wrapper
+  /*.az-custom-language-switcher-menu-wrapper
     ul.az-custom-language-switcher-menu
       li.dropdown
         @apply relative
@@ -62,6 +62,20 @@
       li
         a
           @apply font-serif font-light text-xl text-blue uppercase tracking-[1.54px]
+
+  .widget_icl_lang_sel_widget
+    @apply px-8 hidden invisible md:block md:visible
+    .wpml-ls-sidebars-header_ls
+      @apply w-auto
+      ul
+        li.wpml-ls-current-language
+          a.wpml-ls-item-toggle
+            @apply border-none
+            span.wpml-ls-native
+              @apply font-serif font-light text-xl text-blue uppercase tracking-[1.54px]
+          ul.wpml-ls-sub-menu
+
+
 
 #header-main.sticky
   @apply drop-shadow-[0_2px_2px_rgba(0,0,0,0.06)]

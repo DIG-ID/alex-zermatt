@@ -77,8 +77,12 @@ function az_theme_footer_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name' => 'Header Language Switcher',
-			'id'   => 'header_ls',
+			'name'          => 'Header Language Switcher',
+			'id'            => 'header_ls',
+			'before_widget' => '<div id="%1$s" class="%2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '',
+			'after_title'   => '',
 		)
 	);
 

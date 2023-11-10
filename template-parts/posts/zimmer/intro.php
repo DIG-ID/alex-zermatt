@@ -30,7 +30,16 @@
 			<p class="text-body"><?php the_field( 'descriptions_room_description_2' ) ?></p>
 		</div>
         <div class="col-span-1 md:col-span-4 xl:col-span-2 col-start-1 md:col-start-3 xl:col-start-4 mt-9 xl:mt-0">
-			<button class="btn btn--box"><?php esc_html_e( 'Jetzt buchen', 'alexzermatt' ) ?></button>
+        <?php $br_link = get_field( 'booking_links_booking_reservation', 'options' );
+			if ( $br_link ) :
+				$link_url    = $br_link['url'];
+				$link_title  = $br_link['title'];
+				$link_target = $br_link['target'] ? $br_link['target'] : '_self';
+				?>
+				<a class="btn btn--box" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+				<?php
+			endif; ?>
+			
 		</div>
 	</div>
 </section>

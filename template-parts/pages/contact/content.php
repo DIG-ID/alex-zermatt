@@ -6,7 +6,11 @@
 			<p class="text-bigger-light my-10 invisible"><?php the_field( 'contacts_address', 'option' ); ?></p>
 			<a href="mailto:<?php the_field( 'contacts_email', 'option' ); ?>" class="text-bigger-light inline-block mb-3 invisible hover:cursor-pointer"><?php the_field( 'contacts_email', 'option' ); ?></a>
 			<a href="tel:<?php the_field( 'contacts_phone', 'option' ); ?>" class="text-bigger-light inline-block mb-3 invisible hover:cursor-pointer"><?php esc_html_e( 'Tel:', 'alexzermatt' ); the_field( 'contacts_phone', 'option' ); ?></a>
-			<p class="text-bigger-light mb-32 invisible"><?php esc_html_e( 'Fax:', 'alexzermatt' ); the_field( 'contacts_fax', 'option' ); ?></p>
+			<p class="text-bigger-light mb-32 invisible">
+                <?php if( get_field( 'contacts_fax', 'option' )) : ?>
+                    <?php esc_html_e( 'Fax:', 'alexzermatt' ); the_field( 'contacts_fax', 'option' ); ?>
+                <?php endif; ?>
+            </p>
 			<a href="<?php the_field( 'contacts_gmaps_link', 'option' ); ?>" class="inline-block mb-3 hover:cursor-pointer text-body !font-bold hover:text-gold"><?php esc_html_e( 'Auf Google Maps anzeigen', 'alexzermatt' ); ?></a>
         </div>
         <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-7 order-1 xl:order-2">

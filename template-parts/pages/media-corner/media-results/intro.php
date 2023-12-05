@@ -14,8 +14,10 @@
                 <?php if ( get_sub_field( 'date' ) ) : ?>
                     <p class="text-body"><?php the_sub_field( 'date' ); ?></p>
                 <?php endif; ?>
-                <?php if ( get_sub_field( 'url' ) ) : ?>
+                <?php if ( get_sub_field( 'url' ) && get_sub_field( 'title' ) ) : ?>
                     <a href="<?php the_sub_field( 'url' ) ?>" target="_blank" class="text-bigger mb-5 inline-block underline"><?php the_sub_field( 'title' ); ?></a>
+                <?php elseif ( !get_sub_field( 'url' ) && get_sub_field( 'title' ) && !$pdf ) : ?>
+                    <p class="text-bigger mb-5 inline-block underline"><?php the_sub_field( 'title' ); ?></p>
                 <?php elseif ( $pdf ) : ?>
                     <a href="<?php echo $pdf['url'] ?>" target="_blank" class="text-bigger mb-5 inline-block underline"><?php the_sub_field( 'title' ); ?></a>
                 <?php endif; ?>

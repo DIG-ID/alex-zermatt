@@ -1,4 +1,4 @@
-<footer class="footer-main border-t border-t-blue pt-16 xl:pt-32 mb-5 xl:mb-10">
+<footer class="footer-main border-t border-t-blue pt-20 xl:pt-32 mb-5 xl:mb-10">
 
 	<div class="az-container-footer az-container">
 		<div class="col-span-2 md:col-span-8 xl:col-span-2 xl:col-start-3 mb-12 xl:mb-16">

@@ -37,7 +37,7 @@ $(function() {
       scrubSpeed: 1,
       animDuration: 1.2,
       fadeDistance: "50px",
-      defaultStart: "top 70%",
+      defaultStart: "top 80%",
       defaultEnd: "bottom 90%",
       defaultActions: "play none reverse none"
     },

@@ -31,7 +31,7 @@
 		</div>
 		<div class="az-container-grid mb-11 md:mb-16 xl:mb-36">
 			<div class="col-span-1 md:col-span-4 xl:col-span-3 xl:col-start-3">
-				<p class="text-body text-body-1"><?php the_field( 'section_matterhorn_description' ); ?></p>
+				<p class="text-body text-body-1 mb-6 xl:mb-0"><?php the_field( 'section_matterhorn_description' ); ?></p>
 			</div>
 			<div class="col-span-1 md:col-span-4 xl:col-span-3 md:col-start-5 xl:col-start-8">
 				<h2 class="title-xl"><?php the_field( 'section_matterhorn_title' ); ?></h2>

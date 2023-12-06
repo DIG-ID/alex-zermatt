@@ -1,6 +1,6 @@
 <section id="section-intro" class="section-intro az-container pt-28 xl:pt-48 overflow-hidden">
 	<div class="az-container-grid gap-y-3 xl:items-center">
-        <div class="col-span-1 md:col-span-4 xl:col-span-3 col-start-1 md:col-start-3 xl:col-start-3 text-center xl:text-left order-2 xl:order-1 mb-10 xl:mb-0">
+        <div class="col-span-1 md:col-span-4 xl:col-span-3 col-start-1 md:col-start-3 xl:col-start-3 text-center xl:text-left order-2 xl:order-1 mb-16 xl:mb-0">
             <h1 class="title-xl mb-10 md:mb-12 mt-12 xl:mt-0 invisible"><?php the_title(); ?></h1>
             <p class="text-body xl:max-w-[363px] invisible"><?php the_field( 'description' ); ?></p>
 			

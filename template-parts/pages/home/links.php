@@ -17,7 +17,7 @@
 				$link_title  = $br_link['title'];
 				$link_target = $br_link['target'] ? $br_link['target'] : '_self';
 				?>
-				<a class="btn btn-overline-home !font-medium absolute inline-block -top-52 left-1/2 -translate-x-1/2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+				<a class="btn btn-overline-home !font-medium absolute inline-block left-1/2 -translate-x-1/2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 				<?php
 			endif;
 			$vouchers_link = get_field( 'booking_links_vouchers', 'options' );

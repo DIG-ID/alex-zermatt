@@ -4,6 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
 	//wait until images, links, fonts, stylesheets, and js is loaded
 	window.addEventListener("load", () => {
 
+
+		if (document.body.classList.contains("page-template-page-home")) {
+			var angeboteSummerSwiper = new Swiper(".hero-swiper", {
+				lazy: true,
+				slidesPerView: 1,
+				spaceBetween: 0,
+				speed: 800,
+				loop: true,
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true
+				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+			});
+		}
+
 		if (document.body.classList.contains("post-type-archive-angebot")) {
 			var angeboteSummerSwiper = new Swiper(".angebote-summer-swiper", {
 				loop: true,

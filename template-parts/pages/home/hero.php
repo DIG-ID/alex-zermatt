@@ -2,7 +2,13 @@
 	<div class="az-container-grid">
 		<div class="col-span-1 md:col-span-8 xl:col-span-10 xl:col-start-2">
 			<?php
-			if ( get_field( 'hero_video_as_background' ) ) :
+			if ( 'image' === get_field( 'hero_media' ) ) :
+				$hero_img = get_field( 'hero_image' );
+				if ( $hero_img ) :
+					echo wp_get_attachment_image( $hero_img, 'full', false, array( 'class' => 'w-full object-cover min-h-[530px] md:min-h-[980px] xl:min-h-[760px]' ) );
+				endif;
+			endif;
+			if ( 'video' === get_field( 'hero_media' ) ) :
 				?>
 				<video autoplay loop muted class="section-hero__video" playsinline="playsinline" loop="" autoplay="autoplay" muted="muted">
 					<?php
@@ -17,10 +23,25 @@
 					?>
 				</video>
 				<?php
-			else :
-				$hero_img = get_field( 'hero_image' );
-				if ( $hero_img ) :
-					echo wp_get_attachment_image( $hero_img, 'full', false, array( 'class' => 'w-full object-cover min-h-[530px] md:min-h-[980px] xl:min-h-[760px]' ) );
+			endif;
+			if ( 'slider' === get_field( 'hero_media' ) ) :
+				$slider = get_field( 'hero_slider' );
+				if ( $slider ) :
+					?>
+					<div class="swiper hero-swiper">
+						<div class="swiper-wrapper">
+							<?php
+							foreach ( $slider as $slider_id ) :
+								?>
+								<div class="swiper-slide">
+									<?php echo wp_get_attachment_image( $slider_id, 'full', false, array( 'class' => 'w-full object-cover min-h-[530px] md:min-h-[980px] xl:min-h-[760px]', 'loading' => 'lazy' ) ); ?>
+								</div>
+								<?php
+							endforeach;
+							?>
+						</div>
+					</div>
+					<?php
 				endif;
 			endif;
 			?>

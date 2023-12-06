@@ -1,4 +1,4 @@
-<section id="section-seminare" class="section-seminare overflow-hidden az-container md:pt-24 xl:pt-28 pb-24 xl:pb-64">
+<section id="section-seminare" class="section-seminare overflow-hidden az-container md:pt-24 xl:pt-36 pb-24 xl:pb-64">
 	<div class="az-container-grid">
 		<?php 
 			$image_seminare = get_field('section_seminare_image');

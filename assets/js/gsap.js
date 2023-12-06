@@ -551,7 +551,7 @@ $(function() {
         scrollTrigger: {
           trigger: target,
           start: defaultCfg.defaultStart,
-          end: defaultCfg.defaultEnd,
+          end: "bottom 90%",
           scrub: defaultCfg.scrubSpeed,
           //markers: true,
           toggleActions: defaultCfg.defaultActions

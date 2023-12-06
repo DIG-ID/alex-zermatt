@@ -42,9 +42,6 @@
 						if ( $capacity_value ) {
 							echo "<img class=\"mx-auto my-4\" src=\"" . get_stylesheet_directory_uri() . $image_path . "\" title=\"$image_alt\" alt=\"$image_alt\">";
 							echo "<p class=\"text-body\">" . get_field($capacity_key) . "</p>";
-						} else {
-							echo "<img class=\"mx-auto my-4\" src=\"" . get_stylesheet_directory_uri() . str_replace('.svg', '_off.svg', $image_path) . "\" title=\"$image_alt\" alt=\"$image_alt\">";
-							echo "<p class=\"text-body\">" . esc_html_e('-', 'alexzermatt') . "</p>";
 						}
 
 						echo '</div>';
@@ -85,9 +82,6 @@
 				if ( $capacity_value ) {
 					echo "<img class=\"mx-auto my-4\" src=\"" . get_stylesheet_directory_uri() . $image_path . "\" title=\"$image_alt\" alt=\"$image_alt\">";
 					echo "<p class=\"text-body\">" . get_field($capacity_key) . "</p>";
-				} else {
-					echo "<img class=\"mx-auto my-4\" src=\"" . get_stylesheet_directory_uri() . str_replace('.svg', '_off.svg', $image_path) . "\" title=\"$image_alt\" alt=\"$image_alt\">";
-					echo "<p class=\"text-body\">" . esc_html_e('-', 'alexzermatt') . "</p>";
 				}
 
 				echo '</div>';

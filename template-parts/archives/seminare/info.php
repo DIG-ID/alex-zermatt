@@ -10,7 +10,7 @@
                 <?php
                 if( have_rows( 'archive_seminare_infrastructures_list', 'option' ) ):
                 while( have_rows( 'archive_seminare_infrastructures_list', 'option' ) ) : the_row(); ?>
-                    <li class="text-body"><?php the_sub_field( 'list_item' ); ?></li>
+                    <li class="text-body mb-4"><?php the_sub_field( 'list_item' ); ?></li>
                 <?php 
                 endwhile;
                 endif; ?>

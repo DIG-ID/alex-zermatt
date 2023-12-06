@@ -38,7 +38,7 @@ $(function() {
       animDuration: 1.2,
       fadeDistance: "50px",
       defaultStart: "top 70%",
-      defaultEnd: "bottom 80%",
+      defaultEnd: "bottom 90%",
       defaultActions: "play none reverse none"
     },
     intro: {
@@ -1082,7 +1082,7 @@ $(function() {
       scrollTrigger: {
         trigger: ".section-sommer-sliders",
         start: defaultCfg.defaultStart,
-        end: defaultCfg.defaultEnd,
+        end: "bottom 90%",
         scrub: defaultCfg.scrubSpeed,
         //markers: true,
         toggleActions: defaultCfg.defaultActions

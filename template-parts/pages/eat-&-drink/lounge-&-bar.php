@@ -13,7 +13,7 @@
 			<div class="grid grid-cols-2 xl:grid-cols-1 md:gap-4 xl:gap-9">
 				<div class="col-span-2 md:col-span-1">
 					<h2 class="title-overline__horizontal--right title-overline--xl text-end !hidden !invisible xl:!block xl:!visible"><?php the_field( 'lounge_&_bar_subtitle' ); ?></h2>
-					<h3 class="title-xl xl:mb-8"><?php the_field( 'lounge_&_bar_title' ); ?></h3>
+					<h3 class="title-xl mb-4 xl:mb-8"><?php the_field( 'lounge_&_bar_title' ); ?></h3>
 				</div>
 				<div class="col-span-2 md:col-span-1">
 					<p class="text-body mb-12 xl:mb-8"><?php the_field( 'lounge_&_bar_description' ); ?></p>

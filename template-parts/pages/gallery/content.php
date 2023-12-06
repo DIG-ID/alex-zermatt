@@ -20,7 +20,7 @@
 					if ( $gallery ) :
 						$count = 0;
 						?>
-						<div class="gallery-<?php echo esc_attr( strtolower( $gallery_title ) ); ?>-container grid grid-cols-2 md:grid-cols-8 xl:grid-cols-10 md:gap-x-4 xl:gap-x-9 items-end mb-32">
+						<div class="gallery-<?php echo esc_attr( strtolower( $gallery_title ) ); ?>-container grid grid-cols-2 md:grid-cols-8 xl:grid-cols-10 md:gap-x-4 xl:gap-x-9 items-end mb-32 gap-x-2">
 							<?php
 							foreach ( $gallery as $gallery_image ) :
 								$count++;

@@ -39,7 +39,7 @@
 
 							if ( $capacity_value ) {
 								?>
-								<div class="seminar-icon-wrapper text-center px-2">
+								<div class="seminar-icon-wrapper text-center px-4">
 									<p class="text-body !text-[.75rem] whitespace-nowrap break-keep"><?php echo esc_html( $type[2] ); ?></p>
 									<img class="mx-auto my-4" src="<?php echo esc_url( get_stylesheet_directory_uri() . $image_path ); ?>" title="<?php echo esc_attr( $image_alt ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>">
 									<p class="text-body"><?php echo esc_html( $capacity_value ); ?></p>
@@ -81,7 +81,7 @@
 
 					if ( $capacity_value ) {
 						?>
-						<div class="seminar-icon-wrapper text-center px-2">
+						<div class="seminar-icon-wrapper text-center px-4">
 							<p class="text-body !text-[.75rem] whitespace-nowrap break-keep"><?php echo esc_html( $type[2] ); ?></p>
 							<img class="mx-auto my-4" src="<?php echo esc_url( get_stylesheet_directory_uri() . $image_path ); ?>" title="<?php echo esc_attr( $image_alt ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>">
 							<p class="text-body"><?php echo esc_html( $capacity_value ); ?></p>

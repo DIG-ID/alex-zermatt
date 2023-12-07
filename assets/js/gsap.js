@@ -553,7 +553,7 @@ $(function() {
           start: defaultCfg.defaultStart,
           end: "bottom 90%",
           scrub: defaultCfg.scrubSpeed,
-          //markers: true,
+          markers: true,
           toggleActions: defaultCfg.defaultActions
         }
       });

@@ -3,7 +3,7 @@
 		<?php 
 			$intro_image = get_field( 'section_intro_image' );
 			$size = 'main-header-image';
-			$size_md = 'main-header-image-small';
+			$size_md = 'main-header-image-small-left';
 		?>
 		<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2 hidden xl:block">
 			<?php

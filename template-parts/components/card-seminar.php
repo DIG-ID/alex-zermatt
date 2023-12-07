@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-seminar col-span-4 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-3 pb-20 md:pb-24 xl:pb-64' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'card-seminar col-span-4 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-3 mb-20 md:mb-24 xl:mb-64' ); ?>>
 	<div class="grid grid-cols-1 md:grid-cols-8 xl:grid-cols-10 md:gap-x-4 xl:gap-x-9">
 		<div class="col-span-1 md:col-span-8 xl:col-span-10 grid grid-cols-1 md:grid-cols-8 xl:grid-cols-10 md:gap-x-4 xl:gap-x-9">
 			<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 text-center xl:text-left">

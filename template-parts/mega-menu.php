@@ -117,7 +117,7 @@
 			);
 			?>
 		</div>
-		<div class="booking-links col-span-1 xl:col-span-5 flex flex-col xl:flex-row xl:items-center xl:justify-between mt-8 xl:mt-16">
+		<div class="booking-links col-span-2 xl:col-span-5 flex flex-col xl:flex-row xl:items-center xl:justify-between mt-8 xl:mt-16">
 			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden uppercase"><?php esc_html_e( 'Reservieren', 'az' ); ?></p>
 			<?php
 			$tr_link = get_field( 'booking_links_table_reservation', 'options' );

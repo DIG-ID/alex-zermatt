@@ -3,7 +3,7 @@
 		<?php 
 			$image_ag = get_field('wellness_image');
 			$size = 'full';
-			$size_md = 'angebote-slider-image';
+			$size_md = 'main-header-image-small-left';
 		?>
 		<div class="col-span-1 md:col-span-8 xl:col-span-8 col-start-1 xl:col-start-3 mb-12 md:mb-8 xl:mb-7 hidden xl:block">
 			<span class="az-vertical-line-img"></span>

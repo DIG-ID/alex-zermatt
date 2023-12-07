@@ -34,17 +34,19 @@
 						$image_path   = "/assets/images/seminar/{$type[1]}.svg";
 						$image_alt    = strtolower($type[0]);
 
-						echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
+						
 
 						$capacity_value = get_field( $capacity_key );
 
 						if ( $capacity_value ) {
+							echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
 							echo '<div class="text-body !text-[.75rem]">' . $type[2] . '</div>';
 							echo "<img class=\"mx-auto my-4\" src=\"" . get_stylesheet_directory_uri() . $image_path . "\" title=\"$image_alt\" alt=\"$image_alt\">";
 							echo "<p class=\"text-body\">" . get_field($capacity_key) . "</p>";
+							echo '</div>';
 						}
 
-						echo '</div>';
+						
 					}
 					?>
 				</div>

@@ -18,37 +18,37 @@
 				</div>
 				<div class="col-span-1 md:col-span-6 xl:col-span-3 col-start-1 grid xl:hidden 2xl:grid grid-cols-5">
 					<div class="col-span-5 my-8 md:mt-12 md:mb-9 xl:mt-0">
-						<p class="font-serif font-bold text-sm md:text-xl tracking-[0.6px]"><?php esc_html_e('Bestuhlung & Kapazität', 'alexzermatt') ?></p>
+						<p class="font-serif font-bold text-sm md:text-xl tracking-[0.6px]"><?php esc_html_e( 'Bestuhlung & Kapazität', 'alexzermatt' ) ?></p>
 					</div>
-					<?php
-					$capacity_types = [
-						[ 'Theater', '1_theatre', __( 'Theater', 'az' ) ],
-						[ 'Rezeption', '2_reception', __( 'Rezeption', 'az' ) ],
-						[ 'Bankett', '3_banquet', __( 'Bankett', 'az' ) ],
-						[ 'Klassenzimmer', '4_classroom', __( 'Klassenzimmer', 'az' ) ],
-						[ 'U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
-					];
+					<div class="col-span-1 md:col-span-6 xl:col-span-5 flex">
+						<?php
+						$capacity_types = [
+							[ 'Theater', '1_theatre', __( 'Theater', 'az' ) ],
+							[ 'Rezeption', '2_reception', __( 'Rezeption', 'az' ) ],
+							[ 'Bankett', '3_banquet', __( 'Bankett', 'az' ) ],
+							[ 'Klassenzimmer', '4_classroom', __( 'Klassenzimmer', 'az' ) ],
+							[ 'U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
+						];
 
-					foreach ( $capacity_types as $type ) {
-						$capacity_key = 'capacity_' . strtolower(str_replace(' ', '-', $type[0]));
-						$image_path   = "/assets/images/seminar/{$type[1]}.svg";
-						$image_alt    = strtolower($type[0]);
+						foreach ( $capacity_types as $type ) :
+							$capacity_key = 'capacity_' . strtolower( str_replace( ' ', '-', $type[0] ) );
+							$image_path   = "/assets/images/seminar/{$type[1]}.svg";
+							$image_alt    = strtolower( $type[0] );
 
-						
+							$capacity_value = get_field( $capacity_key );
 
-						$capacity_value = get_field( $capacity_key );
-
-						if ( $capacity_value ) {
-							echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
-							echo '<div class="text-body !text-[.75rem]">' . $type[2] . '</div>';
-							echo "<img class=\"mx-auto my-4\" src=\"" . get_stylesheet_directory_uri() . $image_path . "\" title=\"$image_alt\" alt=\"$image_alt\">";
-							echo "<p class=\"text-body\">" . get_field($capacity_key) . "</p>";
-							echo '</div>';
-						}
-
-						
-					}
-					?>
+							if ( $capacity_value ) {
+								?>
+								<div class="seminar-icon-wrapper text-center text-body !text-[0.75rem] !break-keep">
+									<div class="text-body !text-[.75rem]"><?php echo esc_html( $type[2] ); ?></div>
+									<img class="mx-auto my-4" src="<?php echo esc_url( get_stylesheet_directory_uri() . $image_path ); ?>" title="<?php echo esc_attr( $image_alt ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>">
+									<p class="text-body"><?php echo esc_html( $capacity_value ); ?></p>
+								</div>
+								<?php
+							}
+						endforeach;
+						?>
+					</div>
 				</div>
 		</div>
 		<div class="col-span-1 md:col-span-8 xl:col-span-7 col-start-1 xl:col-start-4 order-2 xl:order-3">
@@ -60,39 +60,37 @@
 	<div class="az-container-grid">
 		<div class="col-span-7 col-start-1 hidden xl:grid 2xl:hidden grid-cols-5">
 			<div class="col-span-5 my-8 md:mt-12 md:mb-9 xl:mt-0">
-				<p class="font-serif font-bold text-sm md:text-xl tracking-[0.6px]"><?php esc_html_e('Bestuhlung & Kapazität', 'alexzermatt') ?></p>
+				<p class="font-serif font-bold text-sm md:text-xl tracking-[0.6px]"><?php esc_html_e( 'Bestuhlung & Kapazität', 'alexzermatt' ) ?></p>
 			</div>
-			<?php
-			$capacity_types = [
-				[ 'Theater', '1_theatre', __( 'Theater', 'az' ) ],
-				[ 'Rezeption', '2_reception', __( 'Rezeption', 'az' ) ],
-				[ 'Bankett', '3_banquet', __( 'Bankett', 'az' ) ],
-				[ 'Klassenzimmer', '4_classroom', __( 'Klassenzimmer', 'az' ) ],
-				[ 'U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
-			];
+			<div class="col-span-1 md:col-span-6 xl:col-span-5 flex">
+				<?php
+				$capacity_types = [
+					[ 'Theater', '1_theatre', __( 'Theater', 'az' ) ],
+					[ 'Rezeption', '2_reception', __( 'Rezeption', 'az' ) ],
+					[ 'Bankett', '3_banquet', __( 'Bankett', 'az' ) ],
+					[ 'Klassenzimmer', '4_classroom', __( 'Klassenzimmer', 'az' ) ],
+					[ 'U-Form', '5_ushape', __( 'U-Form', 'az' ) ],
+				];
 
-			foreach ( $capacity_types as $type ) {
-				$capacity_key = 'capacity_' . strtolower(str_replace(' ', '-', $type[0]));
-				$image_path   = "/assets/images/seminar/{$type[1]}.svg";
-				$image_alt    = strtolower($type[0]);
+				foreach ( $capacity_types as $type ) :
+					$capacity_key = 'capacity_' . strtolower( str_replace( ' ', '-', $type[0] ) );
+					$image_path   = "/assets/images/seminar/{$type[1]}.svg";
+					$image_alt    = strtolower( $type[0] );
 
-				//if ( array_key_exists( $type['value'], $amenities_icons ) )
+					$capacity_value = get_field( $capacity_key );
 
-				
-				
-
-				$capacity_value = get_field( $capacity_key );
-
-				if ( $capacity_value ) {
-					echo '<div class="col-span-1 text-center text-body !text-[0.75rem] !break-keep">';
-					echo '<div class="text-body">' . $type[2] . '</div>';
-					echo "<img class=\"mx-auto my-4\" src=\"" . get_stylesheet_directory_uri() . $image_path . "\" title=\"$image_alt\" alt=\"$image_alt\">";
-					echo "<p class=\"text-body\">" . get_field($capacity_key) . "</p>";
-					echo '</div>';
-				}
-				
-			}
-			?>
+					if ( $capacity_value ) {
+						?>
+						<div class="seminar-icon-wrapper text-center text-body !text-[0.75rem] !break-keep">
+							<div class="text-body !text-[.75rem]"><?php echo esc_html( $type[2] ); ?></div>
+							<img class="mx-auto my-4" src="<?php echo esc_url( get_stylesheet_directory_uri() . $image_path ); ?>" title="<?php echo esc_attr( $image_alt ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>">
+							<p class="text-body"><?php echo esc_html( $capacity_value ); ?></p>
+						</div>
+						<?php
+					}
+				endforeach;
+				?>
+			</div>
 		</div>
 	</div>
 </article>

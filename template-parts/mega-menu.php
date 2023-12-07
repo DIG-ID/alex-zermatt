@@ -117,7 +117,7 @@
 			);
 			?>
 		</div>
-		<div class="booking-links col-span-2 xl:col-span-5 flex flex-col xl:flex-row xl:items-center xl:justify-between mt-8 xl:mt-16">
+		<div class="booking-links col-span-2 xl:col-span-5 flex flex-col xl:flex-row xl:items-center xl:justify-between mt-8 xl:mt-16 xl:grid xl:grid-cols-12">
 			<p class="font-serif font-thin text-gold text-xs leading-none tracking-[1.1px] mb-5 xl:invisible xl:hidden uppercase"><?php esc_html_e( 'Reservieren', 'az' ); ?></p>
 			<?php
 			$tr_link = get_field( 'booking_links_table_reservation', 'options' );
@@ -126,7 +126,7 @@
 				$link_title  = $tr_link['title'];
 				$link_target = $tr_link['target'] ? $tr_link['target'] : '_self';
 				?>
-			<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" data-fancybox="reservation" data-caption="<?php echo esc_html( $link_title ); ?>" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[200px] xl:max-w-none">
+			<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" data-fancybox="reservation" data-caption="<?php echo esc_html( $link_title ); ?>" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[200px] xl:max-w-none xl:col-span-2">
 				<?php echo esc_html( $link_title ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" width="51" height="15" viewBox="0 0 51 15" fill="none" class="xl:invisible xl:hidden ml-1 mb-1">
 					<line x1="51" y1="7.5" x2="4.37114e-08" y2="7.5" stroke="#002850"/>
@@ -137,14 +137,14 @@
 			<?php
 			endif;
 			?>
-			<span class="invisible hidden xl:visible xl:block w-full h-[1px] bg-blue ml-20 mr-12"></span>
+			<span class="invisible hidden xl:visible xl:block w-10/12 h-[1px] bg-blue xl:col-span-3 xl:mx-auto"></span>
 			<?php $br_link = get_field( 'booking_links_booking_reservation', 'options' );
 			if ( $br_link ) :
 				$link_url    = $br_link['url'];
 				$link_title  = $br_link['title'];
 				$link_target = $br_link['target'] ? $br_link['target'] : '_self';
 				?>
-			<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="flex items-center justify-between xl:block font-serif font-light xl:font-medium text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[200px] xl:max-w-none">
+			<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="flex items-center justify-between xl:block font-serif font-light xl:font-medium text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[200px] xl:max-w-none xl:col-span-2 xl:text-center">
 				<?php echo esc_html( $link_title ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" width="51" height="15" viewBox="0 0 51 15" fill="none" class="xl:invisible xl:hidden ml-1 mb-1">
 					<line x1="51" y1="7.5" x2="4.37114e-08" y2="7.5" stroke="#002850"/>
@@ -155,14 +155,14 @@
 			<?php
 			endif;
 			?>
-			<span class="invisible hidden xl:visible xl:block w-full h-[1px] bg-blue mr-20 ml-12"></span>
+			<span class="invisible hidden xl:visible xl:block w-10/12 h-[1px] bg-blue pr-12 pl-12 xl:col-span-3 xl:mx-auto"></span>
 			<?php $vouchers_link = get_field( 'booking_links_vouchers', 'options' );
 			if ( $vouchers_link ) :
 				$link_url    = $vouchers_link['url'];
 				$link_title  = $vouchers_link['title'];
 				$link_target = $vouchers_link['target'] ? $vouchers_link['target'] : '_self';
 				?>
-			<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[200px] xl:max-w-none">
+			<a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="flex items-center justify-between xl:block font-serif font-light text-blue text-sm xl:text-xl uppercase tracking-[0.98px] xl:tracking-[1.54px] whitespace-nowrap mb-5 xl:mb-0 transition-all duration-300 ease-in-out hover:text-gold max-w-[200px] xl:max-w-none xl:col-span-2">
 				<?php echo esc_html( $link_title ); ?>
 				<svg xmlns="http://www.w3.org/2000/svg" width="51" height="15" viewBox="0 0 51 15" fill="none" class="xl:invisible xl:hidden ml-1 mb-1">
 					<line x1="51" y1="7.5" x2="4.37114e-08" y2="7.5" stroke="#002850"/>

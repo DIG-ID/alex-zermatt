@@ -551,9 +551,9 @@ $(function() {
         scrollTrigger: {
           trigger: target,
           start: defaultCfg.defaultStart,
-          end: "bottom 90%",
+          end: "bottom 93%",
           scrub: defaultCfg.scrubSpeed,
-          markers: true,
+          //markers: true,
           toggleActions: defaultCfg.defaultActions
         }
       });

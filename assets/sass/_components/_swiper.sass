@@ -76,4 +76,42 @@
 
 .swiper-tabs-pagination a:hover .swiper-arrow
     display: inline-block
-    
+
+
+.page-template-page-home
+    .hero-swiper
+        .swiper-wrapper
+            .swiper-slide
+                .slide-bg
+                    background-position: center center
+
+@media ( max-width: 768px )
+    .page-template-page-home
+        .hero-swiper
+            .swiper-wrapper
+                .swiper-slide
+                    .slide-bg
+                        &--0
+                           background-position: 53%
+                        &--1
+                            background-position: 37%
+                        &--2
+                            background-position: 58%
+                        &--3
+                            background-position: 47.5%
+
+
+@media ( max-width: 640px )
+    .page-template-page-home
+        .hero-swiper
+            .swiper-wrapper
+                .swiper-slide
+                    .slide-bg
+                        &--0
+                           background-position: 52%
+                        &--1
+                            background-position: 38%
+                        &--2
+                            background-position: 58%
+                        &--3
+                            background-position: 48%

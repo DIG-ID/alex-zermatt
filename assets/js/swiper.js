@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
 				fadeEffect: {
 					crossFade: true
 				},
-				autoplay: {
+				/*autoplay: {
 					delay: 2500,
 					disableOnInteraction: false,
-				},
+				},*/
 			});
 		}
 

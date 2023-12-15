@@ -34,7 +34,7 @@
 							foreach ( $slider as $slider_id ) :
 								?>
 								<div class="swiper-slide">
-									<?php echo wp_get_attachment_image( $slider_id, 'full', false, array( 'class' => 'w-full object-cover min-h-[484px] md:min-h-[600px] xl:min-h-[760px]', 'loading' => 'lazy' ) ); ?>
+									<?php echo wp_get_attachment_image( $slider_id, 'full', false, array( 'class' => 'w-full object-cover min-h-[530px] md:min-h-[984px] xl:min-h-[760px]', 'loading' => 'lazy' ) ); ?>
 								</div>
 								<?php
 							endforeach;

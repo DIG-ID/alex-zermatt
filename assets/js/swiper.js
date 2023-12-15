@@ -6,21 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 		if (document.body.classList.contains("page-template-page-home")) {
-			var angeboteSummerSwiper = new Swiper(".hero-swiper", {
-				touchStartPreventDefault: false,
-				preventInteractionOnTransition: true,
-				lazy: true,
+			var heroSwiper = new Swiper(".hero-swiper", {
+				//lazy: true,
 				slidesPerView: 1,
 				spaceBetween: 0,
 				speed: 800,
 				loop: true,
 				effect: "fade",
-				fadeEffect: {
+				/*fadeEffect: {
 					crossFade: true
-				},
+				},*/
 				autoplay: {
 					delay: 2500,
-					disableOnInteraction: false,
+					//disableOnInteraction: false,
 				},
 			});
 		}

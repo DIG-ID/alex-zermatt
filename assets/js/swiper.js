@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		if (document.body.classList.contains("page-template-page-home")) {
 			var angeboteSummerSwiper = new Swiper(".hero-swiper", {
+				touchStartPreventDefault: false,
+				preventInteractionOnTransition: true,
 				lazy: true,
 				slidesPerView: 1,
 				spaceBetween: 0,

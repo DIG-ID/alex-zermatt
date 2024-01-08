@@ -3,7 +3,7 @@
         <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-2">
             <h2 class="title-xl mb-4"><?php esc_html_e( 'Ausstattung', 'alexzermatt' ) ?></h2>
         </div>
-        <div class="col-span-1 md:col-span-6 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-4 columns-2">
+        <div class="col-span-1 md:col-span-6 xl:col-span-6 2xl:col-span-5 col-start-1 md:col-start-1 xl:col-start-4 2xl:col-start-4 columns-2">
             <?php
             $feature_to_svg = array(
                 'schreibtisch' => 'desk.svg',

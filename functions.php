@@ -159,13 +159,16 @@ function az_theme_enqueue_styles() {
 	// Enqueue theme stylesheet.
 	wp_enqueue_style( 'theme-styles' );
 
+	// Enqueue external CSS file for table reservation
+    wp_enqueue_style( 'reservations-css', 'https://mytools.aleno.me/reservations/v2.0/reservations.css', array(), $theme_version );
+
+
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/js/main.js', array( 'jquery' ), $theme_version, false );
 
-	/*if ( is_home() ) :
-		wp_enqueue_script( 'blog-ajax', get_template_directory_uri() . '/dist/js/blog-ajax.js', array( 'jquery' ), $theme_version, true );
-		wp_localize_script( 'blog-ajax', 'blog_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
-	endif;*/
+	// Enqueue external JavaScript file for table reservation
+    wp_enqueue_script( 'reservations-js', 'https://mytools.aleno.me/reservations/v2.0/reservations.js', array(), $theme_version, false );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'az_theme_enqueue_styles' );

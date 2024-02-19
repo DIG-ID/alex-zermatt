@@ -169,6 +169,23 @@ function az_theme_enqueue_styles() {
 	// Enqueue external JavaScript file for table reservation
     wp_enqueue_script( 'reservations-js', 'https://mytools.aleno.me/reservations/v2.0/reservations.js', array(), $theme_version, false );
 
+	//Enqueue googletagmanager script
+	wp_enqueue_script('google-tag-manager', 'https://www.googletagmanager.com/gtag/js?id=G-LBKCEZXMSN', array(), null, false);
+    wp_add_inline_script('google-tag-manager', "
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('set', {
+            'linker': {
+                'accept_incoming': true,
+                'domains': ['www.simplebooking.it']
+            },
+            'anonymize_ip': true,
+            'transport_type': 'beacon'
+        });
+        gtag('config', 'G-LBKCEZXMSN');
+    ");
+
 }
 
 add_action( 'wp_enqueue_scripts', 'az_theme_enqueue_styles' );

@@ -434,6 +434,16 @@ $(function() {
    *              Culture Page              *
    *                                        *
    ****************************************/
+  if ( $(".page-template-page-eat--drink-bacchus")[0] ) {
+    //Section Intro
+    createIntroSectionTimeline();
+
+  }
+  /******************************************
+   *                                        *
+   *              Culture Page              *
+   *                                        *
+   ****************************************/
   if ( $(".page-template-page-culture")[0] ) {
     //Section Intro
     createIntroSectionTimeline();

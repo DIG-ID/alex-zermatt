@@ -4,7 +4,7 @@
 			<?php
 			$image = get_field( 'intro_image' );
 			if ( $image ) :
-				echo wp_get_attachment_image( $image, 'full', null, array( 'class' => 'h-[380px] md:h-[800px] xl:h-[780px] mb-20 md:mb-12 xl:mb-0 object-cover' ) );
+				echo wp_get_attachment_image( $image, 'full', null, array( 'class' => 'h-[380px] md:h-[800px] xl:h-[780px] mb-20 md:mb-12 xl:mb-0 object-cover invisible' ) );
 			endif;
 			?>
 		</div>

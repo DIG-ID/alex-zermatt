@@ -431,12 +431,62 @@ $(function() {
 
   /******************************************
    *                                        *
-   *              Culture Page              *
+   *              Bodega Bacchus Page              *
    *                                        *
    ****************************************/
   if ( $(".page-template-page-eat--drink-bacchus")[0] ) {
     //Section Intro
-    createIntroSectionTimeline();
+    createIntroPageTimeline();
+
+    //Section The Space
+    let hoursTargets = gsap.utils.toArray([".space-col .title-overline", ".space-col img", ".space-col p"]);
+    hoursTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section Experience
+    let snackTargets = gsap.utils.toArray([".experience-col .title-overline", ".experience-col img", ".experience-col .text-body"]);
+    snackTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        stagger: 0.20,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
+
+    //Section Gallery
+    let galleryTargets = gsap.utils.toArray([".section-gallery img", ".section-gallery .title-xl", ".section-gallery .btn-wrapper"]);
+    galleryTargets.forEach( target => {
+      gsap.from(target, {
+        ...defaultitemcfg,
+        scrollTrigger: {
+          trigger: target,
+          start: defaultCfg.defaultStart,
+          end: defaultCfg.defaultEnd,
+          scrub: defaultCfg.scrubSpeed,
+          //markers: true,
+          toggleActions: defaultCfg.defaultActions
+        }
+      });
+    });
 
   }
   /******************************************
@@ -650,22 +700,22 @@ $(function() {
       });
     });
 
-    //Section Bodega
-    let bodegaTargets = gsap.utils.toArray([".section-bodega .title-xl", ".section-bodega img", ".section-bodega .text-body" ]);
-    bodegaTargets.forEach( target => {
-      gsap.from(target, {
-        ...defaultitemcfg,
-        scrollTrigger: {
-          trigger: target,
-          start: defaultCfg.defaultStart,
-          end: defaultCfg.defaultEnd,
-          scrub: defaultCfg.scrubSpeed,
-          //markers: true,
-          toggleActions: defaultCfg.defaultActions
-        }
-      });
+    //Section Bodega Bacchus
+    let zermatttl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-bacchus",
+        start: defaultCfg.defaultStart,
+        end: defaultCfg.defaultEnd,
+        scrub: defaultCfg.scrubSpeed,
+        //markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
     });
-
+    zermatttl
+      .from(".section-bacchus h2", {  ...defaultitemcfg  })
+      .from(".section-bacchus .text-body", {  ...defaultitemcfg  })
+      .from(".section-bacchus .btn-wrapper", {  ...defaultitemcfg  });
   }
 
   /******************************************

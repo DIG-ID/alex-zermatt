@@ -342,6 +342,29 @@ $(function() {
       .from(".section-lounge-bar .text-body", { ...defaultitemcfg })
       .from(".section-lounge-bar .btn-wrapper", { ...defaultitemcfg });
 
+    //Section le Jardin
+    let bodegatl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-bodega",
+        start: defaultCfg.defaultStart,
+        end: "bottom 85%",
+        scrub: defaultCfg.scrubSpeed,
+        //markers: true,
+        toggleActions: defaultCfg.defaultActions
+      },
+      defaults: { duration: defaultCfg.animDuration },
+    });
+    if ( window.innerWidth <= xl ) {
+      bodegatl.from(".section-bodega .title-overline--sm ", { ...defaultitemcfg });
+    } else {
+      bodegatl.from(".section-bodega .title-overline--xl ", { ...defaultitemcfg });
+    };
+    bodegatl
+      .from(".section-bodega img", { ...defaultitemcfg })
+      .from(".section-bodega .title-xl", { ...defaultitemcfg })
+      .from(".section-bodega .text-body", { ...defaultitemcfg })
+      .from(".section-bodega .btn-wrapper", { ...defaultitemcfg });
+
     //Section Box Teasers
     let boxteaserstl = gsap.timeline({
       scrollTrigger: {

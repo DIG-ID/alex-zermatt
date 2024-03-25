@@ -3,7 +3,7 @@
         <?php
         $news_args   = array(
             'post_type'   => 'news',
-            'order'       => 'ASC',
+            'order'       => 'DESC',
             'orderby'     => 'date',
             'post_status' => 'publish',
             'posts_per_page' => 9,

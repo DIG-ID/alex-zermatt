@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!localStorage.getItem('originalReferrer')) {
       localStorage.setItem('originalReferrer', document.referrer);
-      console.log('localStorage');
+      console.log(localStorage);
     }
 
     let buttosnsBar = $('.section-buttons-bar');

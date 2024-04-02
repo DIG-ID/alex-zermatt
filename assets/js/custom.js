@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	//wait until images, links, fonts, stylesheets, and js is loaded
 	window.addEventListener("load", () => {
 
+    if (!localStorage.getItem('originalReferrer')) {
+      localStorage.setItem('originalReferrer', document.referrer);
+      console.log('localStorage');
+    }
+
     let buttosnsBar = $('.section-buttons-bar');
     let lastScroll = 0;
     let topDistance = 0;

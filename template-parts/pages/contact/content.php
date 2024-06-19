@@ -11,7 +11,7 @@
                     <?php esc_html_e( 'Fax:', 'alexzermatt' ); the_field( 'contacts_fax', 'option' ); ?>
                 <?php endif; ?>
             </p>
-			<a href="<?php the_field( 'contacts_gmaps_link', 'option' ); ?>" class="inline-block mb-3 hover:cursor-pointer text-body !font-bold hover:text-gold"><?php esc_html_e( 'Auf Google Maps anzeigen', 'alexzermatt' ); ?></a>
+			<a href="<?php the_field( 'contacts_gmaps_link', 'option' ); ?>" target="_blank" class="inline-block mb-3 hover:cursor-pointer text-body !font-bold hover:text-gold"><?php esc_html_e( 'Auf Google Maps anzeigen', 'alexzermatt' ); ?></a>
         </div>
         <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-7 order-1 xl:order-2">
             <?php 

@@ -2,8 +2,9 @@
 
 	<div class="az-container-footer az-container">
 		<div class="col-span-2 md:col-span-8 xl:col-span-2 xl:col-start-3 mb-12 xl:mb-16">
-			<div class="w-full">
+			<div class="w-full flex xl:block justify-between">
 				<?php do_action( 'theme_logo' ); ?>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/swisstainable_RGB.png" class=" w-16 md:w-20 xl:w-[113px] mt-0 xl:mt-7" alt="swisstainable" title="Swisstainable">
 			</div>
 		</div>
 		<div class="col-span-2 md:col-span-2 xl:col-span-2 mb-12 xl:mb-16">

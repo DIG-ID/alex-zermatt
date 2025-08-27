@@ -25,7 +25,7 @@
                         <?php endwhile; ?>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-8 xl:grid-cols-10 w-full relative md:absolute left-0 md:bottom-14 xl:bottom-0 z-10">
+                <div class="grid grid-cols-1 md:grid-cols-8 xl:grid-cols-10 w-full relative md:absolute left-0 md:-bottom-3 xl:bottom-0 z-10">
                     <div class="col-span-1 md:col-span-4 xl:col-span-3 col-start-1 md:col-start-5 xl:col-start-1 swiper-tabs-pagination"></div>
                 </div>
             <?php

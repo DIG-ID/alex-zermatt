@@ -20,7 +20,7 @@ mix
 
   .browserSync({
     proxy: {
-      target: "hotel-alex-zermatt.digid",
+      target: "https://hotel-alex-zermatt.digid",
       ws: true
     },
     files: ["./**/*.php", "./dist/js/*.js", "./dist/css/*.css"]

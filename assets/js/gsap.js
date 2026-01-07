@@ -462,7 +462,7 @@ $(function() {
     createIntroPageTimeline();
 
     //Section The Space
-    let hoursTargets = gsap.utils.toArray([".space-col .title-overline", ".space-col img", ".space-col p"]);
+    let hoursTargets = gsap.utils.toArray([".space-col .title-overline", ".space-col img", ".space-col p", ".space-col .menus-links"]);
     hoursTargets.forEach( target => {
       gsap.from(target, {
         ...defaultitemcfg,

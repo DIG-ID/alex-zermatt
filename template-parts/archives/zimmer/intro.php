@@ -1,4 +1,4 @@
-<section id="section-intro" class="section-intro az-container pt-28 xl:pt-48 xl:pb-40 xl:mb-36 overflow-hidden">
+<section id="section-intro" class="section-intro az-container pt-28 xl:pt-48 xl:pb-16 overflow-hidden">
 	<div class="az-container-grid gap-y-3 xl:items-center">
         <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 xl:col-start-3">
             <?php 
@@ -14,6 +14,11 @@
         </div>
         <div class="block xl:hidden col-span-1 md:col-span-8 text-center">
             <span class="az-vertical-line-medium"></span>
+        </div>
+    </div>
+    <div class="az-container-grid gap-y-3 xl:items-center pt-32 md:pt-32 xl:pt-60">
+        <div class="col-span-2 md:col-span-8 xl:col-span-5 col-start-1 xl:col-start-5">
+            <p class="text-body invisible"><?php the_field( 'archive_zimmer_disclaimer', 'option' ); ?></p>
         </div>
     </div>
 </section>

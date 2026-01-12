@@ -1,4 +1,4 @@
-<section id="section-zimmer-sliders" class="section-zimmer-sliders px-0 md:px-16 xl:px-0 overflow-hidden pt-14 xl:pt-0 pb-12 md:pb-40 xl:pb-64">
+<section id="section-zimmer-sliders" class="section-zimmer-sliders px-0 md:px-16 xl:px-0 overflow-hidden pt-14 md:pt-4 xl:pt-0 pb-12 md:pb-40 xl:pb-64">
     <div class="az-container-grid">
         <div class="rooms-zimmer col-span-1 md:col-span-8 xl:col-span-10 col-start-1 md:col-start-1 xl:col-start-3 md:mb-64 xl:mb-64 relative">
             <?php

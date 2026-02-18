@@ -8,6 +8,8 @@
             $feature_to_svg = array(
                 'schreibtisch' => 'desk.svg',
                 'badewanne' => 'bathtub.svg',
+                'badewanneunddusche' => 'bathtub.svg',
+                'dusche' => 'bathtub.svg',
                 'bademantel' => 'bathrobe.svg',
                 'balkon' => 'balcony.svg',
                 'frühstück' => 'breakfast.svg',

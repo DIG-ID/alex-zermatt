@@ -9,6 +9,7 @@
                 'schreibtisch' => 'desk.svg',
                 'badewanne' => 'bathtub.svg',
                 'badewanneunddusche' => 'bathtub.svg',
+                'badewanneoderdusche' => 'bathtub.svg',
                 'dusche' => 'bathtub.svg',
                 'bademantel' => 'bathrobe.svg',
                 'balkon' => 'balcony.svg',

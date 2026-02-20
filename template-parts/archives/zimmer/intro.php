@@ -17,8 +17,8 @@
         </div>
     </div>
     <div class="az-container-grid gap-y-3 xl:items-center pt-32 md:pt-32 xl:pt-60">
-        <div class="col-span-2 md:col-span-8 xl:col-span-5 col-start-1 xl:col-start-5">
-            <p class="text-body invisible"><?php the_field( 'archive_zimmer_disclaimer', 'option' ); ?></p>
+        <div class="col-span-2 md:col-span-8 xl:col-span-6 col-start-1 xl:col-start-4">
+            <p class="text-body invisible px-10 py-10 bg-[#FFF8F1]"><?php the_field( 'archive_zimmer_disclaimer', 'option' ); ?></p>
         </div>
     </div>
 </section>

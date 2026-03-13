@@ -110,7 +110,7 @@
 					<?php
 					$y = date( 'Y' );
 					printf(
-						esc_html__( 'Urheberrecht &copy; %d Hotel Resort Alex', 'az' ),
+						esc_html__( 'Urheberrecht &copy; %d Alex Alpine Resort', 'az' ),
 						esc_html( $y )
 					);
 					?>

@@ -14,7 +14,7 @@
 		while ( $spiellelounge_query->have_posts() ) :
 			$spiellelounge_query->the_post();
 			$title        = get_the_title();
-			$description = get_field( 'description' );
+			$description1 = get_field( 'description_1' );
 			$image_id     = get_field( 'image' );
 			if ( ! $image_id && has_post_thumbnail() ) {
 				$image_id = get_post_thumbnail_id();
@@ -28,7 +28,7 @@
 								<h2 class="title-xl mb-16"><?php echo esc_html( $title ); ?></h2>
 							</div>
 							<div class="col-span-2 md:col-span-1 xl:col-span-1">
-								<p class="text-body mb-6 xl:mb-8"><?php echo wp_kses_post( $description ); ?></p>
+								<p class="text-body mb-6 xl:mb-8"><?php echo wp_kses_post( $description1 ); ?></p>
 							</div>
 						</div>
 					</div>

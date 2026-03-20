@@ -1,61 +1,65 @@
-<section id="section-spielelounge-posts" class="section-spielelounge-posts az-container pb-40 xl:pb-64">
-	<div class="az-container-grid">
-		<?php
-		$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-		$spiellelounge_query = new WP_Query(
-			array(
-				'post_type'      => 'spiellelounge',
-				'order'          => 'DESC',
-				'orderby'        => 'date',
-				'post_status'    => 'publish',
-				'posts_per_page' => 9,
-				'paged'          => $paged,
-			)
-		);
+<section class="section-infrastructure-list">
+	<?php
+	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+	$spiellelounge_query = new WP_Query(
+		array(
+			'post_type'      => 'spiellelounge',
+			'order'          => 'DESC',
+			'orderby'        => 'date',
+			'post_status'    => 'publish',
+			'posts_per_page' => 9,
+			'paged'          => $paged,
+		)
+	);
 
-		if ( $spiellelounge_query->have_posts() ) : ?>
-			<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2 grid grid-cols-1 md:grid-cols-8 xl:grid-cols-9 md:gap-x-4 xl:gap-x-[118px]">
-				<?php
-				while ( $spiellelounge_query->have_posts() ) :
-					$spiellelounge_query->the_post();
-					get_template_part( 'template-parts/components/card-news' );
-				endwhile;
-				?>
-			</div>
-			<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2 justify-end flex">
-				<?php
-				// Pagination
-				if ( $spiellelounge_query->max_num_pages > 1 ) {
-					echo '<div class="pagination flex min-w-[375px]">';
-
-					$current_page = max( 1, get_query_var( 'paged' ) );
-					$total_pages  = $spiellelounge_query->max_num_pages;
-
-					if ( $current_page > 1 ) {
-						echo '<a href="' . get_previous_posts_page_link() . '" class="pagination-arrow prev-arrow flipped mr-7"><img src="' . get_stylesheet_directory_uri() . '/assets/images/slider-arrow.svg" alt="Previous" style="transform: scaleX(-1);" /></a>';
-					} elseif ( $current_page === 1 ) {
-						echo '<span class="w-[145px] mr-7"></span>';
-					}
-
-					echo '<div class="numeric-pagination">' . $current_page . ' / ' . $total_pages . '</div>';
-
-					if ( $current_page < $total_pages ) {
-						echo '<a href="' . get_next_posts_page_link() . '" class="pagination-arrow next-arrow ml-7"><img src="' . get_stylesheet_directory_uri() . '/assets/images/slider-arrow.svg" alt="Next" /></a>';
-					}
-
-					echo '</div>';
-				}
-				?>
+	if ( $spiellelounge_query->have_posts() ) :
+		while ( $spiellelounge_query->have_posts() ) :
+			$spiellelounge_query->the_post();
+			$title        = get_the_title();
+			$description1 = get_field( 'description_1' );
+			$description2 = get_field( 'description_2' );
+			$image_id     = get_field( 'image' );
+			if ( ! $image_id && has_post_thumbnail() ) {
+				$image_id = get_post_thumbnail_id();
+			}
+			?>
+			<div class="infrastructure-content az-container xl:pt-40 pb-20 md:pb-24 xl:pb-36 overflow-hidden">
+				<div class="az-container-grid">
+					<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1">
+						<div class="grid grid-cols-2 xl:grid-cols-1 order-2 xl:order-1 md:gap-4 xl:gap-0">
+							<div class="col-span-1 hidden invisible xl:block xl:visible">
+								<h2 class="title-xl mb-16"><?php echo esc_html( $title ); ?></h2>
+							</div>
+							<div class="col-span-2 md:col-span-1 xl:col-span-1">
+								<p class="text-body mb-6 xl:mb-8"><?php echo wp_kses_post( $description1 ); ?></p>
+							</div>
+							<div class="col-span-2 md:col-span-1 xl:col-span-1">
+								<p class="text-body"><?php echo wp_kses_post( $description2 ); ?></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-span-1 md:col-span-8 xl:col-span-8 xl:col-start-6 order-1 xl:order-2 text-center">
+						<h2 class="title-xl xl:hidden xl:invisible mb-6 md:mb-14"><?php echo esc_html( $title ); ?></h2>
+						<?php
+						if ( $image_id ) :
+							echo wp_get_attachment_image( $image_id, 'full', false, array( 'class' => 'h-[200px] md:h-[500px] xl:h-[603px] w-full object-cover mb-6 md:mb-14 xl:mb-0' ) );
+						endif;
+						?>
+					</div>
+				</div>
 			</div>
 			<?php
-			wp_reset_postdata();
-		else :
-			?>
+		endwhile;
+
+		wp_reset_postdata();
+	else :
+		?>
+		<div class="az-container-grid">
 			<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-2">
 				<p class="text-body"><?php esc_html_e( 'Es wurden keine Beiträge gefunden.', 'az' ); ?></p>
 			</div>
-			<?php
-		endif;
-		?>
-	</div>
+		</div>
+		<?php
+	endif;
+	?>
 </section>

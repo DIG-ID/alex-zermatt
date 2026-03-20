@@ -24,7 +24,7 @@
 				<div class="az-container-grid">
 					<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1">
 						<div class="grid grid-cols-2 md:grid-cols-8 xl:grid-cols-1 order-2 xl:order-1 md:gap-4 xl:gap-0">
-							<div class="col-span-1 md:col-start-1 md:col-span-4 hidden invisible xl:block xl:visible">
+							<div class="col-span-1 md:col-start-1 md:col-span-4">
 								<h2 class="title-xl mb-16"><?php echo esc_html( $title ); ?></h2>
 							</div>
 							<div class="col-span-2 md:col-start-5 md:col-span-4 xl:col-span-1">

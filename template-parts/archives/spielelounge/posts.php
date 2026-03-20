@@ -1,4 +1,4 @@
-<section class="section-infrastructure-list">
+<section class="section-spielelounge-list">
 	<?php
 	$spiellelounge_query = new WP_Query(
 		array(
@@ -20,11 +20,11 @@
 				$image_id = get_post_thumbnail_id();
 			}
 			?>
-			<div class="infrastructure-content az-container xl:pt-40 pb-20 md:pb-24 xl:pb-36 overflow-hidden">
+			<div class="spielelounge-content az-container xl:pt-40 pb-20 md:pb-24 xl:pb-36 overflow-hidden">
 				<div class="az-container-grid">
 					<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1">
 						<div class="grid grid-cols-2 md:grid-cols-8 xl:grid-cols-1 order-2 xl:order-1 md:gap-4 xl:gap-0">
-							<div class="col-span-1 md:col-start-1 md:col-span-4">
+							<div class="col-start-1 col-span-2 md:col-start-1 md:col-span-4">
 								<h2 class="title-xl mb-16"><?php echo esc_html( $title ); ?></h2>
 							</div>
 							<div class="col-span-2 md:col-start-5 md:col-span-4 xl:col-span-1">

@@ -21,6 +21,7 @@
 							$link_target = $link['target'] ? $link['target'] : '_self';
 						?>
 						<a href="<?php echo esc_url( get_post_type_archive_link( 'spielelounge' ) ); ?>" class="btn btn--arrow-left mt-12 xl:absolute xl:block xl:left-0 xl:bottom-0"><?php esc_html_e( $link ); ?></a>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

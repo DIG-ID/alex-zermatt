@@ -14,7 +14,7 @@
 		while ( $spiellelounge_query->have_posts() ) :
 			$spiellelounge_query->the_post();
 			$title        = get_the_title();
-			$description1 = get_field( 'description_1' );
+			$description1 = get_field( 'descriptions_description_1' );
 			$image_id     = get_field( 'image' );
 			if ( ! $image_id && has_post_thumbnail() ) {
 				$image_id = get_post_thumbnail_id();

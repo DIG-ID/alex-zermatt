@@ -20,12 +20,12 @@
 				$image_id = get_post_thumbnail_id();
 			}
 			?>
-			<div class="spielelounge-content az-container xl:pt-40 pb-20 md:pb-24 xl:pb-36 overflow-hidden">
+			<div class="spielelounge-content az-container xl:pt-40 pb-24 md:pb-44 xl:pb-36 overflow-hidden">
 				<div class="az-container-grid">
 					<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1">
 						<div class="grid grid-cols-2 md:grid-cols-8 xl:grid-cols-1 order-2 xl:order-1 md:gap-4 xl:gap-0">
 							<div class="col-start-1 col-span-2 md:col-start-1 md:col-span-4">
-								<h2 class="title-xl mb-16"><?php echo esc_html( $title ); ?></h2>
+								<h2 class="title-xl mb-6"><?php echo esc_html( $title ); ?></h2>
 							</div>
 							<div class="col-span-2 md:col-start-5 md:col-span-4 xl:col-span-1">
 								<p class="text-body mb-6 xl:mb-8"><?php echo wp_kses_post( $description1 ); ?></p>
@@ -35,7 +35,7 @@
 					<div class="col-span-1 md:col-span-8 xl:col-span-8 xl:col-start-6 order-1 xl:order-2 text-center">
 						<?php
 						if ( $image_id ) :
-							echo wp_get_attachment_image( $image_id, 'full', false, array( 'class' => 'h-[200px] md:h-[500px] xl:h-[603px] w-full object-cover mb-6 md:mb-14 xl:mb-0' ) );
+							echo wp_get_attachment_image( $image_id, 'full', false, array( 'class' => 'h-[200px] md:h-[500px] xl:h-[603px] w-full object-cover mb-12 xl:mb-0' ) );
 						endif;
 						?>
 					</div>

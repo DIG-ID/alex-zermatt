@@ -28,7 +28,7 @@
 								<h2 class="title-xl mb-16"><?php echo esc_html( $title ); ?></h2>
 							</div>
 							<div class="col-span-2 md:col-span-1 xl:col-span-1">
-								<p class="text-body mb-6 xl:mb-8"><?php echo wp_kses_post( $description1 ); ?></p>
+								<p class="text-body mb-6 xl:mb-8"><?php echo wp_kses_post( $description ); ?></p>
 							</div>
 						</div>
 					</div>

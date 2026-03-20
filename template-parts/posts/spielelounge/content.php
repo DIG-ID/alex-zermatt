@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'activities-content az-container py-20 xl:pt-40 xl:pb-52 overflow-hidden' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'spielelounge-content az-container py-20 xl:pt-40 xl:pb-52 overflow-hidden' ); ?>>
 	<div class="az-container-grid">
 		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1 relative">
 			<div class="grid grid-cols-2 xl:grid-cols-1 order-2 xl:order-1 md:gap-4 xl:gap-9">
@@ -12,21 +12,15 @@
 					<div class="col-span-1 md:col-start-4 md:col-span-3 xl:col-span-1">
 						<p class="text-body mb-6 xl:mb-8"><?php the_field( 'descriptions_description_1' ); ?></p>
 					</div>
-					<div class="col-span-1 md:col-span-1 xl:col-span-1 mt-6 xl:mt-6 2xl:mt-10">
+					<div class="col-span-1 md:col-span-1 xl:col-span-1 mt-10 2xl:mt-6">
 						<?php
 						$link = get_field( 'descriptions_external_link' );
 						if ( $link ) :
 							$link_url    = $link['url'];
 							$link_title  = $link['title'];
 							$link_target = $link['target'] ? $link['target'] : '_self';
-							?>
-							<a class="text-body !font-bold hover:text-gold" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-							<?php
-						endif;
 						?>
-					</div>
-					<div class="col-span-1 md:col-span-1 xl:col-span-1 mt-10 2xl:mt-6">
-						<a href="<?php echo esc_url( get_post_type_archive_link( 'activities' ) ); ?>" class="btn btn--arrow-left mt-12 xl:absolute xl:block xl:left-0 xl:bottom-0"><?php esc_html_e( 'ZURÜCK', 'az' ); ?></a>
+						<a href="<?php echo esc_url( get_post_type_archive_link( 'spielelounge' ) ); ?>" class="btn btn--arrow-left mt-12 xl:absolute xl:block xl:left-0 xl:bottom-0"><?php esc_html_e( $link ); ?></a>
 					</div>
 				</div>
 			</div>

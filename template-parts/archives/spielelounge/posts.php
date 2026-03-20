@@ -22,7 +22,7 @@
 			?>
 			<div class="infrastructure-content az-container xl:pt-40 pb-20 md:pb-24 xl:pb-36 overflow-hidden">
 				<div class="az-container-grid">
-					<div class="col-span-1 md:col-span-8 xl:col-span-8 xl:col-start-6 xl:row-start-1 xl:row-span-2 text-center">
+					<div class="col-span-1 md:col-span-8 xl:col-span-8 xl:col-start-6 xl:row-start-1 xl:row-span-2 text-center pb-12 xl:pb-0">
 						<?php
 						if ( $image_id ) :
 							echo wp_get_attachment_image( $image_id, 'full', false, array( 'class' => 'h-[200px] md:h-[500px] xl:h-[603px] w-full object-cover mb-6 md:mb-0 xl:mb-0' ) );
@@ -30,7 +30,7 @@
 						?>
 					</div>
 					<div class="col-span-1 md:col-span-4 xl:col-span-3 xl:col-start-3 xl:row-start-1">
-						<h2 class="title-xl mb-6 md:mb-14 xl:mb-16"><?php echo esc_html( $title ); ?></h2>
+						<h2 class="title-xl mb-6 md:mb-14 xl:mb-20"><?php echo esc_html( $title ); ?></h2>
 					</div>
 					<div class="col-span-1 md:col-start-5 md:col-span-4 xl:col-span-3 xl:col-start-3 xl:row-start-2">
 						<p class="text-body mb-6 xl:mb-8"><?php echo wp_kses_post( $description1 ); ?></p>

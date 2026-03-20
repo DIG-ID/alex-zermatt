@@ -14,14 +14,10 @@
 					</div>
 					<div class="col-span-1 md:col-span-1 xl:col-span-1 mt-10 2xl:mt-6">
 						<?php
-						$link = get_field( 'descriptions_external_link' );
-						if ( $link ) :
-							$link_url    = $link['url'];
-							$link_title  = $link['title'];
-							$link_target = $link['target'] ? $link['target'] : '_self';
+						$link       = get_field( 'descriptions_external_link' );
+						$link_title = $link ? $link['title'] : '';
 						?>
-						<a href="<?php echo esc_url( get_post_type_archive_link( 'spielelounge' ) ); ?>" class="btn btn--arrow-left mt-12 xl:absolute xl:block xl:left-0 xl:bottom-0"><?php esc_html_e( $link ); ?></a>
-						<?php endif; ?>
+						<a href="<?php echo esc_url( get_post_type_archive_link( 'spielelounge' ) ); ?>" class="btn btn--arrow-left mt-12 xl:absolute xl:block xl:left-0 xl:bottom-0"><?php echo esc_html( $link_title ); ?></a>
 					</div>
 				</div>
 			</div>

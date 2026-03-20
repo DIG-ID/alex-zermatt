@@ -13,6 +13,7 @@ if ( have_posts() ) :
 				get_template_part( 'template-parts/pages/experience/wellness' );
 				get_template_part( 'template-parts/pages/experience/sport' );
 				get_template_part( 'template-parts/pages/experience/activities' );
+				get_template_part( 'template-parts/pages/experience/spielelounge' );
 			do_action( 'after_post_content' );
 		do_action( 'after_main_content' );
 	endwhile;

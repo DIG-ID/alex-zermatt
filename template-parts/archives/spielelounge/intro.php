@@ -10,7 +10,7 @@
 		</div>
 		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-8 text-center xl:text-left">
 			<h1 class="title-xl !hyphens-none mb-12 xl:mb-24 md:max-w-xl xl:max-w-none mx-auto"><?php the_field( 'archive_spielelounge_intro_title', 'option' ); ?></h1>
-			<p class="text-body mb-24 xl:mb-0 md:max-w-lg xl:max-w-none mx-auto"><?php the_field( 'archive_spielelounge_intro_description', 'option' ); ?></p>
+			<p class="text-body md:max-w-lg xl:max-w-none mx-auto"><?php the_field( 'archive_spielelounge_intro_description', 'option' ); ?></p>
 		</div>
 	</div>
 </section>

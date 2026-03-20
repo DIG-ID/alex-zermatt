@@ -1,6 +1,5 @@
 <section class="section-infrastructure-list">
 	<?php
-	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 	$spiellelounge_query = new WP_Query(
 		array(
 			'post_type'      => 'spielelounge',
@@ -15,8 +14,7 @@
 		while ( $spiellelounge_query->have_posts() ) :
 			$spiellelounge_query->the_post();
 			$title        = get_the_title();
-			$description1 = get_field( 'description_1' );
-			$description2 = get_field( 'description_2' );
+			$description = get_field( 'description' );
 			$image_id     = get_field( 'image' );
 			if ( ! $image_id && has_post_thumbnail() ) {
 				$image_id = get_post_thumbnail_id();
@@ -31,9 +29,6 @@
 							</div>
 							<div class="col-span-2 md:col-span-1 xl:col-span-1">
 								<p class="text-body mb-6 xl:mb-8"><?php echo wp_kses_post( $description1 ); ?></p>
-							</div>
-							<div class="col-span-2 md:col-span-1 xl:col-span-1">
-								<p class="text-body"><?php echo wp_kses_post( $description2 ); ?></p>
 							</div>
 						</div>
 					</div>

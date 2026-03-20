@@ -3,8 +3,7 @@
 	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 	$spiellelounge_query = new WP_Query(
 		array(
-			'post_type'      => 'activities',
-			'category_name'  => 'spielelounge',
+			'post_type'      => 'spielelounge',
 			'order'          => 'DESC',
 			'orderby'        => 'date',
 			'post_status'    => 'publish',

@@ -33,7 +33,6 @@
 						</div>
 					</div>
 					<div class="col-span-1 md:col-span-8 xl:col-span-8 xl:col-start-6 order-1 xl:order-2 text-center">
-						<h2 class="title-xl xl:hidden xl:invisible mb-6 md:mb-14"><?php echo esc_html( $title ); ?></h2>
 						<?php
 						if ( $image_id ) :
 							echo wp_get_attachment_image( $image_id, 'full', false, array( 'class' => 'h-[200px] md:h-[500px] xl:h-[603px] w-full object-cover mb-6 md:mb-14 xl:mb-0' ) );

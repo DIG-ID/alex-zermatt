@@ -1,4 +1,4 @@
-<section class="section-spielelounge az-container mb-28 xl:mb-52">
+<section class="section-sport az-container mb-28 xl:mb-52">
 	<div class="az-container-grid items-center">
 		<div class="col-span-1 md:col-span-8 xl:col-span-4 xl:col-start-3">
 			<h2 class="title-overline !block mx-auto"><?php the_field( 'spielelounge_subtitle' ); ?></h2>

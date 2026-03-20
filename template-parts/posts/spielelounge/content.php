@@ -9,11 +9,8 @@
 					<div class="col-span-1 md:col-span-2 xl:col-span-1 xl:hidden mb-12">
 						<h2 class="title-xl"><?php the_title(); ?></h2>
 					</div>
-					<div class="col-span-1 md:col-span-1 xl:col-span-1">
+					<div class="col-span-1 md:col-start-4 md:col-span-3 xl:col-span-1">
 						<p class="text-body mb-6 xl:mb-8"><?php the_field( 'descriptions_description_1' ); ?></p>
-					</div>
-					<div class="col-span-1 md:col-span-1 xl:col-span-1">
-						<p class="text-body"><?php the_field( 'descriptions_description_2' ); ?></p>
 					</div>
 					<div class="col-span-1 md:col-span-1 xl:col-span-1 mt-6 xl:mt-6 2xl:mt-10">
 						<?php

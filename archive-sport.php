@@ -6,5 +6,6 @@ get_header();
 		get_template_part( 'template-parts/archives/sport/tennis' );
 		get_template_part( 'template-parts/archives/sport/squash' );
 		get_template_part( 'template-parts/archives/sport/golf' );
+		get_template_part( 'template-parts/archives/sport/wasser' );
 	do_action( 'after_main_content' );
 get_footer();

@@ -25,7 +25,7 @@
 					<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-3 order-2 xl:order-1">
 						<div class="grid grid-cols-2 md:grid-cols-8 xl:grid-cols-1 order-2 xl:order-1 md:gap-4 xl:gap-0">
 							<div class="col-start-1 col-span-2 md:col-start-1 md:col-span-4">
-								<h2 class="title-xl mb-6"><?php echo esc_html( $title ); ?></h2>
+								<h2 class="title-xl mb-6 xl:mb-14"><?php echo esc_html( $title ); ?></h2>
 							</div>
 							<div class="col-span-2 md:col-start-5 md:col-span-4 xl:col-span-1">
 								<p class="text-body mb-6 xl:mb-8"><?php echo wp_kses_post( $description1 ); ?></p>

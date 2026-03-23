@@ -369,22 +369,3 @@ require get_template_directory() . '/inc/theme-template-tags.php';
 
 // The theme admin settings
 require get_template_directory() . '/inc/theme-admin-settings.php';
-
-add_filter('get_the_archive_title', function ($title) {
-    if (is_post_type_archive('spielounge')) {
-        if (defined('ICL_LANGUAGE_CODE')) {
-            switch (ICL_LANGUAGE_CODE) {
-                case 'en':
-                    return 'Game Lounge';
-                case 'fr':
-                    return 'Salon de jeux';
-                default:
-                    return 'Spielelounge';
-            }
-        }
-
-        return 'Spielelounge';
-    }
-
-    return $title;
-});

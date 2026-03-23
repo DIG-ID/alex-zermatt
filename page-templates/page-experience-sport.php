@@ -14,6 +14,7 @@ if ( have_posts() ) :
 				get_template_part( 'template-parts/pages/experience/sport/tennis' );
 				get_template_part( 'template-parts/pages/experience/sport/squash' );
 				get_template_part( 'template-parts/pages/experience/sport/golf' );
+				get_template_part( 'template-parts/pages/experience/sport/wasser' );
 			do_action( 'after_post_content' );
 		do_action( 'after_main_content' );
 	endwhile;

@@ -23,7 +23,7 @@
 			endif;
 			?>
 		</div>
-		<div class="col-span-1 md:col-span-8 xl:col-span-4 xl:col-start-8 order-1 xl:order-2">
+		<div class="col-span-1 md:col-span-8 xl:col-span-3 xl:col-start-8 order-1 xl:order-2">
 			<h2 class="title-overline !block mx-auto"><?php the_field( 'sport_archive_wasser_subtitle', 'options' ); ?></h2>
 			<?php
 			$img = get_field( 'sport_archive_wasser_image', 'options' );

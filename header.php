@@ -35,6 +35,7 @@
 	</head>
 
 	<body <?php body_class(); ?>>
+		<a class="skip-link" href="#main-content"><?php esc_html_e( 'Skip to main content', 'az' ); ?></a>
 			<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPWSW4LW"
 		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

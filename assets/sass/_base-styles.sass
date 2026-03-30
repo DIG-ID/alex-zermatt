@@ -36,19 +36,18 @@ body
 
 // Skip to main content – accessibility link
 .skip-link
-  @apply hidden lg:inline-flex items-center
+  @apply inline-flex items-center
   @apply font-serif font-light text-xl tracking-[1.54px] uppercase
   @apply bg-blue text-white
   @apply pl-16 pr-8 pt-[14px] pb-[11px]
-  @apply transition-all duration-300 ease-in-out
   @apply no-underline
   position: absolute
   top: -100%
   left: 0
   z-index: 9999
+  transition: top 0.3s ease-in-out
   &:focus
     top: 1rem
-    @apply text-white
 
 .grecaptcha-badge
   visibility: hidden

@@ -1,4 +1,6 @@
 <?php
+// Temporarily hidden — remove the two lines below to restore
+wp_redirect( home_url(), 302 ); exit;
 
 get_header();
 do_action( 'before_main_content' );

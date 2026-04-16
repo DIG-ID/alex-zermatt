@@ -11,7 +11,9 @@
     </div>
     <div class="az-container-grid gap-y-3 mt-5 pb-10 md:pb-6 xl:pb-40">
         <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 xl:col-start-3 h-1 border-t border-blue "></div>
+        <?php if ( get_field( 'section_intro_media_contacts_title' ) ) : ?>
         <div class="col-span-1 md:col-span-4 xl:col-span-4 col-start-1 md:col-start-5 xl:col-start-7 h-1 border-t border-blue hidden xl:block"></div>
+        <?php endif; ?>
     </div>
     <div class="az-container-grid gap-y-3 mb-10 md:mb-5">
         <div class="col-span-1 md:col-span-8 xl:col-span-4 col-start-1 md:col-start-1 xl:col-start-3 mb-6 xl:mb-0">

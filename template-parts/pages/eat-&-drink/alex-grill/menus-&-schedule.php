@@ -15,20 +15,12 @@
 					$lunch_menu   = get_field( 'lists_lunch_menu_link' );
 					$evening_menu = get_field( 'lists_evening_menu_link' );
 					$wine_menu    = get_field( 'lists_wine_list_link' );
-					if ( $lunch_menu ) :
-						$link_url    = $lunch_menu['url'];
-						$link_title  = $lunch_menu['title'];
-						$link_target = $lunch_menu['target'] ? $lunch_menu['target'] : '_self';
-						?>
-						<a class="btn btn--arrow-down self-start mb-12" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-						<?php
-					endif;
 					if ( $evening_menu ) :
 						$link_url    = $evening_menu['url'];
 						$link_title  = $evening_menu['title'];
 						$link_target = $evening_menu['target'] ? $evening_menu['target'] : '_self';
 						?>
-						<a class="btn btn--arrow-down self-center mb-12" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+						<a class="btn btn--arrow-down self-start mb-12" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 
 						<?php
 					endif;
@@ -36,6 +28,14 @@
 						$link_url    = $wine_menu['url'];
 						$link_title  = $wine_menu['title'];
 						$link_target = $wine_menu['target'] ? $wine_menu['target'] : '_self';
+						?>
+						<a class="btn btn--arrow-down self-center mb-12" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+						<?php
+					endif;
+					if ( $lunch_menu ) :
+						$link_url    = $lunch_menu['url'];
+						$link_title  = $lunch_menu['title'];
+						$link_target = $lunch_menu['target'] ? $lunch_menu['target'] : '_self';
 						?>
 						<a class="btn btn--arrow-down self-end mr-9" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 						<?php

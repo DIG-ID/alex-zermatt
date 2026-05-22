@@ -1,3 +1,12 @@
+<?php
+$summer_args = array(
+	'post_type'     => 'angebot',
+	'category_name' => 'sommer',
+	'order'         => 'ASC',
+);
+$summer_query = new WP_Query( $summer_args );
+if ( $summer_query->have_posts() ) :
+?>
 <section id="section-summer-slider" class="section-summer-slider az-container overflow-hidden pb-[90px] xl:pb-72">
 	<div class="az-container-grid">
 		<div class="col-span-1 md:col-span-8 xl:col-span-10 col-start-1 xl:col-start-3 mb-12 md:mb-8 xl:mb-7 relative">
@@ -11,19 +20,10 @@
 			<div class="swiper angebote-summer-swiper">
 				<div class="swiper-wrapper">
 					<?php
-					$args = array(
-						'post_type'     => 'angebot',
-						'category_name' => 'sommer',
-						'order'         => 'ASC',
-					);
-					$query = new WP_Query( $args );
-
-					if ( $query->have_posts() ) :
-						while ( $query->have_posts() ) :
-							$query->the_post();
-							get_template_part( 'template-parts/components/angebote', 'slide' );
-						endwhile;
-					endif;
+					while ( $summer_query->have_posts() ) :
+						$summer_query->the_post();
+						get_template_part( 'template-parts/components/angebote', 'slide' );
+					endwhile;
 					wp_reset_postdata();
 					?>
 				</div>
@@ -31,3 +31,4 @@
 		</div>
 	</div>
 </section>
+<?php endif; ?>

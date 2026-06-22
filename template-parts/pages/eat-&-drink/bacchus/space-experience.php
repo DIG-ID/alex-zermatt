@@ -33,6 +33,7 @@
 						<a class="btn btn--arrow-down self-start mb-12" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 						<?php
 					endif;
+					$wine_menu = get_field( 'the_space_wine_list_link' );
 					if ( $wine_menu ) :
 						$link_url    = $wine_menu['url'];
 						$link_title  = $wine_menu['title'];

@@ -24,13 +24,21 @@
 				<p class="text-body mb-12 text-left"><?php the_field( 'the_space_description' ); ?></p>
 				<div class="menus-links flex flex-col w-full mt-8">
 					<?php
-					$wine_menu = get_field( 'the_space_wine_list_link' );
+					$dinner_menu = get_field( 'the_space_dinner_menu_link' );
+					if ( $dinner_menu ) :
+						$link_url    = $dinner_menu['url'];
+						$link_title  = $dinner_menu['title'];
+						$link_target = $dinner_menu['target'] ? $dinner_menu['target'] : '_self';
+						?>
+						<a class="btn btn--arrow-down self-start mb-12" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+						<?php
+					endif;
 					if ( $wine_menu ) :
 						$link_url    = $wine_menu['url'];
 						$link_title  = $wine_menu['title'];
 						$link_target = $wine_menu['target'] ? $wine_menu['target'] : '_self';
 						?>
-						<a class="btn btn--arrow-down self-start mb-12" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+						<a class="btn btn--arrow-down self-center mb-12" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 						<?php
 					endif;
 					?>

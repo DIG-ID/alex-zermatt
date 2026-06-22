@@ -1,5 +1,17 @@
 // webpack.mix.js
 
+const os = require('os');
+const path = require('path');
+
+// Caminho para os certificados do Local by WPEngine
+const certPath = path.join(
+  os.homedir(),
+  os.platform() === 'win32'
+    ? 'AppData/Roaming/Local/run/router/nginx/certs'
+    : 'Library/Application Support/Local/run/router/nginx/certs'
+);
+
+
 const mix = require('laravel-mix');
 const tailwindcss = require('tailwindcss');
 
@@ -19,9 +31,14 @@ mix
   })
 
   .browserSync({
-    proxy: {
-      target: "https://hotel-alex-zermatt.digid",
-      ws: true
+    proxy: "https://hotel-alex-zermatt.digid/",
+    host: "hotel-alex-zermatt.digid",
+    open: "external",
+    port: 3000,
+    ws: true,
+    https: {
+      key: path.join(certPath, 'hotel-alex-zermatt.digid.key'),
+      cert: path.join(certPath, 'hotel-alex-zermatt.digid.crt'),
     },
     files: ["./**/*.php", "./dist/js/*.js", "./dist/css/*.css"]
   })

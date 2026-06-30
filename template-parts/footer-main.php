@@ -115,14 +115,6 @@
 					);
 					?>
 				</p>
-				<p class="text-footer !text-xs xl:!text-sm text-center xl:text-right">
-					<?php
-					printf(
-						__( 'Developed by: <a href="%s">dig.id</a>', 'az' ),
-						esc_url( 'https://dig.id' )
-					);
-					?>
-				</p>
 			</div>
 			<div class="copy-menu order-1 xl:order-2 mb-6 xl:mb-0">
 				<?php

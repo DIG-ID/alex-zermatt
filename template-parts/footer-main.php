@@ -6,7 +6,8 @@
 				<?php do_action( 'theme_logo' ); ?>
 				<div class="flex gap-x-4 mt-0 xl:mt-7">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/swisstainable_RGB.png" class="max-h-16 md:max-h-20 xl:max-h-[113px] max-w-16 md:max-w-20 xl:max-w-[113px]" alt="swisstainable" title="Swisstainable">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fait-maison-logo.png" class="max-h-16 md:max-h-20 xl:max-h-[113px]" alt="fait-maison" title="Fait Maison">
+					<!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fait-maison-logo.png" class="max-h-16 md:max-h-20 xl:max-h-[113px]" alt="fait-maison" title="Fait Maison">-->
+					<!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fait-maison-logo-color.png" class="max-h-16 md:max-h-20 xl:max-h-[113px]" alt="fait-maison" title="Fait Maison">-->
 				</div>
 				
 			</div>

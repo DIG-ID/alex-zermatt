@@ -6,19 +6,21 @@
 				<?php do_action( 'theme_logo' ); ?>
 				<div class="flex gap-x-4 mt-0 xl:mt-7">
 					<?php
-					// Partner certification logos. URLs are ACF option fields set to
-					// "Translate" in WPML, so get_field() returns the current-language link.
+					// Partner certification logos. URLs live in the ACF "partners" group (options).
+					// Group fields are read as an array, then sub-fields accessed by key.
+					$partners = get_field( 'partners', 'options' );
+
 					$footer_logos = array(
 						array(
 							'img'   => 'swisstainable_RGB.png',
 							'label' => 'Swisstainable',
-							'url'   => get_field( 'partners_swisstainable_url', 'options' ),
+							'url'   => ( $partners && ! empty( $partners['swisstainable_url'] ) ) ? $partners['swisstainable_url'] : '',
 							'class' => 'max-h-16 md:max-h-20 xl:max-h-[113px] max-w-16 md:max-w-20 xl:max-w-[113px]',
 						),
 						array(
 							'img'   => 'fait-maison-logo-color.png',
 							'label' => 'Fait Maison',
-							'url'   => get_field( 'partners_faitmaison_url', 'options' ),
+							'url'   => ( $partners && ! empty( $partners['faitmaison_url'] ) ) ? $partners['faitmaison_url'] : '',
 							'class' => 'max-h-16 md:max-h-20 xl:max-h-[113px]',
 						),
 					);

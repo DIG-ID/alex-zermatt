@@ -12,13 +12,13 @@
 						array(
 							'img'   => 'swisstainable_RGB.png',
 							'label' => 'Swisstainable',
-							'url'   => get_field( 'footer_swisstainable_url', 'options' ),
+							'url'   => get_field( 'partners_swisstainable_url', 'options' ),
 							'class' => 'max-h-16 md:max-h-20 xl:max-h-[113px] max-w-16 md:max-w-20 xl:max-w-[113px]',
 						),
 						array(
 							'img'   => 'fait-maison-logo-color.png',
 							'label' => 'Fait Maison',
-							'url'   => get_field( 'footer_faitmaison_url', 'options' ),
+							'url'   => get_field( 'partners_faitmaison_url', 'options' ),
 							'class' => 'max-h-16 md:max-h-20 xl:max-h-[113px]',
 						),
 					);

@@ -5,8 +5,38 @@
 			<div class="w-full flex flex-row xl:flex-col justify-between">
 				<?php do_action( 'theme_logo' ); ?>
 				<div class="flex gap-x-4 mt-0 xl:mt-7">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/swisstainable_RGB.png" class="max-h-16 md:max-h-20 xl:max-h-[113px] max-w-16 md:max-w-20 xl:max-w-[113px]" alt="swisstainable" title="Swisstainable">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fait-maison-logo-color.png" class="max-h-16 md:max-h-20 xl:max-h-[113px]" alt="fait-maison" title="Fait Maison">
+					<?php
+					// Partner certification logos. URLs are ACF option fields set to
+					// "Translate" in WPML, so get_field() returns the current-language link.
+					$footer_logos = array(
+						array(
+							'img'   => 'swisstainable_RGB.png',
+							'label' => 'Swisstainable',
+							'url'   => get_field( 'footer_swisstainable_url', 'options' ),
+							'class' => 'max-h-16 md:max-h-20 xl:max-h-[113px] max-w-16 md:max-w-20 xl:max-w-[113px]',
+						),
+						array(
+							'img'   => 'fait-maison-logo-color.png',
+							'label' => 'Fait Maison',
+							'url'   => get_field( 'footer_faitmaison_url', 'options' ),
+							'class' => 'max-h-16 md:max-h-20 xl:max-h-[113px]',
+						),
+					);
+					foreach ( $footer_logos as $logo ) :
+						$img = sprintf(
+							'<img src="%s" class="%s" alt="%s" title="%s">',
+							esc_url( get_stylesheet_directory_uri() . '/assets/images/' . $logo['img'] ),
+							esc_attr( $logo['class'] ),
+							esc_attr( $logo['label'] ),
+							esc_attr( $logo['label'] )
+						);
+						if ( $logo['url'] ) :
+							printf( '<a href="%s" target="_blank" rel="noopener">%s</a>', esc_url( $logo['url'] ), $img );
+						else :
+							echo $img; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- built with esc_* above.
+						endif;
+					endforeach;
+					?>
 				</div>
 				
 			</div>

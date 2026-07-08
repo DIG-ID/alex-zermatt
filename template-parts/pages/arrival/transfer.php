@@ -14,7 +14,7 @@
         <div class="col-span-1 md:col-span-8 xl:col-span-8 col-start-1 xl:col-start-3">
             <?php if ( have_rows( 'transfers_items' ) ) : ?>
                 <?php while ( have_rows( 'transfers_items' ) ) : the_row(); ?>
-                    <div class="transfer-item border-t border-blue last:border-b pt-8 md:pt-12 xl:pt-14 pb-8 md:pb-12 xl:pb-14">
+                    <div class="transfer-item border-b border-blue pt-8 md:pt-12 xl:pt-14 pb-8 md:pb-12 xl:pb-14">
                         <div class="grid grid-cols-1 xl:grid-cols-8 gap-y-5 xl:gap-8">
                             <div class="xl:col-span-4">
                                 <h3 class="title-xl"><?php the_sub_field( 'title' ); ?></h3>

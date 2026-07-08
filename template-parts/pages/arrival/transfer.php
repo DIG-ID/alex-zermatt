@@ -19,7 +19,7 @@
                             <div class="xl:col-span-4">
                                 <h3 class="title-xl"><?php the_sub_field( 'title' ); ?></h3>
                             </div>
-                            <div class="xl:col-span-4 transfer-item__text text-body">
+                            <div class="xl:col-span-4 transfer-item__text text-body hyphens-none">
                                 <?php echo wp_kses_post( get_sub_field( 'text' ) ); ?>
                             </div>
                         </div>

@@ -11,6 +11,7 @@ if ( have_posts() ) :
 			do_action( 'before_post_content' );
 				get_template_part( 'template-parts/pages/arrival/intro' );
 				get_template_part( 'template-parts/pages/arrival/content' );
+				get_template_part( 'template-parts/pages/arrival/transfer' );
 			do_action( 'after_post_content' );
 		do_action( 'after_main_content' );
 	endwhile;

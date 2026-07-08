@@ -1,4 +1,4 @@
-<section id="section-transfers" class="section-transfers az-container pt-28 xl:pt-96 xl:pb-20 overflow-hidden">
+<section id="section-transfers" class="section-transfers az-container xl:pb-20 overflow-hidden">
 	<div class="az-container-grid gap-y-3 xl:items-center">
         <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 text-center xl:text-left">
             <h2 class="title-xl mb-10 md:mb-12 mt-12 xl:mt-0"><?php the_field('transfers_title'); ?></h2>

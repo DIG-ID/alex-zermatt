@@ -13,7 +13,7 @@
 	<div class="az-container-grid">
         <div class="col-span-1 md:col-span-8 xl:col-span-8 col-start-1 xl:col-start-3">
             <div>
-                <script type="text/javascript" src="https://hoteljob-schweiz.de/jobanzeige_extern.php?uid=551&js=1&ssl=1"></script>
+                <script type="text/javascript" data-cookieconsent="marketing" data-src="https://hoteljob-schweiz.de/jobanzeige_extern.php?uid=551&js=1&ssl=1"></script>
                 <div class="htjobs-js pt-3"><span class="text-body">powered by </span><a class="text-body" target="_blank" href="https://hoteljob-schweiz.de/resort-hotel-alex-zermatt-jobs-551.htm">Hoteljob-Schweiz / Resort Hotel Alex **** Zermatt</a></div>
             </div>
         </div>

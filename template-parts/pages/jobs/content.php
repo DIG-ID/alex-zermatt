@@ -6,18 +6,18 @@
         <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 xl:max-w-[363px] text-center xl:text-left">
             <div class="text-body mb-14 xl:mb-0 invisible"><?php the_excerpt(); ?></div>
         </div>
+        <div class="col-span-1 md:col-span-8 xl:col-span-3 col-start-1 xl:col-start-3 flex justify-center xl:justify-start">
+            <div class="btn-wrapper invisible"><a class="btn btn--arrow-right" target="_blank" rel="noopener" href="https://www.hotelcareer.ch/jobs/hotel-alex-zermatt-125643"><?php esc_html_e( 'Offene Stellen', 'az' ); ?></a></div>
+        </div>
     </div>
 </section>
 
 <section id="section-rooms" class="section-rooms az-container mb-20 md:mb-40 xl:mb-80 ">
 	<div class="az-container-grid">
         <div class="col-span-1 md:col-span-8 xl:col-span-8 col-start-1 xl:col-start-3">
-            <div>
-                <div class="hidden">
-                    <script type="text/javascript" data-cookieconsent="marketing" data-src="https://hoteljob-schweiz.de/jobanzeige_extern.php?uid=551&js=1&ssl=1"></script>
-                    <div class="htjobs-js pt-3"><span class="text-body">powered by </span><a class="text-body" target="_blank" href="https://hoteljob-schweiz.de/resort-hotel-alex-zermatt-jobs-551.htm">Hoteljob-Schweiz / Resort Hotel Alex **** Zermatt</a></div>
-                </div>
-                <div class="pt-3 mr-16 xl:mr-0 btn-wrapper"><a class="btn btn--arrow-right" target="_blank" rel="noopener" href="https://www.hotelcareer.ch/jobs/hotel-alex-zermatt-125643"><?php esc_html_e( 'Offene Stellen', 'az' ); ?></a></div>
+            <div class="hidden">
+                <script type="text/javascript" data-cookieconsent="marketing" data-src="https://hoteljob-schweiz.de/jobanzeige_extern.php?uid=551&js=1&ssl=1"></script>
+                <div class="htjobs-js pt-3"><span class="text-body">powered by </span><a class="text-body" target="_blank" href="https://hoteljob-schweiz.de/resort-hotel-alex-zermatt-jobs-551.htm">Hoteljob-Schweiz / Resort Hotel Alex **** Zermatt</a></div>
             </div>
         </div>
     </div>

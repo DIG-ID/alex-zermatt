@@ -1459,7 +1459,7 @@ $(function() {
    ****************************************/
   if ( $(".page-template-page-jobs")[0] ) {
     //Section Intro
-    let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body"]);
+    let introTargets = gsap.utils.toArray([".section-intro .title-xl", ".section-intro .text-body", ".section-intro .btn-wrapper"]);
     gsap.from(introTargets, {
       opacity: 0,
       y: introCfg.fadeDistance,

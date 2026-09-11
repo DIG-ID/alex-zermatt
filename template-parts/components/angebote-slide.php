@@ -3,11 +3,11 @@
         $full_image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), 'angebote-slider-image');
     ?>
         <div class="featured-image">
-            <img src="<?php echo $full_image_url[0]; ?>" alt="<?php the_title(); ?>" class="angebote-slide-img size-angebote-slider-image" />
+            <img src="<?php echo $full_image_url[0]; ?>" alt="<?php the_title(); ?>" class="angebote-slide-img size-angebote-slider-image w-full aspect-[615/640] object-cover" />
         </div>
     <?php else : ?>
         <div class="featured-image">
-            <img src="https://placehold.co/615x640">
+            <img src="https://placehold.co/615x640" class="w-full aspect-[615/640] object-cover">
         </div>
     <?php endif; ?>
     <h2 class="title-xl pt-7 md:pt-12 xl:pt-7 pb-10 xl:pb-16"><?php the_title(); ?></h2>

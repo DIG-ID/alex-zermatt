@@ -314,6 +314,13 @@ add_filter( 'post_thumbnail_html', 'az_wrap_post_thumbnail_in_figure', 10, 5 );*
 // Remove <p> from Contact Form 7
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
+/**
+ * Disable WP Rocket's "Automatic Lazy Rendering" (content-visibility: auto).
+ * It clips absolutely-positioned pseudo-elements that overflow their container
+ * (e.g. the arrow/underline on .btn--arrow-right) on below-the-fold sections.
+ */
+add_filter( 'rocket_lrc_optimization', '__return_false', 999 );
+
 
 /**
  * Create a customized options page and store the data in a variable for later use

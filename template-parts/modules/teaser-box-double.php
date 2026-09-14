@@ -22,7 +22,14 @@ endif;
 						endif;
 						?>
 						<h2 class="title-xl text-left my-10 min-h-[56px] xl:min-h-[96px]"><?php the_sub_field( 'title' ); ?></h2>
-						<span class="block text-right xl:text-left mr-16 xl:mr-0 pb-2"><a class="btn btn--arrow-right" href="<?php the_sub_field( 'cta_link' ); ?>"><?php echo esc_html_e( 'Mehr Erfahren', 'alexzermatt' ); ?></a></span>
+						<?php
+						$cta_link = get_sub_field( 'cta_link' );
+						if ( $cta_link ) :
+							?>
+							<span class="block text-right xl:text-left mr-16 xl:mr-0 pb-2"><a class="btn btn--arrow-right" href="<?php echo esc_url( $cta_link ); ?>"><?php echo esc_html_e( 'Mehr Erfahren', 'alexzermatt' ); ?></a></span>
+							<?php
+						endif;
+						?>
 					</div>
 					<?php
 				endwhile;

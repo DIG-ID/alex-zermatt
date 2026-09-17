@@ -21,8 +21,14 @@ do_action( 'before_main_content' );
 <div class="az-container py-40 xl:py-64">
 	<div id="myIncertShop"></div>
 </div>
+<?php
+$incert_lang = apply_filters( 'wpml_current_language', null );
+if ( empty( $incert_lang ) ) :
+	$incert_lang = 'de'; // Fallback to the site's default language.
+endif;
+?>
 <script defer type="module"
-	src="https://incert-resources.com/frontend/haz/default/main.js?language=<?php echo esc_attr( apply_filters( 'wpml_current_language', null ) ); ?>"
+	src="https://incert-resources.com/frontend/haz/default/main.js?language=<?php echo esc_attr( $incert_lang ); ?>"
 	onload='inctMount("#myIncertShop", "app")'>
 </script>
 <?php

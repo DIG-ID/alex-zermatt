@@ -10,7 +10,6 @@ if ( have_posts() ) :
 					get_template_part( 'template-parts/posts/zimmer/more', 'info' );
 				endif;
 				get_template_part( 'template-parts/posts/zimmer/furnishing' );
-				get_template_part( 'template-parts/modules/booking-box', null, array( 'source' => 'zimmer' ) );
 			do_action( 'after_post_content' );
 		do_action( 'after_main_content' );
 	endwhile;

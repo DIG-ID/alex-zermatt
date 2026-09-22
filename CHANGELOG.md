@@ -14,6 +14,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - A noindex test page template for trying the booking widget in isolation.
 - `npm run php:lint`, a dependency-free syntax check over the theme's PHP.
 
+### Changed
+
+- The booking widget is no longer rendered on room pages while the tracking
+  results are being evaluated. The integration stays in place and the test page
+  template still renders it, so it can be switched back on with a single line.
+
 ### Fixed
 
 - The visitor's consent state now reaches the booking engine. The widget

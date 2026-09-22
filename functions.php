@@ -374,5 +374,8 @@ add_filter( 'get_the_archive_title', 'az_theme_remove_archive_prefix' );
 // Theme custom template tags.
 require get_template_directory() . '/inc/theme-template-tags.php';
 
+// Simple Booking Syncro Box integration.
+require get_template_directory() . '/inc/simplebooking.php';
+
 // The theme admin settings
 require get_template_directory() . '/inc/theme-admin-settings.php';

@@ -60,6 +60,15 @@ function az_simplebooking_config( $args = array() ) {
 		'GoogleAnalyticsId' => AZ_SIMPLEBOOKING_GA4_ID,
 
 		/*
+		 * Both are declared explicitly on purpose. The documentation says they
+		 * default to true, but the widget ships ForwardConsentState as false
+		 * and tests it with a strict === true, so leaving it out means the
+		 * sb_consent parameter never reaches the booking engine.
+		 */
+		'ForwardTrackingParams' => true,
+		'ForwardConsentState'   => true,
+
+		/*
 		 * WORKAROUND UNDER TEST - remove once Simple Booking confirms the ID.
 		 *
 		 * Without this the box runs in multi-property mode and the "Check

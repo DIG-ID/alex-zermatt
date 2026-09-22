@@ -13,3 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   engine can carry marketing parameters and the visitor's consent state.
 - A noindex test page template for trying the booking widget in isolation.
 - `npm run php:lint`, a dependency-free syntax check over the theme's PHP.
+
+### Fixed
+
+- The visitor's consent state now reaches the booking engine. The widget
+  defaults ForwardConsentState to false and tests it strictly, so it has to be
+  declared explicitly even though the vendor documentation states otherwise.

@@ -280,17 +280,23 @@ function az_theme_localize_swiper_data() {
 add_action( 'wp_enqueue_scripts', 'az_theme_localize_swiper_data' );
 
 
-//enable pagination for archives
+// Enable pagination for archives.
+// Keep the main query's posts_per_page in sync with the custom WP_Query used in
+// the archive templates, so /news/page/2/ and /events/page/2/ don't 404.
+// Front end only: without the is_admin() guard this also limits the post list
+// tables in wp-admin to 9/4 items per page.
 function enable_pagination_for_custom_post_types() {
+    if (is_admin()) {
+        return;
+    }
     if (is_post_type_archive(array('news', 'event'))) {
         global $wp_query;
         if ($wp_query->is_main_query()) {
             if (is_post_type_archive('news')) {
-                $wp_query->set('posts_per_page', 9); 
+                $wp_query->set('posts_per_page', 9);
             } elseif (is_post_type_archive('event')) {
-                $wp_query->set('posts_per_page', 4); 
+                $wp_query->set('posts_per_page', 4);
             }
-            $wp_query->get('paged');
         }
     }
 }
